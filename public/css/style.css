@@ -46,12 +46,12 @@ footer h5 {
     color: white;
 }
 
-.card {
+.grid-item .card {
     box-shadow: 3px 3px 3px 0 rgba(0, 0, 0, 0.2);
     transition: 0.3s;
 }
 
-.card:hover {
+.grid-item .card:hover {
     box-shadow: 9px 9px 9px 0 rgba(0, 0, 0, 0.2);
 }
 
@@ -139,10 +139,6 @@ footer hr {
         margin-top: -35px;
     }
 
-    .card {
-        width: 18rem;
-    }
-
     .image-footer {
         /* Center and scale the image nicely */
         position: absolute;
@@ -189,10 +185,6 @@ footer hr {
     .grid-item {
         margin: 20px -65px 0px 0px;
     }
-
-    .card {
-        width: 18rem;
-    }
 }
 
 /* 
@@ -229,8 +221,12 @@ footer hr {
         display: block;
     }
 
-    .card {
-        width: 18rem;
+    .nav-satu {
+        margin-right: 100px;
+    }
+
+    .nav-tiga {
+        margin-left: 100px;
     }
 
     .image-footer {
@@ -280,11 +276,6 @@ footer hr {
         display: block;
     }
 
-    .card {
-        width: 18rem;
-        margin: auto;
-    }
-
     .image-footer {
         /* Center and scale the image nicely */
         position: absolute;
@@ -293,6 +284,10 @@ footer hr {
         background-size: cover;
         width: 300px;
         opacity: 0.5;
+    }
+
+    .card {
+        margin: auto;
     }
 }
 
@@ -333,7 +328,6 @@ footer hr {
     }
 
     .card {
-        width: 18rem;
         margin: auto;
     }
 

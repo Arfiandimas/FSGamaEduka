@@ -14,3 +14,15 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+
+// -------------------------- Siswa ------------------------------
+Route::get('/artikel','ArtikelController@index')->name('artikel.index');
+
+
+
+
+
+// -------------------------- Admin ------------------------------
+Route::get('/admin/artikel','AdminArtikelController@index')->name('adminartikel.index');
+Route::get('/admin/artikel/tambah','AdminTambahArtikelController@index')->name('admintambahartikel.index');
