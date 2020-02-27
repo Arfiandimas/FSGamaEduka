@@ -1,0 +1,349 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.baten {
+    margin-top: 15px;
+    margin-left: 5px;
+    border: 1px solid #356F7D;
+    border-radius: 20px;
+}
+
+.grid-item {
+    margin: 20px -65px 0px 0px;
+}
+
+.image-article {
+    height: 200px;
+}
+
+.tgl {
+    margin-top: 10px;
+    margin-left: 20px;
+}
+
+.arrow {
+    position: relative;
+    width: 30px;
+    margin-left: 225px;
+    margin-top: -43px;
+}
+
+footer {
+    width: 100%;
+    background-color: #5CC4E7;
+    margin-top: 50px;
+    height: 900px;
+}
+
+footer h4 {
+    margin-top: 50px;
+    color: white;
+}
+
+footer h5 {
+    margin-top: 30px;
+    color: white;
+}
+
+.card {
+    box-shadow: 3px 3px 3px 0 rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+}
+
+.card:hover {
+    box-shadow: 9px 9px 9px 0 rgba(0, 0, 0, 0.2);
+}
+
+.baten:hover {
+    background-color: lightblue;
+}
+
+.baten-footer {
+    background-color: transparent;
+    width: 100px;
+    height: 35px;
+    text-align: center;
+    margin: 4px 2px;
+    border-radius: 16px;
+    color: white;
+    border: 1.5px solid white;
+}
+
+.baten-footer2 {
+    background-color: transparent;
+    width: auto;
+    height: 45px;
+    text-align: center;
+    margin: 4px 2px;
+    border-radius: 20px;
+    color: white;
+    border: 1.5px solid white;
+    padding: 5px 12px 5px 12px;
+}
+
+.image-footer {
+    /* Center and scale the image nicely */
+    position: absolute;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 450px;
+    opacity: 0.5;
+}
+
+footer hr {
+    display: block;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    margin-left: auto;
+    margin-right: auto;
+    border-style: inset;
+    border-width: 2px;
+}
+
+
+
+/* 
+    ##Device = Desktops
+    ##Screen = 1281px to higher resolution desktops
+*/
+@media (min-width: 1921px) {
+    nav {
+        height: 100px;
+    }
+
+    .logo-navbar {
+        width: 96px;
+        height: 73px;
+        position: absolute;
+        margin-left: 400px;
+    }
+
+    .nav-satu {
+        margin-right: 150px;
+    }
+
+    .nav-tiga {
+        margin-left: 150px;
+    }
+
+    .search {
+        width: 520px;
+    }
+
+    .logo-search {
+        position: absolute;
+        width: 30px;
+        margin-left: 480px;
+        margin-top: -35px;
+    }
+
+    .card {
+        width: 18rem;
+    }
+
+    .image-footer {
+        /* Center and scale the image nicely */
+        position: absolute;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 600px;
+        opacity: 0.5;
+    }
+}
+
+@media (min-width: 1025px) and (max-width: 1920px) {
+
+    nav {
+        height: 100px;
+    }
+
+    .logo-navbar {
+        width: 96px;
+        height: 73px;
+        position: absolute;
+        margin-left: 100px;
+    }
+
+    .nav-satu {
+        margin-right: 150px;
+    }
+
+    .nav-tiga {
+        margin-left: 150px;
+    }
+
+    .search {
+        width: 420px;
+    }
+
+    .logo-search {
+        position: absolute;
+        width: 30px;
+        margin-left: 380px;
+        margin-top: -35px;
+    }
+
+    .grid-item {
+        margin: 20px -65px 0px 0px;
+    }
+
+    .card {
+        width: 18rem;
+    }
+}
+
+/* 
+    ##Device = Tablets, Ipads (landscape)
+    ##Screen = B/w 768px to 1024px
+*/
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+    .logo-navbar {
+        width: 60px;
+        height: 45px;
+        margin-left: 10px;
+    }
+
+    .search {
+        width: 350px;
+    }
+
+    .logo-search {
+        position: absolute;
+        width: 30px;
+        margin-left: 310px;
+        margin-top: -35px;
+    }
+
+    nav ul {
+        z-index: 9999;
+        width: 100%;
+        height: 115px;
+        left: 0;
+        text-align: center;
+    }
+
+    nav ul li {
+        display: block;
+    }
+
+    .card {
+        width: 18rem;
+    }
+
+    .image-footer {
+        /* Center and scale the image nicely */
+        position: absolute;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 300px;
+        opacity: 0.5;
+    }
+}
+
+/* 
+    ##Device = Low Resolution Tablets, Mobiles (Landscape)
+    ##Screen = B/w 481px to 767px
+*/
+
+@media (min-width: 481px) and (max-width: 767px) {
+
+    .logo-navbar {
+        width: 48px;
+        height: 36px;
+        margin-left: 10px;
+    }
+
+    .search {
+        width: 350px;
+    }
+
+    .logo-search {
+        position: absolute;
+        width: 30px;
+        margin-left: 310px;
+        margin-top: -35px;
+    }
+
+    nav ul {
+        z-index: 9999;
+        width: 100%;
+        height: 115px;
+        left: 0;
+        text-align: center;
+    }
+
+    nav ul li {
+        display: block;
+    }
+
+    .card {
+        width: 18rem;
+        margin: auto;
+    }
+
+    .image-footer {
+        /* Center and scale the image nicely */
+        position: absolute;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 300px;
+        opacity: 0.5;
+    }
+}
+
+/* 
+    ##Device = Most of the Smartphones Mobiles (Portrait)
+    ##Screen = B/w 320px to 479px
+*/
+
+@media (min-width: 320px) and (max-width: 480px) {
+
+    .logo-navbar {
+        width: 48px;
+        height: 36px;
+        margin-left: 10px;
+    }
+
+    .search {
+        width: 150px;
+    }
+
+    .logo-search {
+        position: absolute;
+        width: 30px;
+        margin-left: 118px;
+        margin-top: -35px;
+    }
+
+    nav ul {
+        z-index: 9999;
+        width: 100%;
+        height: 115px;
+        left: 0;
+        text-align: center;
+    }
+
+    nav ul li {
+        display: block;
+    }
+
+    .card {
+        width: 18rem;
+        margin: auto;
+    }
+
+    .image-footer {
+        /* Center and scale the image nicely */
+        position: absolute;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 200px;
+        opacity: 0.5;
+    }
+}
