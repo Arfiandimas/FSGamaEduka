@@ -1,4 +1,4 @@
-@extends('layout.app')
+@extends('layout.admin')
 
 @section('title','Tambah Artikel')
 
@@ -7,7 +7,7 @@
 
     <!-- Content -->
     <div class="container">
-        <form action="{{ route('tambahartikel.store') }}" method="post">
+        <form action="{{ route('tambahartikel.store') }}" method="post" enctype="multipart/form-data">
             {{ csrf_field() }}
             <h6>Judul</h6>
             <div class="input-group mb-3">

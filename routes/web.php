@@ -11,12 +11,13 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 
 
 // -------------------------- Siswa ------------------------------
+Route::get('/','UtamaController@index')->name('utama.index');
 Route::get('/artikel','ArtikelController@index')->name('artikel.index');
 
 
@@ -27,5 +28,6 @@ Route::get('/artikel','ArtikelController@index')->name('artikel.index');
 Route::get('/admin/artikel','AdminArtikelController@index')->name('adminartikel.index');
 Route::get('/admin/artikel/tambah','AdminArtikelController@create')->name('tambahartikel.create');
 Route::post('/admin/artikel/tambah','AdminArtikelController@store')->name('tambahartikel.store');
-Route::get('/admin/artikel/{articles}/edit','AdminArtikelController@edit')->name('tambahartikel.edit');
+Route::get('/admin/artikel/{id}/edit','AdminArtikelController@edit')->name('tambahartikel.edit');
 Route::post('/admin/artikel/{id}/edit','AdminArtikelController@update')->name('tambahartikel.update');
+Route::get('/admin/artikel/{id}/delete','AdminArtikelController@destroy')->name('hapusartikel.destroy');

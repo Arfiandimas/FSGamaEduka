@@ -119,6 +119,10 @@ body {
         position: absolute;
         margin-left: 400px;
     }
+
+    .paragraf-konten {
+        height: 96px;
+    }
 }
 
 @media (min-width: 1025px) and (max-width: 1920px) {
@@ -132,6 +136,10 @@ body {
         height: 73px;
         position: absolute;
         margin-left: 100px;
+    }
+
+    .paragraf-konten {
+        height: 96px;
     }
 }
 
@@ -167,6 +175,10 @@ body {
 
     nav ul li {
         display: block;
+    }
+
+    .paragraf-konten {
+        height: 96px;
     }
 }
 
@@ -212,6 +224,10 @@ body {
 
     .logo-plus {
         z-index: 2;
+    }
+
+    .paragraf-konten {
+        height: 96px;
     }
 }
 

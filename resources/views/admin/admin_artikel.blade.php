@@ -1,30 +1,6 @@
-@extends('layout.app')
+@extends('layout.admin')
 
 @section('title','Artikel')
-
-@section('navbar')
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-light">
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
-            aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse justify-content-center" id="navbarNavDropdown">
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a class="nav-link nav-satu" href="#">Artikel</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link nav-dua" href="#">Program</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link nav-tiga" href="#">Siswa Baru</a>
-                </li>
-            </ul>
-        </div>
-    </nav>
-    <!-- End Navbar -->
-@endsection
 
 @section('content')
     <!-- Search -->
@@ -59,7 +35,7 @@
                     <div class="col-sm-7 card-kanan">
                         <h6>{{ $article->judul }}</h6>
                         {{-- <p>{{ $article->deskripsi }}</p> --}}
-                        <p>{{ Str::limit($article->konten, 250, '...') }}</p>
+                        <p class="paragraf-konten">{{ Str::limit($article->konten, 250, '...') }}</p>
                         <div class="row kategori-waktu">
                             <div class="col-md-6">
                                 <p class="kategori-admin">{{ $article->category->name }}</p>
@@ -71,8 +47,8 @@
                         <hr class=" hr">
                         <div class="card-img-kanan mx-auto">
                             <img src="/img/eye.png" alt="">
-                            <a href="{{ route('tambahartikel.edit', $article->slug) }}"><img src="/img/edit.png" alt=""></a>
-                            <img src="/img/delete.png" alt="">
+                            <a href="{{ route('tambahartikel.edit', $article) }}"><img src="/img/edit.png" alt=""></a>
+                            <a type="submit" href="{{ route('hapusartikel.destroy', $article) }}"><img src="/img/delete.png" alt=""></a>
                         </div>
                     </div>
                 </div>

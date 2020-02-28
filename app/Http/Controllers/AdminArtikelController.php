@@ -111,6 +111,10 @@ class AdminArtikelController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $articles = Article::find($id);
+
+        $articles->delete();
+
+        return redirect()->route('adminartikel.index');
     }
 }
