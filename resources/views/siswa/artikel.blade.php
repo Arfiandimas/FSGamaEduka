@@ -196,6 +196,15 @@
             </div>
             <br>
             <hr>
+            <div class="sosialmedia mx-auto">
+                <a href=""><img style="width: 35px;" src="/img/facebook.png" alt=""></a>
+                <a href=""><img style="width: 35px; margin-left: 50px; margin-right: 50px;" src="/img/instagram.png" alt=""></a>
+                <a href=""><img style="width: 35px;" src="/img/twitter.png" alt=""></a>
+            </div>
+            <div class="copyright mx-auto">
+                <img src="/img/copyright.png" style="width: 25px;" alt="copyright">
+                <span style="margin-left: 5px; color: white;">2020 Gama Eduka</span>
+            </div>
         </div>
     </footer>
     <!-- End Footer -->
