@@ -3,6 +3,7 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Article extends Model
 {
@@ -14,4 +15,8 @@ class Article extends Model
     {
         return $this->belongsTo(Category::class);
     }
+
+    use SoftDeletes;
+
+    protected $dates = ['deleted_at'];
 }
