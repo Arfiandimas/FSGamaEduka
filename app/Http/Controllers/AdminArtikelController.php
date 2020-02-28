@@ -3,6 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Str;
+use App\Article;
+use App\Category;
 
 class AdminArtikelController extends Controller
 {
@@ -13,7 +16,9 @@ class AdminArtikelController extends Controller
      */
     public function index()
     {
-        return view('admin.admin_artikel');
+        $articles = Article::all();
+
+        return view('admin.admin_artikel', compact('articles'));
     }
 
     /**
@@ -23,7 +28,9 @@ class AdminArtikelController extends Controller
      */
     public function create()
     {
-        //
+        $categories = Category::all();
+
+        return view('admin.tambah_artikel', compact('categories'));
     }
 
     /**
@@ -34,7 +41,17 @@ class AdminArtikelController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        Article::create([
+            'judul' => $request->judul,
+            'slug' => Str::slug($request->judul),
+            'gambar' => $request->gambar,
+            'deskripsi' => $request->deskripsi,
+            'konten' => $request->konten,
+            'category_id' => $request->category_id,
+            'user_id' => $request->user_id,
+        ]);
+
+        return redirect()->route('adminartikel.index');
     }
 
     /**
@@ -56,7 +73,10 @@ class AdminArtikelController extends Controller
      */
     public function edit($id)
     {
-        //
+        $articles = Article::find($id);
+        $categories = Category::all();
+
+        return view('admin.edit_artikel', compact('articles', 'categories'));
     }
 
     /**
@@ -68,7 +88,19 @@ class AdminArtikelController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $articles = Article::find($id);
+        $articles->update([
+            'judul' => $request->judul,
+            'slug' => Str::slug($request->judul),
+            'gambar' => $request->gambar,
+            'deskripsi' => $request->deskripsi,
+            'konten' => $request->konten,
+            'category_id' => $request->category_id,
+            'user_id' => $request->user_id,
+        ]);
+
+
+        return redirect()->route('adminartikel.index');
     }
 
     /**

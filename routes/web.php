@@ -25,4 +25,7 @@ Route::get('/artikel','ArtikelController@index')->name('artikel.index');
 
 // -------------------------- Admin ------------------------------
 Route::get('/admin/artikel','AdminArtikelController@index')->name('adminartikel.index');
-Route::get('/admin/artikel/tambah','AdminTambahArtikelController@index')->name('admintambahartikel.index');
+Route::get('/admin/artikel/tambah','AdminArtikelController@create')->name('tambahartikel.create');
+Route::post('/admin/artikel/tambah','AdminArtikelController@store')->name('tambahartikel.store');
+Route::get('/admin/artikel/{articles}/edit','AdminArtikelController@edit')->name('tambahartikel.edit');
+Route::post('/admin/artikel/{id}/edit','AdminArtikelController@update')->name('tambahartikel.update');
