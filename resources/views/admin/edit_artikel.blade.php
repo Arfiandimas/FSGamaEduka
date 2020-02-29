@@ -2,8 +2,9 @@
 
 @section('title','Tambah Artikel')
 
+@section('halaman','Edit Artikel')
+
 @section('content')
-    <h4 class="header mx-auto">Edit Artikel</h4>
 
     <!-- Content -->
     <div class="container">
@@ -44,10 +45,6 @@
                 <textarea class="form-control" style="height: 600px;" rows="3" name="konten">{{ $articles->konten }}</textarea>
             </div>
 
-            <h6>Id User</h6>
-            <div class="input-group mb-3">
-                <input type="text" class="form-control" aria-label="Username" aria-describedby="basic-addon1" name="user_id" value="{{ $articles->user_id }}">
-            </div>
             <button type="submit" class="btn btn-primary">Simpan</button>
         </form>
     </div>

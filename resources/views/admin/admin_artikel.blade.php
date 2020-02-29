@@ -2,6 +2,8 @@
 
 @section('title','Artikel')
 
+@section('halaman','Artikel')
+
 @section('content')
     <!-- Search -->
     <div class="container">
