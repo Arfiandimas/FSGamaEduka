@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="/css/artikel.css">
     <link rel="stylesheet" href="/css/add_artikel.css">
+
+    <script src="https://kit.fontawesome.com/f45723ccd1.js" crossorigin="anonymous"></script>
     <title>@yield('title')</title>
 </head>
 
@@ -41,7 +43,7 @@
 
     <!-- Footer -->
     <footer>
-        <img src="img/logo.png" alt="logo gama eduka" class="image-footer">
+        <img src="/img/logo.png" alt="logo gama eduka" class="image-footer">
         <div class="container">
             <div class="row">
                 <div class="col-md-4">

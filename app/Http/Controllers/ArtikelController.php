@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Article;
+use App\Category;
 
 class ArtikelController extends Controller
 {
@@ -15,9 +16,20 @@ class ArtikelController extends Controller
     public function index()
     {
         $articles = Article::all();
+        $categories = Category::all();
 
-        return view('siswa.artikel', compact('articles'));
+        return view('siswa.artikel', compact('articles', 'categories'));
     }
+
+    public function index_by_kategory($id)
+    {
+        $articles = Article::where('category_id',$id)->get();
+        $categories = Category::all();
+
+        return view('siswa.artikel', compact('articles', 'categories'));
+    }
+
+    
 
     /**
      * Show the form for creating a new resource.

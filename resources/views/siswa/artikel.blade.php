@@ -14,23 +14,12 @@
     <div class="container">
         <div class="row justify-content-md-center">
             <span class="col-md-10">
-                <button type="button" class="btn baten">Komputer Dasar</button>
-                <button type="button" class="btn baten">Komputer</button>
-                <button type="button" class="btn baten">Komputer</button>
-                <button type="button" class="btn baten">Komputer Dasar</button>
-                <button type="button" class="btn baten">Komputer</button>
-                <button type="button" class="btn baten">Komputer Dasar</button>
-                <button type="button" class="btn baten">Komputer</button>
-                <button type="button" class="btn baten">Komputer Dasar</button>
-                <button type="button" class="btn baten">Komputer</button>
-                <button type="button" class="btn baten">Komputer</button>
-                <button type="button" class="btn baten">Komputer</button>
-                <button type="button" class="btn baten">Komputer</button>
-                <button type="button" class="btn baten">Komputer Dasar</button>
-                <button type="button" class="btn baten">Komputer Dasar</button>
-                <button type="button" class="btn baten">Komputer Dasar</button>
-                <button type="button" class="btn baten">Komputer Dasar</button>
-                <button type="button" class="btn baten">Komputer Dasar</button>
+
+                <a href="" type="button" class="btn baten">All</a>
+                @foreach ($categories as $category)
+                    <a href="{{ route('artikel.bycategory', $category->id) }}" type="button" class="btn baten">{{ $category->name }}</a>
+                @endforeach
+
             </span>
         </div>
     </div>
@@ -43,7 +32,7 @@
             @foreach ($articles as $article)
             <div class="col-lg-4 col-md-6 col-sm-12 grid-item">
                 <div class="card" style="width: 18rem;">
-                    <img src="img/{{ $article->gambar }}" class="card-img-top image-article" alt="...">
+                    <img src="/img/{{ $article->gambar }}" class="card-img-top image-article" alt="...">
                     <div class="card-body">
                         <h6 class="card-title">{{ $article->judul }}</h6>
                         <p class="card-text">{{ Str::limit($article->konten, 150, '...') }}</p>

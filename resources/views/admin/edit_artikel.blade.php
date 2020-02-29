@@ -8,7 +8,7 @@
 
     <!-- Content -->
     <div class="container">
-        <form action="{{ route('tambahartikel.update', $articles) }}" method="post">
+        <form action="{{ route('tambahartikel.update', $articles) }}" method="post" enctype="multipart/form-data">
             {{ csrf_field() }}
             <h6>Judul</h6>
             <div class="input-group mb-3">
