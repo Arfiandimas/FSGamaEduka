@@ -48,6 +48,7 @@ footer h5 {
 .grid-item .card {
     box-shadow: 3px 3px 3px 0 rgba(0, 0, 0, 0.2);
     transition: 0.3s;
+    width: 18rem;
 }
 
 .grid-item .card:hover {
@@ -122,8 +123,8 @@ footer .copyright {
     }
 
     .logo-navbar {
-        width: 96px;
-        height: 73px;
+        width: 80px;
+        height: 57px;
         position: absolute;
         margin-left: 400px;
     }
@@ -165,10 +166,10 @@ footer .copyright {
     }
 
     .logo-navbar {
-        width: 96px;
-        height: 73px;
+        width: 70px;
+        height: 50px;
         position: absolute;
-        margin-left: 100px;
+        margin-left: 130px;
     }
 
     .nav-satu {
@@ -199,7 +200,7 @@ footer .copyright {
     ##Device = Tablets, Ipads (landscape)
     ##Screen = B/w 768px to 1024px
 */
-@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+@media (min-width: 768px) and (max-width: 991px) and (orientation: landscape) {
     .logo-navbar {
         width: 60px;
         height: 45px;
@@ -229,13 +230,13 @@ footer .copyright {
         display: block;
     }
 
-    .nav-satu {
+    /* .nav-satu {
         margin-right: 100px;
     }
 
     .nav-tiga {
         margin-left: 100px;
-    }
+    } */
 
     .image-footer {
         /* Center and scale the image nicely */
@@ -243,7 +244,7 @@ footer .copyright {
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
-        width: 300px;
+        width: 260px;
         opacity: 0.5;
     }
 }
@@ -307,8 +308,8 @@ footer .copyright {
 @media (min-width: 320px) and (max-width: 480px) {
 
     .logo-navbar {
-        width: 48px;
-        height: 36px;
+        width: 42px;
+        height: 30px;
         margin-left: 10px;
     }
 
@@ -346,6 +347,80 @@ footer .copyright {
         background-repeat: no-repeat;
         background-size: cover;
         width: 200px;
+        opacity: 0.5;
+    }
+}
+
+
+
+/* Diluar Media Query Yang Semestinya */
+
+@media (min-width: 991px) and (max-width: 1200px) and (orientation: landscape) {
+    .grid-item .card {
+        width: 15rem;
+    }
+
+    .image-article {
+        height: 150px;
+    }
+
+    .arrow {
+        position: relative;
+        width: 30px;
+        margin-left: 180px;
+        margin-top: -43px;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1024px) {
+    .logo-navbar {
+        width: 60px;
+        height: 45px;
+        margin-left: 40px;
+        margin-top: -50px;
+    }
+
+    .search {
+        width: 350px;
+        margin-top: -50px;
+    }
+
+    .logo-search {
+        position: absolute;
+        width: 30px;
+        margin-left: 310px;
+        margin-top: -35px;
+    }
+
+
+    nav ul {
+        z-index: 9999;
+        width: 100%;
+        height: 115px;
+        margin-left: 200px;
+        margin-top: 20px;
+        text-align: center;
+    }
+
+    nav ul li {
+        display: block;
+    }
+
+    .nav-satu {
+        margin-right: 100px;
+    }
+
+    .nav-tiga {
+        margin-left: 100px;
+    }
+
+    .image-footer {
+        /* Center and scale the image nicely */
+        position: absolute;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 260px;
         opacity: 0.5;
     }
 }

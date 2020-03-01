@@ -6,9 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/bootstrap.min.css">
     <link rel="stylesheet" href="/css/style.css">
-    <link rel="stylesheet" href="/css/artikel.css">
-    <link rel="stylesheet" href="/css/add_artikel.css">
-
     <script src="https://kit.fontawesome.com/f45723ccd1.js" crossorigin="anonymous"></script>
     <title>@yield('title')</title>
 </head>
@@ -16,7 +13,7 @@
 <body>
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-light">
-        <img src="/img/logo.png" class="logo-navbar" alt="logo gama eduka">
+        <img src="/img/logo.png" class="logo-navbar img-fluid" alt="logo gama eduka">
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
             aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -82,7 +79,7 @@
                 </div>
             </div>
             <br>
-            <hr>
+            <hr style="color:white;">
             <div class="sosialmedia mx-auto">
                 <a href=""><img style="width: 35px;" src="/img/facebook.png" alt=""></a>
                 <a href=""><img style="width: 35px; margin-left: 50px; margin-right: 50px;" src="/img/instagram.png" alt=""></a>
@@ -99,7 +96,6 @@
     <script src="/js/jquery-3.4.1.slim.min.js"></script>
     <script src="/js/popper.min.js"></script>
     <script src="/js/bootstrap.min.js"></script>
-    <script src="/js/gambar.js"></script>
 </body>
 
 </html>
