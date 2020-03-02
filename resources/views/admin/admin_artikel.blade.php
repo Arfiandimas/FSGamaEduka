@@ -32,7 +32,7 @@
             <div class="card card-admin">
                 <div class="row">
                     <div class="col-sm-5">
-                        <img src="/img/{{ $article->gambar }}" class="gambar-card" alt="">
+                        <img src="{{ asset('storage/thumbnail/'.$article->gambar) }}" class="gambar-card" alt="">
                     </div>
                     <div class="col-sm-7 card-kanan">
                         <h6>{{ $article->judul }}</h6>

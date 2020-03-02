@@ -7,6 +7,8 @@ use Illuminate\Support\Str;
 use App\Article;
 use App\Category;
 
+use Image;
+
 class AdminArtikelController extends Controller
 {
     /**
@@ -41,10 +43,28 @@ class AdminArtikelController extends Controller
      */
     public function store(Request $request)
     {
+
+        $this->validate($request, [
+            'gambar' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:7048'
+        ]);
+
+        $image = $request->file('gambar');
+
+        $image_name = time() . '.' . $image->getClientOriginalExtension();
+
+        $destinationPath = storage_path('app/public/thumbnail');
+
+        $resize_image = Image::make($image->getRealPath());
+
+        $resize_image->resize(1152, 800, function($constraint){
+            $constraint->aspectRatio();
+        })->save($destinationPath . '/' . $image_name);
+
+
         Article::create([
             'judul' => $request->judul,
             'slug' => Str::slug($request->judul),
-            'gambar' => $request->gambar,
+            'gambar' => $image_name,
             'deskripsi' => $request->deskripsi,
             'konten' => $request->konten,
             'category_id' => $request->category_id,

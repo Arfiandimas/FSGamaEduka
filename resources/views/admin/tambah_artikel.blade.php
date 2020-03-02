@@ -8,7 +8,7 @@
 
     <!-- Content -->
     <div class="container">
-        <form action="{{ route('tambahartikel.store') }}" method="post" enctype="multipart/form-data">
+        <form action="{{ route('tambahartikel.store') }}" method="POST" enctype="multipart/form-data">
             {{ csrf_field() }}
             <h6>Judul</h6>
             <div class="input-group mb-3">
@@ -16,15 +16,16 @@
             </div>
 
             <h6>Gambar</h6>
-            <div class="input-group">
+            <input type="file" id="gambar" name = "gambar">
+            {{-- <div class="input-group">
                 <span class="input-group-btn">
                     <span class="btn btn-default btn-file">
                         Browse… <input type="file" id="imgInp">
                     </span>
                 </span>
-                <input type="text" class="nama-gambar" name="gambar" readonly>
+                <input type="text" class="nama-gambar" id="gambar" name="gambar">
             </div>
-            <img id='img-upload' />
+            <img id='img-upload' /> --}}
 
             <h6>Kategori</h6>
             <div class="input-group mb-3">
