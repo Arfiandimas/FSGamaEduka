@@ -32,7 +32,7 @@
             @foreach ($articles as $article)
             <div class="col-lg-4 col-md-6 col-sm-12 grid-item">
                 <div class="card">
-                    <img src="/img/{{ $article->gambar }}" class="card-img-top img-fluid image-article" alt="...">
+                    <img src="{{ asset('storage/thumbnail/'.$article->gambar) }}" class="card-img-top img-fluid image-article" alt="...">
                     <div class="card-body">
                         <h6 class="card-title">{{ $article->judul }}</h6>
                         <p class="card-text">{{ Str::limit($article->konten, 150, '...') }}</p>

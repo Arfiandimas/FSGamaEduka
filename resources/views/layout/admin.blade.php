@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="/css/adminlte.min.css">
     <script src="https://kit.fontawesome.com/f45723ccd1.js" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+    <script src="{{ asset('ckeditor/ckeditor.js') }}"></script>
     <title>@yield('title')</title>
 </head>
 

@@ -37,7 +37,7 @@
                     <div class="col-sm-7 card-kanan">
                         <h6>{{ $article->judul }}</h6>
                         {{-- <p>{{ $article->deskripsi }}</p> --}}
-                        <p class="paragraf-konten">{{ Str::limit($article->konten, 250, '...') }}</p>
+                        <p class="paragraf-konten">{{ Str::limit($article->deskripsi, 250, '...') }}</p>
                         <div class="row kategori-waktu">
                             <div class="col-md-6">
                                 <p class="kategori-admin">{{ $article->category->name }}</p>

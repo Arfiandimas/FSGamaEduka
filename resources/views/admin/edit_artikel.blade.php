@@ -48,5 +48,9 @@
             <button type="submit" class="btn btn-primary">Simpan</button>
         </form>
     </div>
+
+    <script>
+        CKEDITOR.replace( 'konten' );
+    </script>
     <!-- End Content -->
 @endsection
