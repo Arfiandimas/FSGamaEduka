@@ -43,15 +43,19 @@
 
             <h6>Konten</h6>
             <div class="input-group mb-3">
-                <textarea class="form-control" style="height: 600px;" rows="3" name="konten"></textarea>
+                <textarea class="form-control" style="height: 600px;" rows="3" name="konten" id="konten"></textarea>
             </div>
             
             <button type="submit" class="btn btn-primary">Simpan</button>
         </form>
     </div>
 
+        
     <script>
-        CKEDITOR.replace( 'konten' );
+        CKEDITOR.replace( 'konten', {
+            filebrowserUploadUrl: "{{route('upload', ['_token' => csrf_token() ])}}",
+            filebrowserUploadMethod: 'form'
+        });
     </script>
     <!-- End Content -->
 @endsection

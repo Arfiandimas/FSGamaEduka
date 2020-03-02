@@ -42,13 +42,13 @@
 
             <h6>Konten</h6>
             <div class="input-group mb-3">
-                <textarea class="form-control" style="height: 600px;" rows="3" name="konten">{{ $articles->konten }}</textarea>
+                <textarea class="form-control" style="height: 600px;" rows="3" name="konten" id="konten">{{ $articles->konten }}</textarea>
             </div>
 
             <button type="submit" class="btn btn-primary">Simpan</button>
         </form>
     </div>
-
+        
     <script>
         CKEDITOR.replace( 'konten' );
     </script>
