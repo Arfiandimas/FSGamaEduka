@@ -10,4 +10,9 @@ class UtamaController extends Controller
     {
         return view('siswa.index');
     }
+
+    public function about()
+    {
+        return view('siswa.about');
+    }
 }

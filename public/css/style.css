@@ -122,6 +122,34 @@ footer .copyright {
     margin-top: 20px;
 }
 
+.h3about {
+    text-align: center;
+}
+
+.hrabout {
+    width: 120px;
+    margin-top: -6px;
+    position: relative;
+    border: none;
+    height: 2px;
+    background: #707070;
+    margin-bottom: 50px;
+}
+
+.paragrafabout {
+    text-align: center;
+    margin-top: -40px;
+}
+
+.dot {
+    height: 12px;
+    width: 12px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: block;
+    margin-bottom: 8px;
+}
+
 /* 
     ##Device = Desktops
     ##Screen = 1281px to higher resolution desktops

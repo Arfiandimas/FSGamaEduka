@@ -28,7 +28,7 @@
                     <a class="nav-link nav-dua" href="{{ route('artikel.index') }}">Kabar</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link nav-tiga" href="#">About Us</a>
+                    <a class="nav-link nav-tiga" href="{{ route('utama.about') }}">About Us</a>
                 </li>
             </ul>
         </div>

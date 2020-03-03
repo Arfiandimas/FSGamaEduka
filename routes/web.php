@@ -18,6 +18,7 @@
 
 // -------------------------- Siswa ------------------------------
 Route::get('/','UtamaController@index')->name('utama.index');
+Route::get('/about','UtamaController@about')->name('utama.about');
 
 Route::group(['prefix'=>'artikel'] , function(){
     Route::get('/','ArtikelController@index')->name('artikel.index');
