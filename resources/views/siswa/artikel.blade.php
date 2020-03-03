@@ -38,7 +38,7 @@
                         <p class="card-text">{{ Str::limit($article->deskripsi, 150, '...') }}</p>
                     </div>
                     <p class="tgl">Feb 16, 2020</p>
-                    <a href="" class="arrow"><i class="fas fa-arrow-right"></i></a>
+                    <a href="{{ route('artikel.show', $article->slug) }}" class="arrow"><i class="fas fa-arrow-right"></i></a>
                 </div>
             </div>
             @endforeach

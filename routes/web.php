@@ -22,6 +22,7 @@ Route::get('/','UtamaController@index')->name('utama.index');
 Route::group(['prefix'=>'artikel'] , function(){
     Route::get('/','ArtikelController@index')->name('artikel.index');
     Route::get('/show/kategori={id}','ArtikelController@index_by_kategory')->name('artikel.bycategory');
+    Route::get('/show/artikel/{article}','ArtikelController@show')->name('artikel.show');
 });
 
 

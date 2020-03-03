@@ -41,10 +41,19 @@
 
     {{-- Navabar Mobile --}}
     <nav class="nav-mobile">
-        <div class="navbar">
-            <a href="#home" class="active">Home</a>
-            <a href="#news">Kabar</a>
-            <a href="#contact">About Us</a>
+        <div class="navbar shadow-lg">
+            <a href="/" style="margin-left:10px;">
+                <i class="fas fa-home fa-lg"></i>
+                <p>Home</p>
+            </a>
+            <a href="{{ route('artikel.index') }}">
+                <i class="fas fa-rss fa-lg" style="margin-left:12px;"></i>
+                <p>Kabar</p>
+            </a>
+            <a href="http://" style="margin-right:10px;">
+                <i class="far fa-address-card fa-lg" style="margin-left:22px;"></i>
+                <p>About Us</p>
+            </a>
         </div>
     </nav>
     {{-- End Navabar Mobile --}}

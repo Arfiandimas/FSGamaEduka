@@ -58,9 +58,11 @@ class ArtikelController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show($slug)
     {
-        //
+        $artikel = Article::where('slug', $slug)->firstOrFail();
+
+        return view('siswa.showartikel', compact('artikel'));
     }
 
     /**
