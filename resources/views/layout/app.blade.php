@@ -12,7 +12,8 @@
 
 <body>
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-light">
+    <img src="/img/logo.png" class="logo-navbar img-fluid logo-mobile" alt="logo gama eduka">
+    <nav class="navbar navbar-expand-lg navbar-light nav-desktop">
         <img src="/img/logo.png" class="logo-navbar img-fluid" alt="logo gama eduka">
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
             aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -37,6 +38,16 @@
 
     @yield('content')
 
+
+    {{-- Navabar Mobile --}}
+    <nav class="nav-mobile">
+        <div class="navbar">
+            <a href="#home" class="active">Home</a>
+            <a href="#news">Kabar</a>
+            <a href="#contact">About Us</a>
+        </div>
+    </nav>
+    {{-- End Navabar Mobile --}}
 
     <!-- Footer -->
     <footer>
