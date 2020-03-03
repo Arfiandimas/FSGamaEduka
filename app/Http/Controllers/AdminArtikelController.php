@@ -18,7 +18,7 @@ class AdminArtikelController extends Controller
      */
     public function index()
     {
-        $articles = Article::all();
+        $articles = Article::orderBy('id', 'DESC')->get();
 
         return view('admin.admin_artikel', compact('articles'));
     }
@@ -108,15 +108,31 @@ class AdminArtikelController extends Controller
      */
     public function update(Request $request, $id)
     {
+        $this->validate($request, [
+            'gambar' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:7048'
+        ]);
+        
+        $image = $request->file('gambar');
+
+        $image_name = time() . '.' . $image->getClientOriginalExtension();
+
+        $destinationPath = storage_path('app/public/thumbnail');
+
+        $resize_image = Image::make($image->getRealPath());
+
+        $resize_image->resize(1152, 800, function($constraint){
+            $constraint->aspectRatio();
+        })->save($destinationPath . '/' . $image_name);
+
         $articles = Article::find($id);
         $articles->update([
             'judul' => $request->judul,
             'slug' => Str::slug($request->judul),
-            'gambar' => $request->gambar,
             'deskripsi' => $request->deskripsi,
             'konten' => $request->konten,
             'category_id' => $request->category_id,
             'user_id' => auth()->user()->id,
+            'gambar' => $image_name,
         ]);
 
 
@@ -138,32 +154,4 @@ class AdminArtikelController extends Controller
         return redirect()->route('adminartikel.index');
     }
 
-    public function upload(Request $request)
-    {
-        if($request->hasFile('upload')) {
-            //get filename with extension
-            $filenamewithextension = $request->file('upload')->getClientOriginalName();
-    
-            //get filename without extension
-            $filename = pathinfo($filenamewithextension, PATHINFO_FILENAME);
-
-            //get file extension
-            $extension = $request->file('upload')->getClientOriginalExtension();
-    
-            //filename to store
-            $filenametostore = $filename.'_'.time().'.'.$extension;
-
-            //Upload File
-            $request->file('upload')->storeAs('public/uploads', $filenametostore);
-
-            $CKEditorFuncNum = $request->input('CKEditorFuncNum');
-            $url = asset('storage/uploads/'.$filenametostore); 
-            $msg = 'Image successfully uploaded'; 
-            $re = "<script>window.parent.CKEDITOR.tools.callFunction($CKEditorFuncNum, '$url', '$msg')</script>";
-            
-            // Render HTML output 
-            @header('Content-type: text/html; charset=utf-8'); 
-            echo $re;
-        }
-    }
 }

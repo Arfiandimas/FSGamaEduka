@@ -48,9 +48,9 @@
                         </div>
                         <hr class=" hr">
                         <div class="card-img-kanan mx-auto">
-                            <img src="/img/eye.png" alt="">
-                            <a href="{{ route('tambahartikel.edit', $article) }}"><img src="/img/edit.png" alt=""></a>
-                            <a type="submit" href="{{ route('hapusartikel.destroy', $article) }}"><img src="/img/delete.png" alt=""></a>
+                            <a href=""><i class="fas fa-eye"></i></a>
+                            <a href="{{ route('tambahartikel.edit', $article) }}" style="margin-right:20px; margin-left:20px;"><i class="fas fa-edit"></i></a>
+                            <a type="submit" href="{{ route('hapusartikel.destroy', $article) }}"><i class="fas fa-trash-alt"></i></a>
                         </div>
                     </div>
                 </div>

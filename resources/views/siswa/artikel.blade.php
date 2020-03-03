@@ -35,10 +35,10 @@
                     <img src="{{ asset('storage/thumbnail/'.$article->gambar) }}" class="card-img-top img-fluid image-article" alt="...">
                     <div class="card-body">
                         <h6 class="card-title">{{ $article->judul }}</h6>
-                        <p class="card-text">{{ Str::limit($article->konten, 150, '...') }}</p>
+                        <p class="card-text">{{ Str::limit($article->deskripsi, 150, '...') }}</p>
                     </div>
                     <p class="tgl">Feb 16, 2020</p>
-                    <img src="img/arrow.png" class="arrow" alt="">
+                    <a href="" class="arrow"><i class="fas fa-arrow-right"></i></a>
                 </div>
             </div>
             @endforeach

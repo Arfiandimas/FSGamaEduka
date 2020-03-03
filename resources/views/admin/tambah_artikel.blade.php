@@ -52,9 +52,9 @@
 
         
     <script>
-        CKEDITOR.replace( 'konten', {
-            filebrowserUploadUrl: "{{route('upload', ['_token' => csrf_token() ])}}",
-            filebrowserUploadMethod: 'form'
+        CKEDITOR.replace( 'konten' , {
+            width: 1120,
+            height: 600,
         });
     </script>
     <!-- End Content -->

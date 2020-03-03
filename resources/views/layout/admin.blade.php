@@ -49,7 +49,7 @@
                  with font-awesome or any other icon font library -->
               <li class="nav-item">
                 <a href="{{ route('adminartikel.index') }}" class="nav-link">
-                  <i class="nav-icon fas fa-th"></i>
+                  <i class="far fa-newspaper"></i>
                   <p>
                     Artikel
                   </p>
@@ -59,7 +59,7 @@
               <li class="nav-item">
                 <a href="{{ route('logout') }}" class="nav-link" onclick="event.preventDefault();
                 document.getElementById('logout-form').submit();">
-                  <i class="nav-icon fas fa-th"></i>
+                  <i class="fas fa-sign-out-alt"></i>
                   <p>
                     Logout
                   </p>

@@ -15,8 +15,4 @@ class Article extends Model
     {
         return $this->belongsTo(Category::class);
     }
-
-    use SoftDeletes;
-
-    protected $dates = ['deleted_at'];
 }

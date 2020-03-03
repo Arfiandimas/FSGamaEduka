@@ -16,21 +16,33 @@
             </div>
 
             <h6>Gambar</h6>
-            <div class="input-group">
+            <div>
+                <input type="file" name="gambar" id="gambar" value="{{ $articles->gambar }}">
+            </div>
+            {{-- <div class="input-group">
                 <span class="input-group-btn">
                     <span class="btn btn-default btn-file">
                         Browse… <input type="file" id="imgInp">
                     </span>
                 </span>
-                <input type="text" class="nama-gambar" name="gambar" value="{{ $articles->gambar }}" readonly>
+                <input type="text" class="nama-gambar" name="gambar" value="{{ $articles->gambar }}">
             </div>
-            <img id='img-upload' src="/img/{{ $articles->gambar }}"/>
+            <img id='img-upload' src="{{ asset('storage/thumbnail/'.$articles->gambar) }}"/> --}}
+            
+            <img id='img-upload' src="{{ asset('storage/thumbnail/'.$articles->gambar) }}"/>
 
             <h6>Kategori</h6>
             <div class="input-group mb-3">
-                <select class="form-control" id="exampleFormControlSelect1" name="category_id">
+                <select name="category_id" class="form-control">
                     @foreach ($categories as $category)
-                        <option value="{{ $category->id }}">{{ $category->name }}</option>
+                        <option 
+                            value="{{ $category->id }}"
+                            @if ($category->id === $articles->category_id)
+                                selected
+                            @endif
+                            >
+                            {{ $category->name }}
+                        </option>
                     @endforeach
                 </select>
             </div>
@@ -50,7 +62,10 @@
     </div>
         
     <script>
-        CKEDITOR.replace( 'konten' );
+        CKEDITOR.replace( 'konten' , {
+            width: 1120,
+            height: 600,
+        });
     </script>
     <!-- End Content -->
 @endsection

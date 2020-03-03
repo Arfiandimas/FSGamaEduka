@@ -36,7 +36,7 @@ Route::group(['prefix'=>'admin','middleware'=>'auth'], function(){
         Route::get('/tambah','AdminArtikelController@create')->name('tambahartikel.create');
         Route::post('/tambah','AdminArtikelController@store')->name('tambahartikel.store');
         Route::get('/{id}/edit','AdminArtikelController@edit')->name('tambahartikel.edit');
-        Route::post('/{id}/edit','AdminArtikelController@update')->name('tambahartikel.update');
+        Route::post('/{id}/update','AdminArtikelController@update')->name('tambahartikel.update');
         Route::get('/{id}/delete','AdminArtikelController@destroy')->name('hapusartikel.destroy');
     });
 

@@ -15,7 +15,7 @@ class ArtikelController extends Controller
      */
     public function index()
     {
-        $articles = Article::all();
+        $articles = Article::orderBy('id', 'DESC')->get();
         $categories = Category::all();
 
         return view('siswa.artikel', compact('articles', 'categories'));
