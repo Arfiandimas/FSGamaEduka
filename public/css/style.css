@@ -150,6 +150,51 @@ footer .copyright {
     margin-bottom: 8px;
 }
 
+.dotvisi {
+    height: 12px;
+    width: 12px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+.visiabout {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.logovisi {
+    height: 150px;
+    width: 150px;
+    background-color: #FF5757;
+    border-radius: 50%;
+    display: block;
+    margin-bottom: 8px;
+    text-align: center;
+    margin-top: 40px;
+}
+
+.logovisi img {
+    width: 150px;
+}
+
+.logomisi {
+    height: 150px;
+    width: 150px;
+    background-color: #FF5757;
+    border-radius: 50%;
+    display: block;
+    margin-bottom: 8px;
+    text-align: center;
+    margin-top: 40px;
+}
+
+.logomisi img {
+    width: 110px;
+    margin-top: 20px;
+}
+
 /* 
     ##Device = Desktops
     ##Screen = 1281px to higher resolution desktops

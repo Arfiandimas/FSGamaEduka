@@ -50,7 +50,7 @@
                 <i class="fas fa-rss fa-lg" style="margin-left:12px;"></i>
                 <p>Kabar</p>
             </a>
-            <a href="http://" style="margin-right:10px;">
+            <a href="{{ route('utama.about') }}" style="margin-right:10px;">
                 <i class="far fa-address-card fa-lg" style="margin-left:22px;"></i>
                 <p>About Us</p>
             </a>
