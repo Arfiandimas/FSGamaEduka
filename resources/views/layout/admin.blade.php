@@ -40,7 +40,6 @@
         </a>
   
         <!-- Sidebar -->
-        <div class="sidebar">
           <!-- Sidebar user panel (optional) -->
           <!-- Sidebar Menu -->
           <nav class="mt-2">
@@ -52,6 +51,15 @@
                   <i class="far fa-newspaper"></i>
                   <p>
                     Artikel
+                  </p>
+                </a>
+              </li>
+
+              <li class="nav-item">
+                <a href="{{ route('password.index') }}" class="nav-link">
+                  <i class="fas fa-key"></i>
+                  <p>
+                    Ganti Password
                   </p>
                 </a>
               </li>
@@ -72,7 +80,6 @@
             </ul>
           </nav>
           <!-- /.sidebar-menu -->
-        </div>
         <!-- /.sidebar -->
       </aside>
   

@@ -33,6 +33,7 @@ Route::group(['prefix'=>'artikel'] , function(){
 // -------------------------- Admin ------------------------------
 Route::group(['prefix'=>'admin','middleware'=>'auth'], function(){
     Route::get('/','AdminArtikelController@index')->name('adminartikel.index');
+    Route::get('/password','GantiPasswordController@index')->name('password.index');
 
     Route::group(['prefix'=>'artikel'] , function(){
         Route::get('/tambah','AdminArtikelController@create')->name('tambahartikel.create');
