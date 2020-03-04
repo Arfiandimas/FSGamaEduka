@@ -37,7 +37,7 @@
                         <h6 class="card-title">{{ $article->judul }}</h6>
                         <p class="card-text">{{ Str::limit($article->deskripsi, 150, '...') }}</p>
                     </div>
-                    <p class="tgl">Feb 16, 2020</p>
+                    <p class="tgl">{{$article->created_at->format('M d, Y')}}</p>
                     <a href="{{ route('artikel.show', $article->slug) }}" class="arrow"><i class="fas fa-arrow-right"></i></a>
                 </div>
             </div>

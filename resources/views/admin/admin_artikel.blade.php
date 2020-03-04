@@ -43,7 +43,7 @@
                                 <p class="kategori-admin">{{ $article->category->name }}</p>
                             </div>
                             <div class="col-md-6">
-                                <span>Feb 16, 2020</span>
+                                <span>{{$article->created_at->format('M d, Y')}}</span>
                             </div>
                         </div>
                         <hr class=" hr">

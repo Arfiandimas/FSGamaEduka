@@ -4,9 +4,15 @@
 
 @section('halaman','Ganti Password')
 
+@if (session('error'))
+    <div class="alert alert-danger" role="alert">
+        {{ session('error') }}
+    </div>
+@endif
+
 @section('content')
     <div class="container">
-        <form action="" method="post">
+        <form action="{{ route('password.changePassword') }}" method="post" class="formpassword">
             {{ csrf_field() }}
 
             <div class="form-group">
