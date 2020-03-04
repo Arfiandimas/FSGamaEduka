@@ -1,0 +1,317 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+.logo-gama {
+    width: 70px;
+    margin-top: 15px;
+    margin-left: 120px;
+}
+
+.nav-desktop {
+    z-index: 2;
+}
+
+.nav-desktop a {
+    display: inline-block;
+    color: #707070;
+    float: right;
+    margin-top: 10px;
+}
+
+.section2kiri {
+    width: 65%;
+    background-color: pink;
+}
+
+.section2kanan {
+    position: relative;
+    width: 35%;
+    background-color: #5CC4E7;
+    float: right;
+}
+
+div.inline {
+    float: left;
+}
+
+.clearBoth {
+    clear: both;
+}
+
+section {
+    display: flex;
+    min-height: 100%;
+}
+
+.container-a {
+    position: relative;
+    z-index: 3;
+    margin-top: -50px;
+}
+
+footer {
+    width: 100%;
+    background-color: #5CC4E7;
+    margin-top: 50px;
+}
+
+footer h4 {
+    margin-top: 50px;
+    color: white;
+}
+
+footer h5 {
+    margin-top: 30px;
+    color: white;
+}
+
+.baten-footer {
+    background-color: transparent;
+    width: 100px;
+    height: 35px;
+    text-align: center;
+    margin: 4px 2px;
+    border-radius: 16px;
+    color: white;
+    border: 1.5px solid white;
+}
+
+.baten-footer2 {
+    background-color: transparent;
+    width: auto;
+    height: 45px;
+    text-align: center;
+    margin: 4px 2px;
+    border-radius: 20px;
+    color: white;
+    border: 1.5px solid white;
+    padding: 5px 12px 5px 12px;
+}
+
+.image-footer {
+    /* Center and scale the image nicely */
+    position: absolute;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 450px;
+    opacity: 0.5;
+}
+
+footer hr {
+    display: block;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    margin-left: auto;
+    margin-right: auto;
+    border-style: inset;
+    border-width: 2px;
+}
+
+footer .sosialmedia {
+    width: 215px;
+    margin-top: 15px;
+}
+
+footer .copyright {
+    width: 162px;
+    margin-top: 30px;
+    padding-bottom: 40px;
+}
+
+/* 
+    ##Device = Desktops
+    ##Screen = 1281px to higher resolution desktops
+*/
+@media (min-width: 1921px) {
+
+    .logo-mobile {
+        width: 80px;
+        height: 57px;
+        position: absolute;
+        margin-left: 400px;
+    }
+
+    .image-footer {
+        /* Center and scale the image nicely */
+        position: absolute;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 600px;
+        opacity: 0.5;
+    }
+}
+
+@media (min-width: 1025px) and (max-width: 1920px) {
+
+    .logo-mobile {
+        width: 70px;
+        height: 50px;
+        position: absolute;
+        margin-left: 130px;
+    }
+}
+
+/* 
+    ##Device = Tablets, Ipads (landscape)
+    ##Screen = B/w 768px to 1024px
+*/
+@media (min-width: 768px) and (max-width: 991px) and (orientation: landscape) {
+    .logo-mobile {
+        width: 60px;
+        height: 45px;
+        margin-left: 10px;
+    }
+
+    .container-a a {
+        font-size: 12px;
+    }
+
+    .image-footer {
+        /* Center and scale the image nicely */
+        position: absolute;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 260px;
+        opacity: 0.5;
+    }
+}
+
+/* 
+    ##Device = Low Resolution Tablets, Mobiles (Landscape)
+    ##Screen = B/w 481px to 767px
+*/
+
+@media (min-width: 481px) and (max-width: 767px) {
+
+    .logo-mobile {
+        width: 48px;
+        height: 36px;
+        margin-left: 10px;
+    }
+
+    .image-footer {
+        /* Center and scale the image nicely */
+        position: absolute;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 300px;
+        opacity: 0.5;
+    }
+}
+
+/* 
+    ##Device = Most of the Smartphones Mobiles (Portrait)
+    ##Screen = B/w 320px to 479px
+*/
+
+@media (min-width: 320px) and (max-width: 480px) {
+
+    .logo-mobile {
+        width: 42px;
+        height: 30px;
+        margin-left: 10px;
+    }
+
+    .image-footer {
+        /* Center and scale the image nicely */
+        position: absolute;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 200px;
+        opacity: 0.5;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1024px) {
+    .logo-mobile {
+        width: 60px;
+        height: 45px;
+        margin-left: 40px;
+        margin-top: -50px;
+    }
+
+    .image-footer {
+        /* Center and scale the image nicely */
+        position: absolute;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 260px;
+        opacity: 0.5;
+    }
+}
+
+
+@media (min-width: 751px) {
+    .nav-mobile {
+        display: none;
+    }
+
+    .logo-mobile {
+        display: none;
+    }
+}
+
+@media (max-width: 750px) {
+    .nav-desktop {
+        display: none;
+    }
+
+    /* Place the navbar at the bottom of the page, and make it stick */
+    .nav-mobile .navbar {
+        background-color: white;
+        overflow: hidden;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        z-index: 999;
+    }
+
+    /* Style the links inside the navigation bar */
+    .navbar p {
+        float: left;
+        display: block;
+        color: #707070;
+        text-align: center;
+        text-decoration: none;
+        font-size: 17px;
+        padding-top: 25px;
+    }
+
+    .nav-mobile i {
+        position: absolute;
+        padding-top: 5px;
+        margin-left: 10px;
+    }
+
+    /* Change the color of links on hover */
+    /* .navbar a:hover {
+        background-color: #ddd;
+        color: black;
+    } */
+
+    /* Add a color to the active/current link */
+    /* .navbar a.active {
+        background-color: #4CAF50;
+        color: white;
+    } */
+
+
+    .logo-mobile {
+        margin-top: 15px;
+        margin-left: 20px;
+    }
+
+
+}
