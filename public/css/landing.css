@@ -1,5 +1,6 @@
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #707070;
 }
 
 html,
@@ -24,17 +25,36 @@ body {
     margin-top: 10px;
 }
 
-.section2kiri {
-    width: 65%;
+/* .section2kiri {
+    width: 100%;
     background-color: pink;
+    border-right: 500px solid red;
+} */
+
+.section1kiri {
+    position: relative;
+    z-index: 9;
+    background: #5CC4E7;
+    width: 100%;
 }
 
-.section2kanan {
+.section1kiri:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    right: 37%;
+    bottom: 0;
+    left: 0;
+    background: #F4F8F7;
+}
+
+/* .section2kanan {
     position: relative;
     width: 35%;
     background-color: #5CC4E7;
     float: right;
-}
+} */
 
 div.inline {
     float: left;
@@ -54,6 +74,19 @@ section {
     z-index: 3;
     margin-top: -50px;
 }
+
+.section1h1 {
+    font-size: 55px;
+}
+
+.section1p1 {
+    font-size: 28px;
+    font-weight: bold;
+    margin-top: -20px;
+}
+
+
+
 
 footer {
     width: 100%;
@@ -164,6 +197,10 @@ footer .copyright {
     ##Screen = B/w 768px to 1024px
 */
 @media (min-width: 768px) and (max-width: 991px) and (orientation: landscape) {
+    .logo-gama {
+        margin-left: 40px;
+    }
+
     .logo-mobile {
         width: 60px;
         height: 45px;
@@ -182,6 +219,13 @@ footer .copyright {
         background-size: cover;
         width: 260px;
         opacity: 0.5;
+    }
+}
+
+@media (min-width: 751px) and (max-width: 767px) {
+    .logo-gama {
+        margin-left: 30px;
+        width: 60px;
     }
 }
 
@@ -276,6 +320,7 @@ footer .copyright {
         bottom: 0;
         width: 100%;
         z-index: 999;
+        height: 55px;
     }
 
     /* Style the links inside the navigation bar */
@@ -285,32 +330,20 @@ footer .copyright {
         color: #707070;
         text-align: center;
         text-decoration: none;
-        font-size: 17px;
-        padding-top: 25px;
+        font-size: 15px;
+        padding-top: 17px;
     }
 
     .nav-mobile i {
         position: absolute;
-        padding-top: 5px;
-        margin-left: 10px;
+        margin-left: 8px;
     }
-
-    /* Change the color of links on hover */
-    /* .navbar a:hover {
-        background-color: #ddd;
-        color: black;
-    } */
-
-    /* Add a color to the active/current link */
-    /* .navbar a.active {
-        background-color: #4CAF50;
-        color: white;
-    } */
-
 
     .logo-mobile {
         margin-top: 15px;
         margin-left: 20px;
+        position: absolute;
+        z-index: 5;
     }
 
 

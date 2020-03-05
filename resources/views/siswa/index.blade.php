@@ -17,29 +17,47 @@
     
     {{-- Section 2 --}}
     <section>
-    <div class="section2kiri">
+    <div class="section1kiri">
 
                 <div class="nav-desktop">
                 <img src="/img/logo.png" class="logo-gama img-fluid" alt="logo gama eduka">
                     <div class="container container-a">
                         <div class="row">
-                            <div class="col-3 offset-3">
+                            <div class="col-2 offset-2">
                                 <a href="/">Home</a>
                             </div>
-                            <div class="col-3">
+                            <div class="col-2">
                                 <a href="{{ route('artikel.index') }}">Kabar</a>
                             </div>
-                            <div class="col-3">
+                            <div class="col-2">
                                 <a href="{{ route('utama.about') }}">About Us</a>
                             </div>
                         </div>
                     </div>
                 </div>
 
-    </div>
-    <div class="section2kanan">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-7 offset-3">
+                            <div style="width:700px; height:450px; margin-top:100px; border: 5px solid #F8C470; position:relative; z-index:5;">
+                                <div style="width:600px;" class="mx-auto">
+                                    <img src="/img/gambar section 1.svg" alt="" style="width:600px; height: 400px;">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div style="margin-left: 300px; width:400px; position: absolute;">
+                    <h1 class="section1h1">Gama Eduka</h1>
+                    <p class="section1p1">Let's Join Us, Upgrade</p>
+                    <p class="section1p1">Your Skill</p>
+                </div>
 
     </div>
+    {{-- <div class="section2kanan">
+
+    </div> --}}
     </section>
     {{-- End Section 2 --}}
 
