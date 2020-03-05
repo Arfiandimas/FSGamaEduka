@@ -39,21 +39,37 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-7 offset-3">
-                            <div style="width:700px; height:450px; margin-top:100px; border: 5px solid #F8C470; position:relative; z-index:5;">
-                                <div style="width:600px;" class="mx-auto">
-                                    <img src="/img/gambar section 1.svg" alt="" style="width:600px; height: 400px;">
+                            <div class="divgambar">
+                                <div class="wadahgambarsection1" class="mx-auto">
+                                    <img class="gambarsection1" src="/img/gambar section 1.svg" alt="">
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <div style="margin-left: 300px; width:400px; position: absolute;">
+                <div class="divtulisan">
                     <h1 class="section1h1">Gama Eduka</h1>
                     <p class="section1p1">Let's Join Us, Upgrade</p>
-                    <p class="section1p1">Your Skill</p>
+                    <p class="section1p2">Your Skill</p>
                 </div>
 
+                <div class="container-fluid bungkussection1baten">
+                    <div class="row">
+                        <div class="col-8">
+                            <button type="button" class="section1baten section1batenkanan">Program</button>
+                            <button type="button" class="section1baten">Service</button>
+                            <button type="button" class="section1baten">Kabar Kami</button>
+                            <button type="button" class="section1baten">Testimoni</button>
+                            <button type="button" class="section1baten">Bergabung</button>
+                        </div>
+                        <div class="col-4">
+
+                        </div>
+                    </div>
+                </div>
+
+                <img src="/img/downdirection.png" alt="" class="downdirection">
     </div>
     {{-- <div class="section2kanan">
 

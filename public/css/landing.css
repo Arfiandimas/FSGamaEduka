@@ -8,6 +8,7 @@ body {
     height: 100%;
 }
 
+/* ---------------------Section1----------------------- */
 .logo-gama {
     width: 70px;
     margin-top: 15px;
@@ -24,12 +25,6 @@ body {
     float: right;
     margin-top: 10px;
 }
-
-/* .section2kiri {
-    width: 100%;
-    background-color: pink;
-    border-right: 500px solid red;
-} */
 
 .section1kiri {
     position: relative;
@@ -49,21 +44,6 @@ body {
     background: #F4F8F7;
 }
 
-/* .section2kanan {
-    position: relative;
-    width: 35%;
-    background-color: #5CC4E7;
-    float: right;
-} */
-
-div.inline {
-    float: left;
-}
-
-.clearBoth {
-    clear: both;
-}
-
 section {
     display: flex;
     min-height: 100%;
@@ -73,6 +53,25 @@ section {
     position: relative;
     z-index: 3;
     margin-top: -50px;
+}
+
+.divgambar {
+    width: 700px;
+    height: 450px;
+    margin-top: 100px;
+    border: 5px solid #F8C470;
+    position: relative;
+    z-index: 5;
+}
+
+.divgambar .gambarsection1 {
+    width: 600px;
+    height: 400px;
+}
+
+.divgambar .wadahgambarsection1 {
+    width: 600px;
+    margin-left: 50px;
 }
 
 .section1h1 {
@@ -85,8 +84,51 @@ section {
     margin-top: -20px;
 }
 
+.section1p2 {
+    font-size: 28px;
+    font-weight: bold;
+    margin-top: -20px;
+    float: right;
+    margin-right: 20px;
+}
 
+.divtulisan {
+    margin-left: 280px;
+    width: 311px;
+    margin-top: -300px;
+    position: absolute;
+    z-index: 6;
+}
 
+.section1baten {
+    background-color: transparent;
+    width: 110px;
+    height: 35px;
+    text-align: center;
+    margin: 4px 2px;
+    border-radius: 16px;
+    color: #707070;
+    border: 2px solid #F8C470;
+    float: right;
+}
+
+.bungkussection1baten {
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 10px;
+}
+
+.section1batenkanan {
+    margin-right: 70px;
+}
+
+.downdirection {
+    float: right;
+    width: 40px;
+    margin-right: 80px;
+}
+
+/* ---------------------End Section1----------------------- */
 
 footer {
     width: 100%;
@@ -164,6 +206,17 @@ footer .copyright {
 */
 @media (min-width: 1921px) {
 
+    /* ---------------------Section1----------------------- */
+    .divtulisan {
+        margin-left: 650px;
+        width: 311px;
+        margin-top: -300px;
+        position: absolute;
+        z-index: 6;
+    }
+
+    /* ---------------------End Section1----------------------- */
+
     .logo-mobile {
         width: 80px;
         height: 57px;
@@ -192,11 +245,268 @@ footer .copyright {
     }
 }
 
+
+@media (min-width: 992px) and (max-width: 1024px) {
+
+    /* ---------------------Section1----------------------- */
+    .logo-gama {
+        width: 60px;
+        margin-top: 15px;
+        margin-left: 75px;
+    }
+
+    .nav-desktop {
+        z-index: 2;
+    }
+
+    .nav-desktop a {
+        display: inline-block;
+        color: #707070;
+        float: right;
+        margin-top: 10px;
+        margin-right: 22px;
+    }
+
+    .section1kiri {
+        position: relative;
+        z-index: 9;
+        background: #5CC4E7;
+        width: 100%;
+    }
+
+    .section1kiri:before {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        top: 0;
+        right: 37%;
+        bottom: 0;
+        left: 0;
+        background: #F4F8F7;
+    }
+
+    section {
+        display: flex;
+        min-height: 100%;
+    }
+
+    .container-a {
+        position: relative;
+        z-index: 3;
+        margin-top: -50px;
+    }
+
+    .divgambar {
+        width: 500px;
+        height: 300px;
+        margin-top: 100px;
+        border: 5px solid #F8C470;
+        position: relative;
+        z-index: 5;
+    }
+
+    .divgambar .gambarsection1 {
+        width: 400px;
+        height: 280px;
+    }
+
+    .divgambar .wadahgambarsection1 {
+        width: 450px;
+    }
+
+    .divtulisan {
+        margin-left: 150px;
+        width: 230px;
+        margin-top: -200px;
+        position: absolute;
+        z-index: 6;
+    }
+
+    .section1h1 {
+        font-size: 40px;
+    }
+
+    .section1p1 {
+        font-size: 21px;
+        font-weight: bold;
+        margin-top: -15px;
+    }
+
+    .section1p2 {
+        font-size: 21px;
+        font-weight: bold;
+        margin-top: -15px;
+        float: right;
+        margin-right: 20px;
+    }
+
+    .bungkussection1baten {
+        position: absolute;
+        bottom: 0;
+        margin-bottom: 10px;
+    }
+
+    .section1batenkanan {
+        margin-right: 70px;
+    }
+
+    .downdirection {
+        float: right;
+        width: 40px;
+        margin-right: 80px;
+        margin-top: 100px;
+    }
+
+    /* ---------------------End Section1----------------------- */
+
+    .logo-mobile {
+        width: 60px;
+        height: 45px;
+        margin-left: 40px;
+        margin-top: -50px;
+    }
+
+    .image-footer {
+        /* Center and scale the image nicely */
+        position: absolute;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 260px;
+        opacity: 0.5;
+    }
+}
+
 /* 
     ##Device = Tablets, Ipads (landscape)
     ##Screen = B/w 768px to 1024px
 */
 @media (min-width: 768px) and (max-width: 991px) and (orientation: landscape) {
+
+    /* ---------------------Section1----------------------- */
+    .logo-gama {
+        width: 60px;
+        margin-top: 15px;
+        margin-left: 75px;
+    }
+
+    .nav-desktop {
+        z-index: 2;
+    }
+
+    .nav-desktop a {
+        display: inline-block;
+        color: #707070;
+        float: right;
+        margin-top: 10px;
+        margin-right: 22px;
+    }
+
+    .section1kiri {
+        position: relative;
+        z-index: 9;
+        background: #5CC4E7;
+        width: 100%;
+    }
+
+    .section1kiri:before {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        top: 0;
+        right: 37%;
+        bottom: 0;
+        left: 0;
+        background: #F4F8F7;
+    }
+
+    section {
+        display: flex;
+        min-height: 100%;
+    }
+
+    .container-a {
+        position: relative;
+        z-index: 3;
+        margin-top: -50px;
+    }
+
+    .divgambar {
+        width: 400px;
+        height: 300px;
+        margin-top: 100px;
+        border: 5px solid #F8C470;
+        position: relative;
+        z-index: 5;
+        margin-left: 20px;
+    }
+
+    .divgambar .wadahgambarsection1 {
+        width: 350px;
+    }
+
+    .divgambar .gambarsection1 {
+        width: 300px;
+        height: 280px;
+    }
+
+    .divtulisan {
+        margin-left: 150px;
+        width: 200px;
+        margin-top: -200px;
+        position: absolute;
+        z-index: 6;
+    }
+
+    .section1h1 {
+        font-size: 30px;
+    }
+
+    .section1p1 {
+        font-size: 16px;
+        font-weight: bold;
+        margin-top: -15px;
+    }
+
+    .section1p2 {
+        font-size: 16px;
+        font-weight: bold;
+        margin-top: -15px;
+        float: right;
+        margin-right: 20px;
+    }
+
+    .bungkussection1baten {
+        position: absolute;
+        bottom: 0;
+        margin-bottom: 10px;
+    }
+
+    .section1baten {
+        background-color: transparent;
+        width: 80px;
+        height: 30px;
+        text-align: center;
+        margin: 4px 2px;
+        border-radius: 16px;
+        color: #707070;
+        border: 1.5px solid #F8C470;
+        float: right;
+        font-size: 10px;
+    }
+
+    .section1batenkanan {
+        margin-right: 30px;
+    }
+
+    .downdirection {
+        float: right;
+        width: 30px;
+        margin-right: 50px;
+        margin-top: 20px;
+    }
+
+    /* ---------------------End Section1----------------------- */
     .logo-gama {
         margin-left: 40px;
     }
@@ -223,11 +533,249 @@ footer .copyright {
 }
 
 @media (min-width: 751px) and (max-width: 767px) {
+
+    /* ---------------------Section1----------------------- */
+    .logo-gama {
+        width: 60px;
+        margin-top: 15px;
+        margin-left: 75px;
+    }
+
+    .nav-desktop {
+        z-index: 2;
+        position: relative;
+    }
+
+    .nav-desktop a {
+        display: inline-block;
+        color: #707070;
+        float: right;
+        margin-top: 10px;
+        margin-right: 22px;
+    }
+
+    .section1kiri {
+        position: relative;
+        z-index: 9;
+        background: #5CC4E7;
+        width: 100%;
+    }
+
+    .section1kiri:before {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        top: 0;
+        right: 37%;
+        bottom: 0;
+        left: 0;
+        background: #F4F8F7;
+    }
+
+    section {
+        display: flex;
+        min-height: 100%;
+    }
+
+    .container-a {
+        position: relative;
+        z-index: 3;
+        margin-top: -50px;
+    }
+
+    .divgambar {
+        width: 400px;
+        height: 300px;
+        margin-top: 10px;
+        border: 5px solid #F8C470;
+        position: relative;
+        z-index: 5;
+        margin-left: 20px;
+    }
+
+    .divgambar .wadahgambarsection1 {
+        width: 350px;
+    }
+
+    .divgambar .gambarsection1 {
+        width: 300px;
+        height: 280px;
+    }
+
+    .divtulisan {
+        margin-left: 150px;
+        width: 187px;
+        margin-top: -200px;
+        position: absolute;
+        z-index: 6;
+    }
+
+    .section1h1 {
+        font-size: 30px;
+    }
+
+    .section1p1 {
+        font-size: 16px;
+        font-weight: bold;
+        margin-top: -15px;
+    }
+
+    .section1p2 {
+        font-size: 16px;
+        font-weight: bold;
+        margin-top: -15px;
+        float: right;
+        margin-right: 20px;
+    }
+
+    .bungkussection1baten {
+        position: absolute;
+        bottom: 0;
+        margin-bottom: 10px;
+    }
+
+    .section1baten {
+        background-color: transparent;
+        width: 80px;
+        height: 30px;
+        text-align: center;
+        margin: 4px 2px;
+        border-radius: 16px;
+        color: #707070;
+        border: 1.5px solid #F8C470;
+        float: right;
+        font-size: 10px;
+    }
+
+    .section1batenkanan {
+        margin-right: 30px;
+    }
+
+    .downdirection {
+        float: right;
+        width: 20px;
+        margin-right: 50px;
+        margin-top: 20px;
+    }
+
+    /* ---------------------End Section1----------------------- */
+
     .logo-gama {
         margin-left: 30px;
         width: 60px;
     }
 }
+
+@media (min-width: 481px) and (max-width: 750px) {
+
+    /* ---------------------Section1----------------------- */
+    .section1kiri {
+        position: relative;
+        z-index: 9;
+        background: #5CC4E7;
+        width: 100%;
+    }
+
+    .section1kiri:before {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        top: 0;
+        right: 37%;
+        bottom: 0;
+        left: 0;
+        background: #F4F8F7;
+    }
+
+    section {
+        display: flex;
+        min-height: 100%;
+    }
+
+    .container-a {
+        position: relative;
+        z-index: 3;
+        margin-top: -50px;
+    }
+
+    .divgambar {
+        width: 200px;
+        height: 150px;
+        margin-top: 10px;
+        border: 5px solid #F8C470;
+        position: relative;
+        z-index: 5;
+        margin-left: 20px;
+    }
+
+    .divgambar .wadahgambarsection1 {
+        width: 150px;
+    }
+
+    .divgambar .gambarsection1 {
+        width: 150px;
+        height: 80px;
+    }
+
+    .divtulisan {
+        margin-left: 150px;
+        width: 187px;
+        margin-top: -200px;
+        position: absolute;
+        z-index: 6;
+    }
+
+    .section1h1 {
+        font-size: 30px;
+    }
+
+    .section1p1 {
+        font-size: 16px;
+        font-weight: bold;
+        margin-top: -15px;
+    }
+
+    .section1p2 {
+        font-size: 16px;
+        font-weight: bold;
+        margin-top: -15px;
+        float: right;
+        margin-right: 20px;
+    }
+
+    .bungkussection1baten {
+        position: absolute;
+        bottom: 0;
+        margin-bottom: 10px;
+    }
+
+    .section1baten {
+        background-color: transparent;
+        width: 80px;
+        height: 30px;
+        text-align: center;
+        margin: 4px 2px;
+        border-radius: 16px;
+        color: #707070;
+        border: 1.5px solid #F8C470;
+        float: right;
+        font-size: 10px;
+    }
+
+    .section1batenkanan {
+        margin-right: 30px;
+    }
+
+    .downdirection {
+        float: right;
+        width: 20px;
+        margin-right: 50px;
+        margin-top: 20px;
+    }
+
+    /* ---------------------End Section1----------------------- */
+}
+
 
 /* 
     ##Device = Low Resolution Tablets, Mobiles (Landscape)
@@ -273,25 +821,6 @@ footer .copyright {
         background-repeat: no-repeat;
         background-size: cover;
         width: 200px;
-        opacity: 0.5;
-    }
-}
-
-@media (min-width: 992px) and (max-width: 1024px) {
-    .logo-mobile {
-        width: 60px;
-        height: 45px;
-        margin-left: 40px;
-        margin-top: -50px;
-    }
-
-    .image-footer {
-        /* Center and scale the image nicely */
-        position: absolute;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        width: 260px;
         opacity: 0.5;
     }
 }
@@ -345,6 +874,4 @@ footer .copyright {
         position: absolute;
         z-index: 5;
     }
-
-
 }
