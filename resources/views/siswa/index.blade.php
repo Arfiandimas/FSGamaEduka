@@ -15,7 +15,7 @@
     <img src="/img/logo.png" class="img-fluid logo-mobile" alt="logo gama eduka">
     {{-- End Logo Mobile --}}
     
-    {{-- Section 2 --}}
+    {{-- Section 1 --}}
     <section class="section1">
     <div class="section1kiri">
 
@@ -75,12 +75,12 @@
 
     </div> --}}
     </section>
-    {{-- End Section 2 --}}
+    {{-- End Section 1 --}}
 
 
 
-    {{-- Section 1 --}}
-        <div style="width:100%; background-color:#98E0F8;">
+    {{-- Section 2 --}}
+        <div style="width:100%; background-color:#98E0F8; height: 620px;">
             <div class="container">
                 <h5 style="padding-top:50px;">Program Kami</h5>
                 <div class="jumbotron" style="margin-top: 30px; background-color:white;">
@@ -105,8 +105,170 @@
                 </div>
             </div>
         </div>
-    {{-- End Section 1 --}}
+    {{-- End Section 2 --}}
 
+
+
+    {{-- Section 3 --}}
+    <section class="section3 section3kiri">
+        <div class="container">
+            <h5 style="padding-top:50px;">Kenapa Harus Memilih Kami</h5>
+            <div class="kotakkuning mx-auto">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="row">
+                                <div class="col-6">
+                                    <div class="card section3card" style="margin-top:15px">
+                                        <img src="/img/teacher.png" class="section3wadahcardimg mx-auto rounded-circle">
+                                        <b>Tenaga Pengajar Handal</b>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="card section3card" style="margin-top:58px">
+                                        <img src="/img/mind.png" class="section3wadahcardimg mx-auto rounded-circle">
+                                        <b>Ilmu Praktis</b>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-6">
+                                    <div class="card section3card" style="margin-top:15px">
+                                        <img src="/img/library.png" class="section3wadahcardimg mx-auto rounded-circle">>
+                                        <b>Fasilitas Lengkap</b>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="card section3card" style="margin-top:58px">
+                                        <img src="/img/kerja.png" class="section3wadahcardimg mx-auto rounded-circle">
+                                        <b>Langsung Diterima Di Dunia Kerja</b>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <h4 class="section3h4">Service Terbaik Kami</h4>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti eaque iusto delectus rerum, maiores, nostrum iure iste minima aspernatur at illum, explicabo quos rem. Placeat obcaecati rem necessitatibus veniam odit cumque esse tenetur eum officia nesciunt consectetur praesentium voluptates, ut tempore.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    {{-- End Section 3 --}}
+
+
+    {{-- Section 4 --}}
+    <div class="section4">
+        <div class="container">
+            <h5 style="padding-top:50px;">Kabar Terbaru</h5>
+            <div class="row" style="margin-top:25px;">
+                
+                <div class="col-md-4">
+                    <div class="card mx-auto section4card" style="width: 18rem;">
+                        <img src="/img/computer.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                        <h6 class="card-title">Card title</h6>
+                        <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</p>   
+                        <p class="tgl">Feb 16, 2020</p>
+                        <a href="" class="arrow"><i class="fas fa-arrow-right"></i></a>
+                    </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card mx-auto section4card" style="width: 18rem;">
+                        <img src="/img/Cook.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                        <h6 class="card-title">Card title</h6>
+                        <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</p>   
+                        <p class="tgl">Feb 16, 2020</p>
+                        <a href="" class="arrow"><i class="fas fa-arrow-right"></i></a>
+                    </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card mx-auto section4card" style="width: 18rem;">
+                        <img src="/img/nurse.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                        <h6 class="card-title">Card title</h6>
+                        <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</p>
+                        <p class="tgl">Feb 16, 2020</p>
+                        <a href="" class="arrow"><i class="fas fa-arrow-right"></i></a>
+                    </div>
+                    </div>
+                </div>
+                
+            </div>
+            <a href=""><p class="section4showall">Show All</p></a>
+        </div>
+    </div>
+    {{-- End Section 4 --}}
+
+
+    {{-- Section 5 --}}
+    <div class="section5 section5kiri">
+        <div class="container">
+            <h5 style="padding-top:50px;">Kata Mereka</h5>
+            <h5 class="section5h5">Testimoni Siswa Gama Eduka</h5>
+            <div class="row">
+
+                <div class="col-1">
+                    <i class="fas fa-chevron-left section5chevronleft"></i>
+                </div>
+
+                <div class="col-5">
+                    <div class="card mx-auto section5card" style="width: 100%;">
+                    <img src="/img/travel_plans.png" class="section5fotomuka rounded-circle mx-auto">
+                    <p class="section5nama">Arfian Dimas Andi Permana</p>
+                    <p class="section5program">Komputer Dasar</p>
+                        <div class="container">
+                            <p class="section5kesan">"Lorem ipsum dolor sit, amet consectetur adipisicing elit. Explicabo temporibus veniam expedita quidem suscipit, consectetur officiis quisquam enim iusto quis cupiditate sed qui possimus laboriosam nobis nesciunt commodi unde. Odit molestias a nulla id soluta quasi adipisci libero"</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-5">
+                    <div class="card mx-auto section5card" style="width: 100%;">
+                    <img src="/img/success_.png" class="section5fotomuka rounded-circle mx-auto">
+                    <p class="section5nama">Zaufik Rizaldi</p>
+                    <p class="section5program">Microsoft Office</p>
+                        <div class="container">
+                            <p class="section5kesan">"Lorem ipsum dolor sit, amet consectetur adipisicing elit. Explicabo temporibus veniam expedita quidem suscipit, consectetur officiis quisquam enim iusto quis cupiditate sed qui possimus laboriosam nobis nesciunt commodi unde. Odit molestias a nulla id soluta quasi adipisci libero"</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-1">
+                    <i class="fas fa-chevron-right section5chevronright"></i>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    {{-- End Section 5 --}}
+
+
+    {{-- Section 6 --}}
+    <div class="section6">
+        <div class="container">
+            <h5 style="padding-top:50px;">Bergabung</h5>
+            <div class="row section6container">
+                <div class="col-6">
+                    <img src="/img/bergabung.svg" alt="">
+                </div>
+                <div class="col-6">
+                    <h1 class="section6h1">Let's Join Us</h1>
+                    <a href="" class="btn btn-primary section6button">Daftar !</a>
+                </div>
+            </div>
+
+            <h5 class="section6temukan">Temukan Kami</h5>
+            <img class="section6maps" src="/img/maps.png" alt="">
+        </div>
+    </div>
+    {{-- End Section 6 --}}
 
 
     {{-- Navabar Mobile --}}

@@ -130,10 +130,221 @@ body {
 
 /* ---------------------End Section1----------------------- */
 
+
+
+/* ---------------------End Section3----------------------- */
+.section3 {
+    display: flex;
+    height: 780px;
+}
+
+.section3kiri {
+    position: relative;
+    z-index: 9;
+    background: #5CC4E7;
+    width: 100%;
+}
+
+.section3kiri:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    right: 37%;
+    bottom: 0;
+    left: 0;
+    background: #F4F8F7;
+}
+
+
+.kotakkuning {
+    width: 90%;
+    height: 80%;
+    border: 5px solid #F8C470;
+    position: relative;
+    z-index: 5;
+    margin-top: 2%;
+}
+
+.section3col6kanan {
+    top: 50%;
+    bottom: 50%;
+}
+
+.section3h4 {
+    margin-top: 200px;
+}
+
+.section3card {
+    width: 13rem;
+    height: 15rem;
+    box-shadow: 5px 5px 5px 0 rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.section3wadahcardimg {
+    width: 100px;
+    height: 100px;
+    background-color: #C7EFF8;
+    margin-top: 20%;
+}
+
+/* ---------------------End Section3----------------------- */
+
+
+
+
+/* ---------------------Section4----------------------- */
+.section4 {
+    display: flex;
+    height: 590px;
+    background-color: #E6F8FE;
+}
+
+.tgl {
+    margin-bottom: -30px;
+}
+
+.arrow {
+    float: right;
+    margin-top: 8px;
+}
+
+.section4showall {
+    text-align: center;
+    text-decoration: underline;
+    font-style: italic;
+    margin-top: 30px;
+    color: #707070;
+}
+
+.section4card {
+    box-shadow: 3px 5px 5px 0 rgba(0, 0, 0, 0.2);
+}
+
+/* ---------------------End Section4----------------------- */
+
+
+
+/* ---------------------Section5----------------------- */
+.section5 {
+    display: flex;
+    height: 500px;
+}
+
+.section5kiri {
+    position: relative;
+    z-index: 9;
+    background: #5CC4E7;
+    width: 100%;
+}
+
+.section5kiri:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    right: 37%;
+    bottom: 0;
+    left: 0;
+    background: #F4F8F7;
+}
+
+.section5h5 {
+    margin-top: 10px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 80px;
+}
+
+.section5chevronleft {
+    float: left;
+    margin-top: 100%;
+}
+
+.section5chevronright {
+    float: right;
+    margin-top: 100%;
+}
+
+.section5card {
+    box-shadow: 3px 5px 5px 0 rgba(0, 0, 0, 0.2);
+    height: 250px;
+}
+
+.section5fotomuka {
+    width: 100px;
+    height: 100px;
+    margin-top: -50px;
+    border: 0.5px solid #707070;
+    background-color: #F4F8F7;
+    box-shadow: 0px 2px 5px 2px rgba(0, 0, 0, 0.2);
+}
+
+.section5nama {
+    text-align: center;
+    font-weight: 700;
+    margin-bottom: 0;
+}
+
+.section5program {
+    text-align: center;
+    font-size: 15px;
+}
+
+.section5kesan {
+    font-size: 14px;
+    font-style: italic;
+}
+
+/* ---------------------End Section5----------------------- */
+
+
+
+/* ---------------------Section6----------------------- */
+.section6 {
+    display: flex;
+    height: 1100px;
+    background-color: #E6F8FE;
+}
+
+.section6container {
+    margin-top: 50px;
+}
+
+.section6h1 {
+    margin-top: 20%;
+    font-size: 70px;
+    font-weight: bold;
+}
+
+.section6button {
+    border-radius: 30px;
+    padding: 5px 25px 5px 25px;
+    margin-left: 150px;
+}
+
+.section6temukan {
+    margin-top: 60px;
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.section6maps {
+    width: 100%;
+    height: 400px;
+    border-radius: 15px;
+}
+
+/* ---------------------End Section6----------------------- */
+
+
+
+
 footer {
     width: 100%;
     background-color: #5CC4E7;
-    margin-top: 50px;
 }
 
 footer h4 {
