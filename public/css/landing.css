@@ -44,7 +44,7 @@ body {
     background: #F4F8F7;
 }
 
-section {
+.section1 {
     display: flex;
     min-height: 100%;
 }
@@ -285,11 +285,6 @@ footer .copyright {
         background: #F4F8F7;
     }
 
-    section {
-        display: flex;
-        min-height: 100%;
-    }
-
     .container-a {
         position: relative;
         z-index: 3;
@@ -418,11 +413,6 @@ footer .copyright {
         bottom: 0;
         left: 0;
         background: #F4F8F7;
-    }
-
-    section {
-        display: flex;
-        min-height: 100%;
     }
 
     .container-a {
@@ -572,11 +562,6 @@ footer .copyright {
         background: #F4F8F7;
     }
 
-    section {
-        display: flex;
-        min-height: 100%;
-    }
-
     .container-a {
         position: relative;
         z-index: 3;
@@ -685,11 +670,6 @@ footer .copyright {
         bottom: 0;
         left: 0;
         background: #F4F8F7;
-    }
-
-    section {
-        display: flex;
-        min-height: 100%;
     }
 
     .container-a {

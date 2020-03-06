@@ -16,7 +16,7 @@
     {{-- End Logo Mobile --}}
     
     {{-- Section 2 --}}
-    <section>
+    <section class="section1">
     <div class="section1kiri">
 
                 <div class="nav-desktop">
@@ -77,6 +77,35 @@
     </section>
     {{-- End Section 2 --}}
 
+
+
+    {{-- Section 1 --}}
+        <div style="width:100%; background-color:#98E0F8;">
+            <div class="container">
+                <h5 style="padding-top:50px;">Program Kami</h5>
+                <div class="jumbotron" style="margin-top: 30px; background-color:white;">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-sm-1">
+                                <i class="fas fa-chevron-left" style="position: relative; float: left; margin-top:170px;"></i>
+                            </div>  
+                            <div class="col-sm-5">
+                                <img src="/img/program komputer.svg" alt="" class="img-fluid" style="width:100%; height:auto;">
+                            </div>
+                            <div class="col-sm-5">
+                                <h5>Pelatihan Komputer Dasar</h5>
+                                <span style="inline-block; color: #F9A826;"><i class="far fa-clock"></i><p>25 Pertemuan</p></span>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint porro voluptatum sapiente mollitia, non nesciunt deserunt tempore rem repudiandae sequi laudantium similique tempora tenetur aspernatur quidem provident suscipit delectus consequatur architecto repellendus cupiditate vitae inventore doloribus facere. Harum maiores quibusdam, earum tempore ipsa possimus est. Ex quos laudantium, aperiam quo in ab sint eligendi minus ullam libero rem recusandae consequatur pariatur deserunt veritatis id hic dicta tempore.</p>
+                            </div>
+                            <div class="col-sm-1">
+                                <i class="fas fa-chevron-right" style="position: relative; float: right; margin-top:170px;"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    {{-- End Section 1 --}}
 
 
 
