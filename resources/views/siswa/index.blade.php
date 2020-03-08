@@ -36,22 +36,42 @@
                     </div>
                 </div>
 
-                <div class="container">
-                    <div class="row">
-                        <div class="col-7 offset-3">
-                            <div class="divgambar">
-                                <div class="wadahgambarsection1" class="mx-auto">
-                                    <img class="gambarsection1" src="/img/gambar section 1.svg" alt="">
+                <div class="section1bagiandesk">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-7 offset-3">
+                                <div class="divgambar">
+                                    <div class="wadahgambarsection1" class="mx-auto">
+                                        <img class="gambarsection1" src="/img/gambar section 1.svg" alt="">
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
+
+                    <div class="divtulisan">
+                        <h1 class="section1h1">Gama Eduka</h1>
+                        <p class="section1p1">Let's Join Us, Upgrade</p>
+                        <p class="section1p2">Your Skill</p>
+                    </div>
                 </div>
 
-                <div class="divtulisan">
-                    <h1 class="section1h1">Gama Eduka</h1>
-                    <p class="section1p1">Let's Join Us, Upgrade</p>
-                    <p class="section1p2">Your Skill</p>
+                <div class="section1bagianmobile">
+                    <div class="container">
+                        <div class="divgambarmobile">
+                            <div class="wadahgambarmobile mx-auto">
+                                <img class="gambarsection1mobile" src="/img/gambar section 1.svg" alt="">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="divtulisanmobile">
+                        <div class="wadahtulisanmobile mx-auto">
+                            <h1 class="section1h1mobile">Gama Eduka</h1>
+                            <p class="section1p1mobile">Let's Join Us, Upgrade</p>
+                            <p class="section1p2mobile">Your Skill</p>
+                        </div>
+                    </div>
                 </div>
 
                 <div class="container-fluid bungkussection1baten">
@@ -80,31 +100,80 @@
 
 
     {{-- Section 2 --}}
-        {{-- <div style="width:100%; background-color:#98E0F8; height: 620px;">
+        <div class="section2">
             <div class="container">
-                <h5 style="padding-top:50px;">Program Kami</h5>
-                <div class="jumbotron" style="margin-top: 30px; background-color:white;">
-                    <div class="container-fluid">
-                        <div class="row">
-                            <div class="col-sm-1">
-                                <i class="fas fa-chevron-left" style="position: relative; float: left; margin-top:170px;"></i>
-                            </div>  
-                            <div class="col-sm-5">
-                                <img src="/img/program komputer.svg" alt="" class="img-fluid" style="width:100%; height:auto;">
+                <h5 class="section2h5">Program Kami</h5>
+                <div class="section2wadah mx-auto">
+                    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+                        <div class="carousel-inner">
+
+                            <div class="carousel-item active">    
+                                <div class="container-fluid">
+                                    <div class="row">
+                                        <div class="col-md-5 offset-1">
+                                            <img src="/img/program komputer.svg" alt="" class="img-fluid" style="width:100%; height:auto;">
+                                        </div>
+                                        <div class="col-md-5">
+                                            <h5 class="section2judulprogram">Pelatihan Komputer Dasar</h5>
+                                            <span class="section2clock">
+                                                <i class="far fa-clock"></i>
+                                                <p class="section2pertemuan">25 Pertemuan</p>
+                                            </span>
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint porro voluptatum sapiente mollitia, non nesciunt deserunt tempore rem repudiandae sequi laudantium similique tempora tenetur aspernatur quidem provident suscipit delectus consequatur architecto repellendus cupiditate vitae inventore doloribus facere. Harum maiores quibusdam, earum tempore ipsa possimus est. Ex quos laudantium, aperiam quo in ab sint eligendi minus ullam libero rem recusandae consequatur pariatur deserunt veritatis id hic dicta tempore.</p>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="col-sm-5">
-                                <h5>Pelatihan Komputer Dasar</h5>
-                                <span style="inline-block; color: #F9A826;"><i class="far fa-clock"></i><p>25 Pertemuan</p></span>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint porro voluptatum sapiente mollitia, non nesciunt deserunt tempore rem repudiandae sequi laudantium similique tempora tenetur aspernatur quidem provident suscipit delectus consequatur architecto repellendus cupiditate vitae inventore doloribus facere. Harum maiores quibusdam, earum tempore ipsa possimus est. Ex quos laudantium, aperiam quo in ab sint eligendi minus ullam libero rem recusandae consequatur pariatur deserunt veritatis id hic dicta tempore.</p>
+
+                            <div class="carousel-item">    
+                                <div class="container-fluid">
+                                    <div class="row">
+                                        <div class="col-md-5 offset-1">
+                                            <img src="/img/program komputer.svg" alt="" class="img-fluid" style="width:100%; height:auto;">
+                                        </div>
+                                        <div class="col-md-5">
+                                            <h5 class="section2judulprogram">Pelatihan Komputer Dasar</h5>
+                                            <span class="section2clock">
+                                                <i class="far fa-clock"></i>
+                                                <p class="section2pertemuan">25 Pertemuan</p>
+                                            </span>
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint porro voluptatum sapiente mollitia, non nesciunt deserunt tempore rem repudiandae sequi laudantium similique tempora tenetur aspernatur quidem provident suscipit delectus consequatur architecto repellendus cupiditate vitae inventore doloribus facere. Harum maiores quibusdam, earum tempore ipsa possimus est. Ex quos laudantium, aperiam quo in ab sint eligendi minus ullam libero rem recusandae consequatur pariatur deserunt veritatis id hic dicta tempore.</p>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="col-sm-1">
-                                <i class="fas fa-chevron-right" style="position: relative; float: right; margin-top:170px;"></i>
+
+                            <div class="carousel-item">    
+                                <div class="container-fluid">
+                                    <div class="row">
+                                        <div class="col-md-5 offset-1">
+                                            <img src="/img/program komputer.svg" alt="" class="img-fluid" style="width:100%; height:auto;">
+                                        </div>
+                                        <div class="col-md-5">
+                                            <h5 class="section2judulprogram">Pelatihan Komputer Dasar</h5>
+                                            <span class="section2clock">
+                                                <i class="far fa-clock"></i>
+                                                <p class="section2pertemuan">25 Pertemuan</p>
+                                            </span>
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint porro voluptatum sapiente mollitia, non nesciunt deserunt tempore rem repudiandae sequi laudantium similique tempora tenetur aspernatur quidem provident suscipit delectus consequatur architecto repellendus cupiditate vitae inventore doloribus facere. Harum maiores quibusdam, earum tempore ipsa possimus est. Ex quos laudantium, aperiam quo in ab sint eligendi minus ullam libero rem recusandae consequatur pariatur deserunt veritatis id hic dicta tempore.</p>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
+
                         </div>
-                    </div>
+                        <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                            <span class="fas fa-chevron-left" style="color: black;" aria-hidden="true"></span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                            <span class="fas fa-chevron-right" style="color: black;" aria-hidden="true"></span>
+                            <span class="sr-only">Next</span>
+                        </a>
+                        </div>
                 </div>
             </div>
-        </div> --}}
+        </div>
     {{-- End Section 2 --}}
 
 

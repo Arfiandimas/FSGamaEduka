@@ -126,6 +126,40 @@ body {
 /* ---------------------End Section1----------------------- */
 
 
+/* ---------------------Section2----------------------- */
+.section2 {
+    width: 100%;
+    background-color: #98E0F8;
+    min-height: 500px;
+    padding-bottom: 1px;
+}
+
+.section2h5 {
+    padding-top: 50px;
+}
+
+.section2wadah {
+    margin-top: 20px;
+    margin-bottom: 50px;
+    width: 100%;
+    background-color: white;
+    padding-top: 20px;
+    border-radius: 5px;
+}
+
+.section2clock {
+    display: inline-flex;
+    color: #F9A826;
+}
+
+.section2pertemuan {
+    margin-left: 5px;
+    margin-top: -5px;
+}
+
+/* ---------------------End Section2----------------------- */
+
+
 
 /* ---------------------Section3----------------------- */
 .section3 {
@@ -1162,7 +1196,8 @@ footer .copyright {
 
     /* ---------------------End Section1----------------------- */
 
-    /* ---------------------End Section3----------------------- */
+
+    /* ---------------------Section3----------------------- */
     .section3 {
         min-height: 900px;
     }
@@ -1315,7 +1350,7 @@ footer .copyright {
     }
 
     .section1batenkanan {
-        margin-right: 30px;
+        margin-right: 20px;
     }
 
     .downdirection {
@@ -1416,6 +1451,41 @@ footer .copyright {
 */
 
 @media (min-width: 481px) and (max-width: 767px) {
+
+    /* ---------------------Section2----------------------- */
+
+    .section2wadah {
+        margin-top: 20px;
+        margin-bottom: 50px;
+        width: 80%;
+        background-color: white;
+        padding-top: 20px;
+        border-radius: 5px;
+    }
+
+    .section2judulprogram {
+        text-align: center;
+        margin-top: 10px;
+    }
+
+    .section2clock {
+        margin-left: 120px;
+        margin-top: -10px;
+    }
+
+    .carousel-control-prev {
+        position: absolute;
+        margin-left: -50px;
+    }
+
+    .carousel-control-next {
+        position: absolute;
+        margin-right: -50px;
+    }
+
+    /* ---------------------End Section2----------------------- */
+
+
     .image-footer {
         /* Center and scale the image nicely */
         position: absolute;
@@ -1527,30 +1597,6 @@ footer .copyright {
 
 @media (min-width: 320px) and (max-width: 480px) {
 
-    /* ---------------------Section1----------------------- */
-    .section1 {
-        display: flex;
-        height: 250px;
-    }
-
-    .section1kiri {
-        position: relative;
-        z-index: 9;
-        background: #5CC4E7;
-        width: 100%;
-    }
-
-    .section1kiri:before {
-        content: "";
-        position: absolute;
-        z-index: -1;
-        top: 0;
-        right: 37%;
-        bottom: 0;
-        left: 0;
-        background: #F4F8F7;
-    }
-
     .logo-mobile {
         width: 25px;
         margin-top: 15px;
@@ -1559,80 +1605,38 @@ footer .copyright {
         z-index: 10;
     }
 
-    .divgambar {
-        width: 200px;
-        height: 120px;
-        margin-top: 80px;
-        border: 3px solid #F8C470;
-        position: relative;
-        z-index: 5;
+    /* ---------------------Section2----------------------- */
+
+    .section2wadah {
+        margin-top: 20px;
+        margin-bottom: 50px;
+        width: 80%;
+        background-color: white;
+        padding-top: 20px;
+        border-radius: 5px;
     }
 
-    .divgambar .wadahgambarsection1 {
-        width: 200px;
-    }
-
-    .divgambar .gambarsection1 {
-        width: 130px;
-        height: 110px;
-    }
-
-    .divtulisan {
-        margin-left: 40px;
-        width: 130px;
-        margin-top: -90px;
-        position: absolute;
-        z-index: 6;
-    }
-
-    .section1h1 {
-        font-size: 20px;
-    }
-
-    .section1p1 {
-        font-size: 11px;
-        font-weight: bold;
-        margin-top: -12px;
-    }
-
-    .section1p2 {
-        font-size: 11px;
-        font-weight: bold;
-        margin-top: -17px;
-        float: right;
-        margin-right: 20px;
-    }
-
-    .bungkussection1baten {
-        position: absolute;
-        bottom: 0;
-        margin-bottom: 10px;
-        display: none;
-    }
-
-    .section1baten {
-        background-color: transparent;
-        width: 50px;
-        height: 20px;
+    .section2judulprogram {
         text-align: center;
-        margin: 4px 2px;
-        border-radius: 16px;
-        color: #707070;
-        border: 1.5px solid #F8C470;
-        font-size: 7px;
+        margin-top: 10px;
     }
 
-    .section1batenkanan {
-        margin-right: 30px;
+    .section2clock {
+        margin-left: 50px;
+        margin-top: -10px;
     }
 
-    .downdirection {
-        float: right;
-        width: 15px;
-        margin-right: 30px;
+    .carousel-control-prev {
+        position: absolute;
+        margin-left: -44px;
     }
 
-    /* ---------------------End Section1----------------------- */
+    .carousel-control-next {
+        position: absolute;
+        margin-right: -44px;
+    }
+
+    /* ---------------------End Section2----------------------- */
 
     /* ---------------------End Section3----------------------- */
     .section3 {
@@ -1701,7 +1705,7 @@ footer .copyright {
         height: 13rem;
         box-shadow: 5px 5px 5px 0 rgba(0, 0, 0, 0.2);
         text-align: center;
-        margin-top: 250px;
+        margin-top: 238px;
         margin-left: -110px;
         margin-right: auto;
     }
@@ -1737,13 +1741,12 @@ footer .copyright {
     .section6h1 {
         margin-top: 20%;
         font-size: 20px;
-        font-weight: bold;
     }
 
     .section6button {
         border-radius: 30px;
         padding: 3px 10px 3px 10px;
-        width: 60px;
+        width: 70px;
         margin-left: 30px;
         font-size: 10px;
     }
@@ -1751,14 +1754,13 @@ footer .copyright {
     .section6temukan {
         margin-top: 40px;
         text-align: center;
-        font-weight: bold;
         margin-bottom: 12px;
-        font-size: 12px;
+        font-size: 20px;
     }
 
     .section6maps {
         width: 100%;
-        height: 100px;
+        height: 150px;
         border-radius: 15px;
         margin-bottom: 15px;
     }
@@ -1862,4 +1864,123 @@ footer .copyright {
     }
 
     /* ---------------------End Section5----------------------- */
+}
+
+
+
+@media (min-width: 481px) {
+    .section1bagianmobile {
+        display: none;
+    }
+}
+
+@media (max-width: 480px) {
+    .section1bagiandesk {
+        display: none;
+    }
+
+    /* ---------------------Section1----------------------- */
+    .section1 {
+        display: flex;
+        height: 250px;
+    }
+
+    .section1kiri {
+        position: relative;
+        z-index: 9;
+        background: #5CC4E7;
+        width: 100%;
+    }
+
+    .section1kiri:before {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        top: 0;
+        right: 0%;
+        bottom: 0;
+        left: 0;
+        background: #F4F8F7;
+    }
+
+    .divgambarmobile {
+        width: 100%;
+        height: 100%;
+        margin-top: 80px;
+        border: 0px solid #F8C470;
+        position: relative;
+        z-index: 5;
+    }
+
+    .wadahgambarmobile {
+        width: 300px;
+    }
+
+    .divgambarmobile .gambarsection1mobile {
+        width: 300px;
+        height: 110px;
+        opacity: 0.5;
+    }
+
+    .divtulisanmobile {
+        margin-left: 0px;
+        width: 100%;
+        height: 100%;
+        margin-top: -90px;
+        position: absolute;
+        z-index: 6;
+    }
+
+    .wadahtulisanmobile {
+        width: 227px;
+    }
+
+    .section1h1mobile {
+        font-size: 40px;
+    }
+
+    .section1p1mobile {
+        font-size: 20px;
+        font-weight: bold;
+        margin-top: -12px;
+    }
+
+    .section1p2mobile {
+        font-size: 20px;
+        font-weight: bold;
+        margin-top: -17px;
+        float: none;
+        margin-right: 20px;
+    }
+
+    .bungkussection1baten {
+        position: absolute;
+        bottom: 0;
+        margin-bottom: 10px;
+        display: none;
+    }
+
+    .section1baten {
+        background-color: transparent;
+        width: 50px;
+        height: 20px;
+        text-align: center;
+        margin: 4px 2px;
+        border-radius: 16px;
+        color: #707070;
+        border: 1.5px solid #F8C470;
+        font-size: 7px;
+    }
+
+    .section1batenkanan {
+        margin-right: 30px;
+    }
+
+    .downdirection {
+        float: right;
+        width: 15px;
+        margin-right: 30px;
+    }
+
+    /* ---------------------End Section1----------------------- */
 }
