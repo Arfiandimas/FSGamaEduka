@@ -69,17 +69,17 @@
                     <p>Jl. Ring Road Utara, Ngringin, Condongcatur, Kec. Depok, Kabupaten Sleman, Daerah Istimewa
                         Yogyakarta 55281
                     </p>
-                    <div style="display: flex;">
+                    <div class="footerwadahkontak">
                         <button type="button" class="baten-footer">Email</button>
-                        <p style="margin-top: auto; margin-bottom: 11px; margin-left: 15px;">Gamaeduka@gmail.com</p>
+                        <p class="footerparagraf">Gamaeduka@gmail.com</p>
                     </div>
-                    <div style="display: flex; margin-top: 5px;">
+                    <div class="footerwadahkontak">
                         <button type="button" class="baten-footer">Phone</button>
-                        <p style="margin-top: auto; margin-bottom: 11px; margin-left: 15px;"> 0814-4353-2121</p>
+                        <p class="footerparagraf"> 0814-4353-2121</p>
                     </div>
-                    <div style="display: flex; margin-top: 5px;">
+                    <div class="footerwadahkontak">
                         <button type="button" class="baten-footer">WA</button>
-                        <p style="margin-top: auto; margin-bottom: 11px; margin-left: 15px;">0873-4545-0000</p>
+                        <p class="footerparagraf">0873-4545-0000</p>
                     </div>
                 </div>
                 <div class="col-md-4">
@@ -101,9 +101,9 @@
             <br>
             <hr style="color:white;">
             <div class="sosialmedia mx-auto">
-                <a href=""><img style="width: 35px;" src="/img/facebook.png" alt=""></a>
-                <a href=""><img style="width: 35px; margin-left: 50px; margin-right: 50px;" src="/img/instagram.png" alt=""></a>
-                <a href=""><img style="width: 35px;" src="/img/twitter.png" alt=""></a>
+                <a href=""><img class="footerlogososlialmedia" src="/img/facebook.png" alt=""></a>
+                <a href=""><img class="footerlogososlialmediatengah" src="/img/instagram.png" alt=""></a>
+                <a href=""><img class="footerlogososlialmedia" src="/img/twitter.png" alt=""></a>
             </div>
             <div class="copyright mx-auto">
                 <img src="/img/copyright.png" style="width: 25px;" alt="copyright">

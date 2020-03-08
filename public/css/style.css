@@ -1,5 +1,6 @@
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #707070;
 }
 
 .baten {
@@ -11,6 +12,10 @@ body {
 
 .grid-item {
     margin: 20px -65px 0px 0px;
+}
+
+.cardartikelsiswa {
+    margin-bottom: 30px;
 }
 
 .image-article {
@@ -29,22 +34,6 @@ body {
     margin-top: -38px;
 }
 
-footer {
-    width: 100%;
-    background-color: #5CC4E7;
-    margin-top: 50px;
-}
-
-footer h4 {
-    margin-top: 50px;
-    color: white;
-}
-
-footer h5 {
-    margin-top: 30px;
-    color: white;
-}
-
 .grid-item .card {
     box-shadow: 3px 3px 3px 0 rgba(0, 0, 0, 0.2);
     transition: 0.3s;
@@ -57,60 +46,6 @@ footer h5 {
 
 .baten:hover {
     background-color: lightblue;
-}
-
-.baten-footer {
-    background-color: transparent;
-    width: 100px;
-    height: 35px;
-    text-align: center;
-    margin: 4px 2px;
-    border-radius: 16px;
-    color: white;
-    border: 1.5px solid white;
-}
-
-.baten-footer2 {
-    background-color: transparent;
-    width: auto;
-    height: 45px;
-    text-align: center;
-    margin: 4px 2px;
-    border-radius: 20px;
-    color: white;
-    border: 1.5px solid white;
-    padding: 5px 12px 5px 12px;
-}
-
-.image-footer {
-    /* Center and scale the image nicely */
-    position: absolute;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 450px;
-    opacity: 0.5;
-}
-
-footer hr {
-    display: block;
-    margin-top: 0.5em;
-    margin-bottom: 0.5em;
-    margin-left: auto;
-    margin-right: auto;
-    border-style: inset;
-    border-width: 2px;
-}
-
-footer .sosialmedia {
-    width: 215px;
-    margin-top: 15px;
-}
-
-footer .copyright {
-    width: 162px;
-    margin-top: 30px;
-    padding-bottom: 40px;
 }
 
 .imgshowartikel {
@@ -195,6 +130,98 @@ footer .copyright {
     margin-top: 20px;
 }
 
+/* ---------------------Footer----------------------- */
+footer {
+    width: 100%;
+    background-color: #5CC4E7;
+}
+
+footer h4 {
+    margin-top: 50px;
+    color: white;
+}
+
+footer h5 {
+    margin-top: 30px;
+    color: white;
+}
+
+.footerwadahkontak {
+    display: flex;
+}
+
+.baten-footer {
+    background-color: transparent;
+    width: 100px;
+    height: 35px;
+    text-align: center;
+    margin: 4px 2px;
+    border-radius: 16px;
+    color: white;
+    border: 1.5px solid white;
+}
+
+.footerparagraf {
+    margin-top: auto;
+    margin-bottom: 11px;
+    margin-left: 15px;
+}
+
+.baten-footer2 {
+    background-color: transparent;
+    width: auto;
+    height: 45px;
+    text-align: center;
+    margin: 4px 2px;
+    border-radius: 20px;
+    color: white;
+    border: 1.5px solid white;
+    padding: 5px 12px 5px 12px;
+}
+
+.image-footer {
+    /* Center and scale the image nicely */
+    position: absolute;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 450px;
+    opacity: 0.5;
+}
+
+footer hr {
+    display: block;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    margin-left: auto;
+    margin-right: auto;
+    border-style: inset;
+    border-width: 2px;
+}
+
+footer .sosialmedia {
+    width: 215px;
+    margin-top: 15px;
+}
+
+.footerlogososlialmedia {
+    width: 35px;
+}
+
+.footerlogososlialmediatengah {
+    width: 35px;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+footer .copyright {
+    width: 162px;
+    margin-top: 30px;
+    padding-bottom: 40px;
+}
+
+/* ---------------------End Footer----------------------- */
+
 /* 
     ##Device = Desktops
     ##Screen = 1281px to higher resolution desktops
@@ -228,16 +255,6 @@ footer .copyright {
         width: 30px;
         margin-left: 480px;
         margin-top: -35px;
-    }
-
-    .image-footer {
-        /* Center and scale the image nicely */
-        position: absolute;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        width: 600px;
-        opacity: 0.5;
     }
 }
 
@@ -276,6 +293,54 @@ footer .copyright {
     .grid-item {
         margin: 20px -65px 0px 0px;
     }
+
+    /* ---------------------Footer----------------------- */
+    .baten-footer {
+        background-color: transparent;
+        width: 100px;
+        height: 35px;
+        text-align: center;
+        margin: 4px 2px;
+        border-radius: 16px;
+        color: white;
+        border: 1.5px solid white;
+    }
+
+    .baten-footer2 {
+        background-color: transparent;
+        width: auto;
+        height: 45px;
+        text-align: center;
+        margin: 4px 2px;
+        border-radius: 20px;
+        color: white;
+        border: 1.5px solid white;
+        padding: 5px 12px 5px 12px;
+        font-size: 15px;
+    }
+
+    .image-footer {
+        /* Center and scale the image nicely */
+        position: absolute;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 320px;
+        opacity: 0.5;
+    }
+
+    footer .sosialmedia {
+        width: 215px;
+        margin-top: 15px;
+    }
+
+    footer .copyright {
+        width: 162px;
+        margin-top: 30px;
+        padding-bottom: 40px;
+    }
+
+    /* ---------------------End Footer----------------------- */
 }
 
 /* 
@@ -312,13 +377,39 @@ footer .copyright {
         display: block;
     }
 
-    /* .nav-satu {
-        margin-right: 100px;
+    /* ---------------------Footer----------------------- */
+    .footerwadahkontak {
+        display: contents;
     }
 
-    .nav-tiga {
-        margin-left: 100px;
-    } */
+    .baten-footer {
+        background-color: transparent;
+        width: 100px;
+        height: 35px;
+        text-align: center;
+        margin-left: 20px;
+        border-radius: 16px;
+        color: white;
+        border: 1.5px solid white;
+    }
+
+    .footerparagraf {
+        margin-top: auto;
+        margin-bottom: 11px;
+        margin-left: 15px;
+    }
+
+    .baten-footer2 {
+        background-color: transparent;
+        width: auto;
+        height: 45px;
+        text-align: center;
+        border-radius: 20px;
+        color: white;
+        border: 1.5px solid white;
+        padding: 0px 10px 0px 10px;
+        font-size: 13px;
+    }
 
     .image-footer {
         /* Center and scale the image nicely */
@@ -326,9 +417,32 @@ footer .copyright {
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
-        width: 260px;
+        width: 250px;
         opacity: 0.5;
     }
+
+    footer .sosialmedia {
+        width: 185px;
+        margin-top: 15px;
+    }
+
+    .footerlogososlialmedia {
+        width: 25px;
+    }
+
+    .footerlogososlialmediatengah {
+        width: 25px;
+        margin-left: 50px;
+        margin-right: 50px;
+    }
+
+    footer .copyright {
+        width: 162px;
+        margin-top: 20px;
+        padding-bottom: 20px;
+    }
+
+    /* ---------------------End Footer----------------------- */
 }
 
 /* 
@@ -355,6 +469,14 @@ footer .copyright {
         margin-top: -35px;
     }
 
+    .card {
+        margin: auto;
+    }
+
+    .cardartikelsiswa {
+        margin-bottom: 30px;
+    }
+
     .image-footer {
         /* Center and scale the image nicely */
         position: absolute;
@@ -363,10 +485,6 @@ footer .copyright {
         background-size: cover;
         width: 300px;
         opacity: 0.5;
-    }
-
-    .card {
-        margin: auto;
     }
 }
 
@@ -396,6 +514,10 @@ footer .copyright {
 
     .card {
         margin: auto;
+    }
+
+    .cardartikelsiswa {
+        margin-bottom: 30px;
     }
 
     .image-footer {
@@ -472,15 +594,68 @@ footer .copyright {
         margin-left: 100px;
     }
 
+    /* ---------------------Footer----------------------- */
+    .baten-footer {
+        background-color: transparent;
+        width: 100px;
+        height: 35px;
+        text-align: center;
+        margin: 4px 2px;
+        border-radius: 16px;
+        color: white;
+        border: 1.5px solid white;
+    }
+
+    .footerparagraf {
+        margin-top: auto;
+        margin-bottom: 11px;
+        margin-left: 15px;
+    }
+
+    .baten-footer2 {
+        background-color: transparent;
+        width: auto;
+        height: 45px;
+        text-align: center;
+        border-radius: 20px;
+        color: white;
+        border: 1.5px solid white;
+        padding: 0px 10px 0px 10px;
+        font-size: 13px;
+    }
+
     .image-footer {
         /* Center and scale the image nicely */
         position: absolute;
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
-        width: 260px;
+        width: 250px;
         opacity: 0.5;
     }
+
+    footer .sosialmedia {
+        width: 185px;
+        margin-top: 15px;
+    }
+
+    .footerlogososlialmedia {
+        width: 25px;
+    }
+
+    .footerlogososlialmediatengah {
+        width: 25px;
+        margin-left: 50px;
+        margin-right: 50px;
+    }
+
+    footer .copyright {
+        width: 162px;
+        margin-top: 20px;
+        padding-bottom: 20px;
+    }
+
+    /* ---------------------End Footer----------------------- */
 }
 
 

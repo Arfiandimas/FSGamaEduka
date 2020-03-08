@@ -80,7 +80,7 @@
 
 
     {{-- Section 2 --}}
-        <div style="width:100%; background-color:#98E0F8; height: 620px;">
+        {{-- <div style="width:100%; background-color:#98E0F8; height: 620px;">
             <div class="container">
                 <h5 style="padding-top:50px;">Program Kami</h5>
                 <div class="jumbotron" style="margin-top: 30px; background-color:white;">
@@ -104,7 +104,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> --}}
     {{-- End Section 2 --}}
 
 
@@ -112,20 +112,22 @@
     {{-- Section 3 --}}
     <section class="section3 section3kiri">
         <div class="container">
-            <h5 style="padding-top:50px;">Kenapa Harus Memilih Kami</h5>
+            <h5>Kenapa Harus Memilih Kami</h5>
             <div class="kotakkuning mx-auto">
                 <div class="container">
-                    <div class="row">
+
+                    {{-- Row Desktop --}}
+                    <div class="row section3rowdesk">
                         <div class="col-6">
                             <div class="row">
                                 <div class="col-6">
-                                    <div class="card section3card" style="margin-top:15px">
+                                    <div class="card section3cardkiri">
                                         <img src="/img/teacher.png" class="section3wadahcardimg mx-auto rounded-circle">
                                         <b>Tenaga Pengajar Handal</b>
                                     </div>
                                 </div>
                                 <div class="col-6">
-                                    <div class="card section3card" style="margin-top:58px">
+                                    <div class="card section3cardkanan">
                                         <img src="/img/mind.png" class="section3wadahcardimg mx-auto rounded-circle">
                                         <b>Ilmu Praktis</b>
                                     </div>
@@ -133,13 +135,13 @@
                             </div>
                             <div class="row">
                                 <div class="col-6">
-                                    <div class="card section3card" style="margin-top:15px">
+                                    <div class="card section3cardkiri">
                                         <img src="/img/library.png" class="section3wadahcardimg mx-auto rounded-circle">>
                                         <b>Fasilitas Lengkap</b>
                                     </div>
                                 </div>
                                 <div class="col-6">
-                                    <div class="card section3card" style="margin-top:58px">
+                                    <div class="card section3cardkanan">
                                         <img src="/img/kerja.png" class="section3wadahcardimg mx-auto rounded-circle">
                                         <b>Langsung Diterima Di Dunia Kerja</b>
                                     </div>
@@ -151,6 +153,41 @@
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti eaque iusto delectus rerum, maiores, nostrum iure iste minima aspernatur at illum, explicabo quos rem. Placeat obcaecati rem necessitatibus veniam odit cumque esse tenetur eum officia nesciunt consectetur praesentium voluptates, ut tempore.</p>
                         </div>
                     </div>
+                    {{-- End Row Desktop --}}
+
+                    <div class="row section3rowmobile">
+                        <div class="col-6">
+                            <div class="card section3cardkiri">
+                                <img src="/img/teacher.png" class="section3wadahcardimg mx-auto rounded-circle">
+                                <b>Tenaga Pengajar Handal</b>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="card section3cardkanan">
+                                <img src="/img/mind.png" class="section3wadahcardimg mx-auto rounded-circle">
+                                <b>Ilmu Praktis</b>
+                            </div>
+                        </div>
+                    
+                        <div class="col-6">
+                            <div class="card section3cardkiri">
+                                <img src="/img/library.png" class="section3wadahcardimg mx-auto rounded-circle">
+                                <b>Fasilitas Lengkap</b>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="card section3cardkanan">
+                                <img src="/img/kerja.png" class="section3wadahcardimg mx-auto rounded-circle">
+                                <b>Langsung Diterima Di Dunia Kerja</b>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="section3rowmobile">
+                        <h4 class="section3h4mobile">Service Terbaik Kami</h4>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti eaque iusto delectus rerum, maiores, nostrum iure iste minima aspernatur at illum, explicabo quos rem. Placeat obcaecati rem necessitatibus veniam odit cumque esse tenetur eum officia nesciunt consectetur praesentium voluptates, ut tempore. lorem20</p>
+                    </div>
+
                 </div>
             </div>
         </div>
@@ -161,41 +198,93 @@
     {{-- Section 4 --}}
     <div class="section4">
         <div class="container">
-            <h5 style="padding-top:50px;">Kabar Terbaru</h5>
-            <div class="row" style="margin-top:25px;">
+            <h5 class="section4h5">Kabar Terbaru</h5>
+            <div class="row section4rowdesk" style="margin-top:25px;">
                 
                 <div class="col-md-4">
-                    <div class="card mx-auto section4card" style="width: 18rem;">
+                    <div class="card mx-auto section4card">
                         <img src="/img/computer.jpg" class="card-img-top" alt="...">
                         <div class="card-body">
                         <h6 class="card-title">Card title</h6>
                         <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</p>   
-                        <p class="tgl">Feb 16, 2020</p>
-                        <a href="" class="arrow"><i class="fas fa-arrow-right"></i></a>
+                        <div class="section4keterangan">
+                            <p class="tgl">Feb 16, 2020</p>
+                            <a href="" class="arrow"><i class="fas fa-arrow-right"></i></a>
+                        </div>
                     </div>
                     </div>
                 </div>
 
                 <div class="col-md-4">
-                    <div class="card mx-auto section4card" style="width: 18rem;">
+                    <div class="card mx-auto section4card">
                         <img src="/img/Cook.jpg" class="card-img-top" alt="...">
                         <div class="card-body">
                         <h6 class="card-title">Card title</h6>
                         <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</p>   
-                        <p class="tgl">Feb 16, 2020</p>
-                        <a href="" class="arrow"><i class="fas fa-arrow-right"></i></a>
+                        <div class="section4keterangan">
+                            <p class="tgl">Feb 16, 2020</p>
+                            <a href="" class="arrow"><i class="fas fa-arrow-right"></i></a>
+                        </div>
                     </div>
                     </div>
                 </div>
 
                 <div class="col-md-4">
-                    <div class="card mx-auto section4card" style="width: 18rem;">
+                    <div class="card mx-auto section4card">
                         <img src="/img/nurse.jpg" class="card-img-top" alt="...">
                         <div class="card-body">
                         <h6 class="card-title">Card title</h6>
                         <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</p>
-                        <p class="tgl">Feb 16, 2020</p>
-                        <a href="" class="arrow"><i class="fas fa-arrow-right"></i></a>
+                        <div class="section4keterangan">
+                            <p class="tgl">Feb 16, 2020</p>
+                            <a href="" class="arrow"><i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                
+            </div>
+
+            <div class="row section4rowmobile" style="margin-top:25px;">
+                
+                <div class="col-md-6">
+                    <div class="card mx-auto section4card">
+                        <img src="/img/computer.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                        <h6 class="card-title">Card title</h6>
+                        <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</p>   
+                        <div class="section4keterangan">
+                            <p class="tgl">Feb 16, 2020</p>
+                            <a href="" class="arrow"><i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="card mx-auto section4card">
+                        <img src="/img/Cook.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                        <h6 class="card-title">Card title</h6>
+                        <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</p>   
+                        <div class="section4keterangan">
+                            <p class="tgl">Feb 16, 2020</p>
+                            <a href="" class="arrow"><i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="card mx-auto section4card">
+                        <img src="/img/nurse.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                        <h6 class="card-title">Card title</h6>
+                        <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</p>   
+                        <div class="section4keterangan">
+                            <p class="tgl">Feb 16, 2020</p>
+                            <a href="" class="arrow"><i class="fas fa-arrow-right"></i></a>
+                        </div>
                     </div>
                     </div>
                 </div>
@@ -210,15 +299,14 @@
     {{-- Section 5 --}}
     <div class="section5 section5kiri">
         <div class="container">
-            <h5 style="padding-top:50px;">Kata Mereka</h5>
-            <h5 class="section5h5">Testimoni Siswa Gama Eduka</h5>
-            <div class="row">
+            <h5 class="section5h5">Kata Mereka</h5>
+            <h5 class="section5h5judul">Testimoni Siswa Gama Eduka</h5>
 
-                <div class="col-1">
-                    <i class="fas fa-chevron-left section5chevronleft"></i>
-                </div>
+            <div class="row section5rowdesk">
 
-                <div class="col-5">
+                <i class="fas fa-chevron-left section5chevronleft"></i>
+
+                <div class="col-md-5 offset-1">
                     <div class="card mx-auto section5card" style="width: 100%;">
                     <img src="/img/travel_plans.png" class="section5fotomuka rounded-circle mx-auto">
                     <p class="section5nama">Arfian Dimas Andi Permana</p>
@@ -229,7 +317,7 @@
                     </div>
                 </div>
 
-                <div class="col-5">
+                <div class="col-md-5">
                     <div class="card mx-auto section5card" style="width: 100%;">
                     <img src="/img/success_.png" class="section5fotomuka rounded-circle mx-auto">
                     <p class="section5nama">Zaufik Rizaldi</p>
@@ -240,8 +328,32 @@
                     </div>
                 </div>
 
-                <div class="col-1">
-                    <i class="fas fa-chevron-right section5chevronright"></i>
+                <i class="fas fa-chevron-right section5chevronright"></i>
+
+            </div>
+
+            <div class="row section5rowmobile">
+
+                <div class="col-12">
+                    <div class="card mx-auto section5card" style="width: 100%;">
+                    <img src="/img/travel_plans.png" class="section5fotomuka rounded-circle mx-auto">
+                    <p class="section5nama">Arfian Dimas Andi Permana</p>
+                    <p class="section5program">Komputer Dasar</p>
+                        <div class="container">
+                            <p class="section5kesan">"Lorem ipsum dolor sit, amet consectetur adipisicing elit. Explicabo temporibus veniam expedita quidem suscipit, consectetur officiis quisquam enim iusto quis cupiditate sed qui possimus laboriosam nobis nesciunt commodi unde. Odit molestias a nulla id soluta quasi adipisci libero"</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12">
+                    <div class="card mx-auto section5card" style="width: 100%;">
+                    <img src="/img/success_.png" class="section5fotomuka rounded-circle mx-auto">
+                    <p class="section5nama">Zaufik Rizaldi</p>
+                    <p class="section5program">Microsoft Office</p>
+                        <div class="container">
+                            <p class="section5kesan">"Lorem ipsum dolor sit, amet consectetur adipisicing elit. Explicabo temporibus veniam expedita quidem suscipit, consectetur officiis quisquam enim iusto quis cupiditate sed qui possimus laboriosam nobis nesciunt commodi unde. Odit molestias a nulla id soluta quasi adipisci libero"</p>
+                        </div>
+                    </div>
                 </div>
 
             </div>
@@ -253,7 +365,7 @@
     {{-- Section 6 --}}
     <div class="section6">
         <div class="container">
-            <h5 style="padding-top:50px;">Bergabung</h5>
+            <h5 class="section6h5">Bergabung</h5>
             <div class="row section6container">
                 <div class="col-6">
                     <img src="/img/bergabung.svg" alt="">
@@ -301,17 +413,17 @@
                     <p>Jl. Ring Road Utara, Ngringin, Condongcatur, Kec. Depok, Kabupaten Sleman, Daerah Istimewa
                         Yogyakarta 55281
                     </p>
-                    <div style="display: flex;">
+                    <div class="footerwadahkontak">
                         <button type="button" class="baten-footer">Email</button>
-                        <p style="margin-top: auto; margin-bottom: 11px; margin-left: 15px;">Gamaeduka@gmail.com</p>
+                        <p class="footerparagraf">Gamaeduka@gmail.com</p>
                     </div>
-                    <div style="display: flex; margin-top: 5px;">
+                    <div class="footerwadahkontak">
                         <button type="button" class="baten-footer">Phone</button>
-                        <p style="margin-top: auto; margin-bottom: 11px; margin-left: 15px;"> 0814-4353-2121</p>
+                        <p class="footerparagraf"> 0814-4353-2121</p>
                     </div>
-                    <div style="display: flex; margin-top: 5px;">
+                    <div class="footerwadahkontak">
                         <button type="button" class="baten-footer">WA</button>
-                        <p style="margin-top: auto; margin-bottom: 11px; margin-left: 15px;">0873-4545-0000</p>
+                        <p class="footerparagraf">0873-4545-0000</p>
                     </div>
                 </div>
                 <div class="col-md-4">
@@ -333,9 +445,9 @@
             <br>
             <hr style="color:white;">
             <div class="sosialmedia mx-auto">
-                <a href=""><img style="width: 35px;" src="/img/facebook.png" alt=""></a>
-                <a href=""><img style="width: 35px; margin-left: 50px; margin-right: 50px;" src="/img/instagram.png" alt=""></a>
-                <a href=""><img style="width: 35px;" src="/img/twitter.png" alt=""></a>
+                <a href=""><img class="footerlogososlialmedia" src="/img/facebook.png" alt=""></a>
+                <a href=""><img class="footerlogososlialmediatengah" src="/img/instagram.png" alt=""></a>
+                <a href=""><img class="footerlogososlialmedia" src="/img/twitter.png" alt=""></a>
             </div>
             <div class="copyright mx-auto">
                 <img src="/img/copyright.png" style="width: 25px;" alt="copyright">

@@ -31,7 +31,7 @@
 
             @foreach ($articles as $article)
             <div class="col-lg-4 col-md-6 col-sm-12 grid-item">
-                <div class="card">
+                <div class="card cardartikelsiswa">
                     <img src="{{ asset('storage/thumbnail/'.$article->gambar) }}" class="card-img-top img-fluid image-article" alt="...">
                     <div class="card-body">
                         <h6 class="card-title">{{ $article->judul }}</h6>
