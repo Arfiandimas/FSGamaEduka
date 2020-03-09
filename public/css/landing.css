@@ -8,6 +8,10 @@ body {
     height: 100%;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 /* ---------------------Section1----------------------- */
 .logo-gama {
     width: 70px;
@@ -111,6 +115,11 @@ body {
     position: absolute;
     bottom: 0;
     margin-bottom: 10px;
+}
+
+.bungkussection1baten a {
+    color: #707070;
+    padding-top: 2px;
 }
 
 .section1batenkanan {
@@ -841,6 +850,11 @@ footer .copyright {
         position: absolute;
         bottom: 0;
         margin-bottom: 10px;
+    }
+
+    .bungkussection1baten a {
+        color: #707070;
+        padding-top: 5px;
     }
 
     .section1baten {

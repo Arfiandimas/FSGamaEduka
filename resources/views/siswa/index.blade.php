@@ -77,11 +77,11 @@
                 <div class="container-fluid bungkussection1baten">
                     <div class="row">
                         <div class="col-8">
-                            <button type="button" class="section1baten section1batenkanan">Program</button>
-                            <button type="button" class="section1baten">Service</button>
-                            <button type="button" class="section1baten">Kabar Kami</button>
-                            <button type="button" class="section1baten">Testimoni</button>
-                            <button type="button" class="section1baten">Bergabung</button>
+                            <a href="#bergabung" type="button" class="section1baten section1batenkanan">Bergabung</a>
+                            <a href="#testimoni" type="button" class="section1baten">Testimoni</a>
+                            <a href="#kabar" type="button" class="section1baten">Kabar Kami</a>
+                            <a href="#service" type="button" class="section1baten">Service</a>
+                            <a href="#program" type="button" class="section1baten">Program</a>
                         </div>
                         <div class="col-4">
 
@@ -89,7 +89,7 @@
                     </div>
                 </div>
 
-                <img src="/img/downdirection.png" alt="" class="downdirection">
+                <a href="#palingbawah"><img src="/img/downdirection.png" alt="" class="downdirection"></a>
     </div>
     {{-- <div class="section2kanan">
 
@@ -100,7 +100,7 @@
 
 
     {{-- Section 2 --}}
-        <div class="section2">
+        <div class="section2" id="program">
             <div class="container">
                 <h5 class="section2h5">Program Kami</h5>
                 <div class="section2wadah mx-auto">
@@ -179,7 +179,7 @@
 
 
     {{-- Section 3 --}}
-    <section class="section3 section3kiri">
+    <section class="section3 section3kiri" id="service">
         <div class="container">
             <h5>Kenapa Harus Memilih Kami</h5>
             <div class="kotakkuning mx-auto">
@@ -265,108 +265,56 @@
 
 
     {{-- Section 4 --}}
-    <div class="section4">
+    <div class="section4" id="kabar">
         <div class="container">
             <h5 class="section4h5">Kabar Terbaru</h5>
             <div class="row section4rowdesk" style="margin-top:25px;">
                 
+                @foreach ($articles as $article)
                 <div class="col-md-4">
                     <div class="card mx-auto section4card">
-                        <img src="/img/computer.jpg" class="card-img-top" alt="...">
+                        <img src="{{ asset('storage/thumbnail/'.$article->gambar) }}" class="card-img-top" alt="...">
                         <div class="card-body">
-                        <h6 class="card-title">Card title</h6>
-                        <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</p>   
+                        <h6 class="card-title">{{ $article->judul }}</h6>
+                        <p class="card-text">{{ Str::limit($article->deskripsi, 150, '...') }}</p>   
                         <div class="section4keterangan">
-                            <p class="tgl">Feb 16, 2020</p>
-                            <a href="" class="arrow"><i class="fas fa-arrow-right"></i></a>
+                            <p class="tgl">{{$article->created_at->format('M d, Y')}}</p>
+                            <a href="{{ route('artikel.show', $article->slug) }}" class="arrow"><i class="fas fa-arrow-right"></i></a>
                         </div>
                     </div>
                     </div>
                 </div>
-
-                <div class="col-md-4">
-                    <div class="card mx-auto section4card">
-                        <img src="/img/Cook.jpg" class="card-img-top" alt="...">
-                        <div class="card-body">
-                        <h6 class="card-title">Card title</h6>
-                        <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</p>   
-                        <div class="section4keterangan">
-                            <p class="tgl">Feb 16, 2020</p>
-                            <a href="" class="arrow"><i class="fas fa-arrow-right"></i></a>
-                        </div>
-                    </div>
-                    </div>
-                </div>
-
-                <div class="col-md-4">
-                    <div class="card mx-auto section4card">
-                        <img src="/img/nurse.jpg" class="card-img-top" alt="...">
-                        <div class="card-body">
-                        <h6 class="card-title">Card title</h6>
-                        <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</p>
-                        <div class="section4keterangan">
-                            <p class="tgl">Feb 16, 2020</p>
-                            <a href="" class="arrow"><i class="fas fa-arrow-right"></i></a>
-                        </div>
-                    </div>
-                    </div>
-                </div>
+                @endforeach
                 
             </div>
 
             <div class="row section4rowmobile" style="margin-top:25px;">
                 
+                @foreach ($articles as $article)
                 <div class="col-md-6">
                     <div class="card mx-auto section4card">
-                        <img src="/img/computer.jpg" class="card-img-top" alt="...">
+                        <img src="{{ asset('storage/thumbnail/'.$article->gambar) }}" class="card-img-top" alt="...">
                         <div class="card-body">
-                        <h6 class="card-title">Card title</h6>
-                        <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</p>   
+                        <h6 class="card-title">{{ $article->judul }}</h6>
+                        <p class="card-text">{{ Str::limit($article->deskripsi, 150, '...') }}</p>   
                         <div class="section4keterangan">
-                            <p class="tgl">Feb 16, 2020</p>
-                            <a href="" class="arrow"><i class="fas fa-arrow-right"></i></a>
+                            <p class="tgl">{{$article->created_at->format('M d, Y')}}</p>
+                            <a href="{{ route('artikel.show', $article->slug) }}" class="arrow"><i class="fas fa-arrow-right"></i></a>
                         </div>
                     </div>
                     </div>
                 </div>
+                @endforeach
 
-                <div class="col-md-6">
-                    <div class="card mx-auto section4card">
-                        <img src="/img/Cook.jpg" class="card-img-top" alt="...">
-                        <div class="card-body">
-                        <h6 class="card-title">Card title</h6>
-                        <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</p>   
-                        <div class="section4keterangan">
-                            <p class="tgl">Feb 16, 2020</p>
-                            <a href="" class="arrow"><i class="fas fa-arrow-right"></i></a>
-                        </div>
-                    </div>
-                    </div>
-                </div>
-
-                <div class="col-md-6">
-                    <div class="card mx-auto section4card">
-                        <img src="/img/nurse.jpg" class="card-img-top" alt="...">
-                        <div class="card-body">
-                        <h6 class="card-title">Card title</h6>
-                        <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</p>   
-                        <div class="section4keterangan">
-                            <p class="tgl">Feb 16, 2020</p>
-                            <a href="" class="arrow"><i class="fas fa-arrow-right"></i></a>
-                        </div>
-                    </div>
-                    </div>
-                </div>
-                
             </div>
-            <a href=""><p class="section4showall">Show All</p></a>
+            <a href="{{ route('artikel.index') }}"><p class="section4showall">Show All</p></a>
         </div>
     </div>
     {{-- End Section 4 --}}
 
 
     {{-- Section 5 --}}
-    <div class="section5 section5kiri">
+    <div class="section5 section5kiri" id="testimoni">
         <div class="container">
             <h5 class="section5h5">Kata Mereka</h5>
             <h5 class="section5h5judul">Testimoni Siswa Gama Eduka</h5>
@@ -453,7 +401,7 @@
 
 
     {{-- Section 6 --}}
-    <div class="section6">
+    <div class="section6" id="bergabung">
         <div class="container">
             <h5 class="section6h5">Bergabung</h5>
             <div class="row section6container">
@@ -493,7 +441,7 @@
     {{-- End Navabar Mobile --}}
 
     <!-- Footer -->
-    <footer>
+    <footer id="palingbawah">
         <img src="/img/logo.png" alt="logo gama eduka" class="image-footer">
         <div class="container">
             <div class="row">

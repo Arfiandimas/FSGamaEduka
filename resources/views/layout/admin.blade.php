@@ -56,6 +56,15 @@
               </li>
 
               <li class="nav-item">
+                <a href="{{ route('program.index') }}" class="nav-link">
+                  <i class="far fa-calendar"></i>
+                  <p>
+                    Program
+                  </p>
+                </a>
+              </li>
+
+              <li class="nav-item">
                 <a href="{{ route('password.index') }}" class="nav-link">
                   <i class="fas fa-key"></i>
                   <p>
@@ -102,16 +111,16 @@
           <div class="container-fluid">
             <div class="row">
 
-    @yield('content')
+        @yield('content')
 
 
-    </div>
-    <!-- /.row -->
-    </div><!-- /.container-fluid -->
-    </div>
-    <!-- /.content -->
-    </div>
-    <!-- /.content-wrapper -->
+            </div>
+            <!-- /.row -->
+          </div><!-- /.container-fluid -->
+        </div>
+      <!-- /.content -->
+      </div>
+      <!-- /.content-wrapper -->
     </div>
 
     <script src="/js/jquery-3.4.1.slim.min.js"></script>

@@ -44,6 +44,10 @@ Route::group(['prefix'=>'admin','middleware'=>'auth'], function(){
         Route::get('/{id}/delete','AdminArtikelController@destroy')->name('hapusartikel.destroy');
     });
 
+    Route::group(['prefix'=>'program'] , function(){
+        Route::get('/','ProgramController@index')->name('program.index');
+    });
+
     
     
 });

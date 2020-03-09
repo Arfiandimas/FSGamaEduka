@@ -48,7 +48,7 @@
                         </div>
                         <hr class=" hr">
                         <div class="card-img-kanan mx-auto">
-                            <a href=""><i class="fas fa-eye"></i></a>
+                            <a href="{{ route('artikel.show', $article->slug) }}"><i class="fas fa-eye"></i></a>
                             <a href="{{ route('tambahartikel.edit', $article) }}" style="margin-right:20px; margin-left:20px;"><i class="fas fa-edit"></i></a>
                             <a type="submit" href="{{ route('hapusartikel.destroy', $article) }}"><i class="fas fa-trash-alt"></i></a>
                         </div>

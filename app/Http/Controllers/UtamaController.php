@@ -3,12 +3,15 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Article;
 
 class UtamaController extends Controller
 {
     public function index()
     {
-        return view('siswa.index');
+        $articles = Article::orderBy('id', 'DESC')->take(3)->get();
+
+        return view('siswa.index', compact('articles'));
     }
 
     public function about()
