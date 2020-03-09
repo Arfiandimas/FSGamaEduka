@@ -373,9 +373,8 @@
 
             <div class="row section5rowdesk">
 
-                <i class="fas fa-chevron-left section5chevronleft"></i>
 
-                <div class="col-md-5 offset-1">
+                <div class="col-md-4">
                     <div class="card mx-auto section5card" style="width: 100%;">
                     <img src="/img/travel_plans.png" class="section5fotomuka rounded-circle mx-auto">
                     <p class="section5nama">Arfian Dimas Andi Permana</p>
@@ -386,7 +385,7 @@
                     </div>
                 </div>
 
-                <div class="col-md-5">
+                <div class="col-md-4">
                     <div class="card mx-auto section5card" style="width: 100%;">
                     <img src="/img/success_.png" class="section5fotomuka rounded-circle mx-auto">
                     <p class="section5nama">Zaufik Rizaldi</p>
@@ -397,7 +396,17 @@
                     </div>
                 </div>
 
-                <i class="fas fa-chevron-right section5chevronright"></i>
+                <div class="col-md-4">
+                    <div class="card mx-auto section5card" style="width: 100%;">
+                    <img src="/img/success_.png" class="section5fotomuka rounded-circle mx-auto">
+                    <p class="section5nama">Zaufik Rizaldi</p>
+                    <p class="section5program">Microsoft Office</p>
+                        <div class="container">
+                            <p class="section5kesan">"Lorem ipsum dolor sit, amet consectetur adipisicing elit. Explicabo temporibus veniam expedita quidem suscipit, consectetur officiis quisquam enim iusto quis cupiditate sed qui possimus laboriosam nobis nesciunt commodi unde. Odit molestias a nulla id soluta quasi adipisci libero"</p>
+                        </div>
+                    </div>
+                </div>
+
 
             </div>
 
@@ -425,7 +434,19 @@
                     </div>
                 </div>
 
+                <div class="col-12">
+                    <div class="card mx-auto section5card" style="width: 100%;">
+                    <img src="/img/success_.png" class="section5fotomuka rounded-circle mx-auto">
+                    <p class="section5nama">Zaufik Rizaldi</p>
+                    <p class="section5program">Microsoft Office</p>
+                        <div class="container">
+                            <p class="section5kesan">"Lorem ipsum dolor sit, amet consectetur adipisicing elit. Explicabo temporibus veniam expedita quidem suscipit, consectetur officiis quisquam enim iusto quis cupiditate sed qui possimus laboriosam nobis nesciunt commodi unde. Odit molestias a nulla id soluta quasi adipisci libero"</p>
+                        </div>
+                    </div>
+                </div>
+
             </div>
+            <a href=""><p class="section4showall">Show All</p></a>
         </div>
     </div>
     {{-- End Section 5 --}}

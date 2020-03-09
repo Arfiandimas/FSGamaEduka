@@ -813,7 +813,7 @@ footer .copyright {
 
     .divtulisan {
         margin-left: 150px;
-        width: 200px;
+        width: 188px;
         margin-top: -200px;
         position: absolute;
         z-index: 6;
@@ -1442,6 +1442,31 @@ footer .copyright {
     }
 
     /* ---------------------End Section3----------------------- */
+
+    /* ---------------------Footer----------------------- */
+    footer .sosialmedia {
+        width: 230px;
+        margin-top: 15px;
+    }
+
+    .footerlogososlialmedia {
+        width: 35px;
+    }
+
+    .footerlogososlialmediatengah {
+        width: 35px;
+        margin-left: 50px;
+        margin-right: 50px;
+    }
+
+    footer .copyright {
+        width: 170px;
+        margin-top: 30px;
+        padding-bottom: 40px;
+        margin-bottom: 40px;
+    }
+
+    /* ---------------------End Footer----------------------- */
 }
 
 
@@ -1572,12 +1597,13 @@ footer .copyright {
         text-align: center;
         text-decoration: none;
         font-size: 15px;
-        padding-top: 17px;
+        margin-top: 23px;
     }
 
     .nav-mobile i {
         position: absolute;
         margin-left: 8px;
+        margin-top: 8px;
     }
 
     .logo-mobile {
@@ -1767,6 +1793,7 @@ footer .copyright {
 
     /* ---------------------End Section6----------------------- */
 
+    /* ---------------------Footer----------------------- */
     .image-footer {
         /* Center and scale the image nicely */
         position: absolute;
@@ -1776,6 +1803,30 @@ footer .copyright {
         width: 200px;
         opacity: 0.5;
     }
+
+    footer .sosialmedia {
+        width: 230px;
+        margin-top: 15px;
+    }
+
+    .footerlogososlialmedia {
+        width: 35px;
+    }
+
+    .footerlogososlialmediatengah {
+        width: 35px;
+        margin-left: 50px;
+        margin-right: 50px;
+    }
+
+    footer .copyright {
+        width: 185px;
+        margin-top: 30px;
+        padding-bottom: 40px;
+        margin-bottom: 40px;
+    }
+
+    /* ---------------------End Footer----------------------- */
 }
 
 @media (max-width: 991px) {
@@ -1932,7 +1983,7 @@ footer .copyright {
     }
 
     .wadahtulisanmobile {
-        width: 227px;
+        width: 280px;
     }
 
     .section1h1mobile {
