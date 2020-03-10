@@ -3,6 +3,10 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Program;
+use App\Testimoni;
+
+use Image;
 
 class AdminTestimoniController extends Controller
 {
@@ -13,7 +17,9 @@ class AdminTestimoniController extends Controller
      */
     public function index()
     {
-        //
+        $testimoni = Testimoni::orderBy('id', 'DESC')->get();
+
+        return view('admin.admin_testimoni', compact('testimoni'));
     }
 
     /**
@@ -23,7 +29,9 @@ class AdminTestimoniController extends Controller
      */
     public function create()
     {
-        //
+        $programs = Program::all();
+
+        return view('admin.tambah_testimoni', compact('programs'));
     }
 
     /**
@@ -34,7 +42,31 @@ class AdminTestimoniController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $this->validate($request, [
+            'foto' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:7048'
+        ]);
+
+        $image = $request->file('foto');
+
+        $image_name = time() . '.' . $image->getClientOriginalExtension();
+
+        $destinationPath = storage_path('app/public/testimoni');
+
+        $resize_image = Image::make($image->getRealPath());
+
+        $resize_image->resize(1152, 800, function($constraint){
+            $constraint->aspectRatio();
+        })->save($destinationPath . '/' . $image_name);
+
+
+        Testimoni::create([
+            'name' => $request->name,
+            'foto' => $image_name,
+            'program_id' => $request->program_id,
+            'kesan' => $request->kesan
+        ]);
+
+        return redirect()->route('admin_testimoni.index');
     }
 
     /**
@@ -56,7 +88,10 @@ class AdminTestimoniController extends Controller
      */
     public function edit($id)
     {
-        //
+        $testimoni = Testimoni::find($id);
+        $programs = Program::all();
+
+        return view('admin.edit_testimoni', compact('testimoni', 'programs'));
     }
 
     /**
@@ -68,7 +103,33 @@ class AdminTestimoniController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $programs = Testimoni::find($id);
+
+        $this->validate($request, [
+            'foto' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:7048'
+        ]);
+
+        $image = $request->file('foto');
+
+        $image_name = time() . '.' . $image->getClientOriginalExtension();
+
+        $destinationPath = storage_path('app/public/testimoni');
+
+        $resize_image = Image::make($image->getRealPath());
+
+        $resize_image->resize(1152, 800, function($constraint){
+            $constraint->aspectRatio();
+        })->save($destinationPath . '/' . $image_name);
+
+
+        $programs->update([
+            'name' => $request->name,
+            'foto' => $image_name,
+            'program_id' => $request->program_id,
+            'kesan' => $request->kesan
+        ]);
+
+        return redirect()->route('admin_testimoni.index');
     }
 
     /**

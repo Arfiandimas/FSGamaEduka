@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="/css/artikel.css">
     <link rel="stylesheet" href="/css/add_artikel.css">
+    <link rel="stylesheet" href="/css/program.css">
+    <link rel="stylesheet" href="/css/showtestimoni.css">
 
     <link rel="stylesheet" href="/css/all.min.css">
     <link rel="stylesheet" href="/css/adminlte.min.css">
@@ -60,6 +62,15 @@
                   <i class="far fa-calendar"></i>
                   <p>
                     Program
+                  </p>
+                </a>
+              </li>
+
+              <li class="nav-item">
+                <a href="{{ route('admin_testimoni.index') }}" class="nav-link">
+                  <i class="fas fa-comments"></i>
+                  <p>
+                    Testimoni
                   </p>
                 </a>
               </li>

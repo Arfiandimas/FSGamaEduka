@@ -54,6 +54,14 @@ Route::group(['prefix'=>'admin','middleware'=>'auth'], function(){
         Route::get('/{id}/delete','ProgramController@destroy')->name('hapusprogram.destroy');
     });
 
+    Route::group(['prefix'=>'testimoni'] , function(){
+        Route::get('/', 'AdminTestimoniController@index')->name('admin_testimoni.index');
+        Route::get('/tambah', 'AdminTestimoniController@create')->name('tambah_testimoni.create');
+        Route::post('/tambah', 'AdminTestimoniController@store')->name('tambah_testimoni.store');
+        Route::get('/{id}/edit', 'AdminTestimoniController@edit')->name('edit_testimoni.edit');
+        Route::post('/{id}/update', 'AdminTestimoniController@update')->name('update_testimoni.update');
+    });
+
     
     
 });

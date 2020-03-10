@@ -36,7 +36,7 @@
 <script>
     CKEDITOR.replace( 'deskripsi' , {
         width: 1120,
-        height: 600,
+        height: 300,
     });
 </script>
 @endsection
