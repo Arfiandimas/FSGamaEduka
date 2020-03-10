@@ -1,6 +1,6 @@
 @extends('layout.admin')
 
-@section('title','Artikel')
+@section('title','Program')
 
 @section('halaman','Program')
 
@@ -60,81 +60,35 @@
     <div class="container">
 
         <div class="tambah-program mx-auto">
-            <a href=""><img src="/img/plus.png" class="logo-programtambah" alt="">
+            <a href="{{ route('program.create') }}"><img src="/img/plus.png" class="logo-programtambah" alt="">
             <h5 class="new-program">Tambah Program</h5></a>
         </div>
 
+        @foreach ($programs as $program)
         <div class="section2wadah mx-auto">
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-md-5 offset-1">
-                        <img src="/img/program komputer.svg" alt="" class="img-fluid" style="width:100%; height:auto;">
+                        <img src="{{ asset('storage/program/'.$program->gambar) }}" alt="" class="img-fluid" style="width:100%; height:auto;">
                     </div>
                     <div class="col-md-5">
-                        <h5 class="section2judulprogram">Pelatihan Komputer Dasar</h5>
+                        <h5 class="section2judulprogram">{{ $program->name }}</h5>
                         <span class="section2clock">
                             <i class="far fa-clock"></i>
-                            <p class="section2pertemuan">25 Pertemuan</p>
+                            <p class="section2pertemuan">{{ $program->pertemuan }} Pertemuan</p>
                         </span>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint porro voluptatum sapiente mollitia, non nesciunt deserunt tempore rem repudiandae sequi laudantium similique tempora tenetur aspernatur quidem provident suscipit delectus consequatur architecto repellendus cupiditate vitae inventore doloribus facere. Harum maiores quibusdam, earum tempore ipsa possimus est. Ex quos laudantium, aperiam quo in ab sint eligendi minus ullam libero rem recusandae consequatur pariatur deserunt veritatis id hic dicta tempore.</p>
+                        <p>{!! Str::limit($program->deskripsi, 600, '...') !!}</p>
                     </div>
                 </div>
             </div>
             <div class="optionprogram">
                 <div class="wadahoptionprogram mx-auto">
-                    <a href="http://" style="margin-right:20px;"><i class="fas fa-edit"></i></a>
-                    <a href="http://"><i class="fas fa-trash-alt"></i></a>
+                    <a href="{{ route('editprogram.edit', $program) }}" style="margin-right:20px;"><i class="fas fa-edit"></i></a>
+                    <a href="{{ route('hapusprogram.destroy', $program) }}"><i class="fas fa-trash-alt"></i></a>
                 </div>
             </div>
         </div>
-
-        <div class="section2wadah mx-auto">
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-md-5 offset-1">
-                        <img src="/img/program komputer.svg" alt="" class="img-fluid" style="width:100%; height:auto;">
-                    </div>
-                    <div class="col-md-5">
-                        <h5 class="section2judulprogram">Pelatihan Komputer Dasar</h5>
-                        <span class="section2clock">
-                            <i class="far fa-clock"></i>
-                            <p class="section2pertemuan">25 Pertemuan</p>
-                        </span>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint porro voluptatum sapiente mollitia, non nesciunt deserunt tempore rem repudiandae sequi laudantium similique tempora tenetur aspernatur quidem provident suscipit delectus consequatur architecto repellendus cupiditate vitae inventore doloribus facere. Harum maiores quibusdam, earum tempore ipsa possimus est. Ex quos laudantium, aperiam quo in ab sint eligendi minus ullam libero rem recusandae consequatur pariatur deserunt veritatis id hic dicta tempore.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="optionprogram">
-                <div class="wadahoptionprogram mx-auto">
-                    <a href="http://" style="margin-right:20px;"><i class="fas fa-edit"></i></a>
-                    <a href="http://"><i class="fas fa-trash-alt"></i></a>
-                </div>
-            </div>
-        </div>
-
-        <div class="section2wadah mx-auto">
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-md-5 offset-1">
-                        <img src="/img/program komputer.svg" alt="" class="img-fluid" style="width:100%; height:auto;">
-                    </div>
-                    <div class="col-md-5">
-                        <h5 class="section2judulprogram">Pelatihan Komputer Dasar</h5>
-                        <span class="section2clock">
-                            <i class="far fa-clock"></i>
-                            <p class="section2pertemuan">25 Pertemuan</p>
-                        </span>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint porro voluptatum sapiente mollitia, non nesciunt deserunt tempore rem repudiandae sequi laudantium similique tempora tenetur aspernatur quidem provident suscipit delectus consequatur architecto repellendus cupiditate vitae inventore doloribus facere. Harum maiores quibusdam, earum tempore ipsa possimus est. Ex quos laudantium, aperiam quo in ab sint eligendi minus ullam libero rem recusandae consequatur pariatur deserunt veritatis id hic dicta tempore.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="optionprogram">
-                <div class="wadahoptionprogram mx-auto">
-                    <a href="http://" style="margin-right:20px;"><i class="fas fa-edit"></i></a>
-                    <a href="http://"><i class="fas fa-trash-alt"></i></a>
-                </div>
-            </div>
-        </div>
+        @endforeach
 
     </div>
 

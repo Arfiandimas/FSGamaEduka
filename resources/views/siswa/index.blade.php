@@ -89,7 +89,9 @@
                     </div>
                 </div>
 
-                <a href="#palingbawah"><img src="/img/downdirection.png" alt="" class="downdirection"></a>
+                <a href="#palingbawah">
+                    <img src="/img/downdirection.png" alt="" class="downdirection">
+                </a>
     </div>
     {{-- <div class="section2kanan">
 
@@ -107,59 +109,26 @@
                     <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
                         <div class="carousel-inner">
 
-                            <div class="carousel-item active">    
+                            @foreach ($programs as $key => $program)
+                            <div class="carousel-item {{$key == 0 ? 'active' : '' }}">    
                                 <div class="container-fluid">
                                     <div class="row">
                                         <div class="col-md-5 offset-1">
-                                            <img src="/img/program komputer.svg" alt="" class="img-fluid" style="width:100%; height:auto;">
+                                            <img src="{{ asset('storage/program/'.$program->gambar) }}" alt="" class="img-fluid" style="width:100%; height:auto;">
                                         </div>
                                         <div class="col-md-5">
-                                            <h5 class="section2judulprogram">Pelatihan Komputer Dasar</h5>
+                                            <h5 class="section2judulprogram">{{ $program->name }}</h5>
                                             <span class="section2clock">
                                                 <i class="far fa-clock"></i>
-                                                <p class="section2pertemuan">25 Pertemuan</p>
+                                                <p class="section2pertemuan">{{ $program->pertemuan }} Pertemuan</p>
                                             </span>
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint porro voluptatum sapiente mollitia, non nesciunt deserunt tempore rem repudiandae sequi laudantium similique tempora tenetur aspernatur quidem provident suscipit delectus consequatur architecto repellendus cupiditate vitae inventore doloribus facere. Harum maiores quibusdam, earum tempore ipsa possimus est. Ex quos laudantium, aperiam quo in ab sint eligendi minus ullam libero rem recusandae consequatur pariatur deserunt veritatis id hic dicta tempore.</p>
+                                            <p>{!! Str::limit($program->deskripsi, 600, '...') !!}</p>
                                         </div>
                                     </div>
                                 </div>
                             </div>
+                            @endforeach
 
-                            <div class="carousel-item">    
-                                <div class="container-fluid">
-                                    <div class="row">
-                                        <div class="col-md-5 offset-1">
-                                            <img src="/img/program komputer.svg" alt="" class="img-fluid" style="width:100%; height:auto;">
-                                        </div>
-                                        <div class="col-md-5">
-                                            <h5 class="section2judulprogram">Pelatihan Komputer Dasar</h5>
-                                            <span class="section2clock">
-                                                <i class="far fa-clock"></i>
-                                                <p class="section2pertemuan">25 Pertemuan</p>
-                                            </span>
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint porro voluptatum sapiente mollitia, non nesciunt deserunt tempore rem repudiandae sequi laudantium similique tempora tenetur aspernatur quidem provident suscipit delectus consequatur architecto repellendus cupiditate vitae inventore doloribus facere. Harum maiores quibusdam, earum tempore ipsa possimus est. Ex quos laudantium, aperiam quo in ab sint eligendi minus ullam libero rem recusandae consequatur pariatur deserunt veritatis id hic dicta tempore.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="carousel-item">    
-                                <div class="container-fluid">
-                                    <div class="row">
-                                        <div class="col-md-5 offset-1">
-                                            <img src="/img/program komputer.svg" alt="" class="img-fluid" style="width:100%; height:auto;">
-                                        </div>
-                                        <div class="col-md-5">
-                                            <h5 class="section2judulprogram">Pelatihan Komputer Dasar</h5>
-                                            <span class="section2clock">
-                                                <i class="far fa-clock"></i>
-                                                <p class="section2pertemuan">25 Pertemuan</p>
-                                            </span>
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint porro voluptatum sapiente mollitia, non nesciunt deserunt tempore rem repudiandae sequi laudantium similique tempora tenetur aspernatur quidem provident suscipit delectus consequatur architecto repellendus cupiditate vitae inventore doloribus facere. Harum maiores quibusdam, earum tempore ipsa possimus est. Ex quos laudantium, aperiam quo in ab sint eligendi minus ullam libero rem recusandae consequatur pariatur deserunt veritatis id hic dicta tempore.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
 
                         </div>
                         <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
@@ -394,7 +363,7 @@
                 </div>
 
             </div>
-            <a href=""><p class="section4showall">Show All</p></a>
+            <a href="{{ route('utama.testimoni') }}"><p class="section4showall">Show All</p></a>
         </div>
     </div>
     {{-- End Section 5 --}}

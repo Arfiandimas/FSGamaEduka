@@ -19,6 +19,7 @@
 // -------------------------- Siswa ------------------------------
 Route::get('/','UtamaController@index')->name('utama.index');
 Route::get('/about','UtamaController@about')->name('utama.about');
+Route::get('/testimoni','UtamaController@testimoni')->name('utama.testimoni');
 
 Route::group(['prefix'=>'artikel'] , function(){
     Route::get('/','ArtikelController@index')->name('artikel.index');
@@ -46,6 +47,11 @@ Route::group(['prefix'=>'admin','middleware'=>'auth'], function(){
 
     Route::group(['prefix'=>'program'] , function(){
         Route::get('/','ProgramController@index')->name('program.index');
+        Route::get('/tambah','ProgramController@create')->name('program.create');
+        Route::post('/tambah','ProgramController@store')->name('program.store');
+        Route::get('/{id}/edit','ProgramController@edit')->name('editprogram.edit');
+        Route::post('/{id}/update','ProgramController@update')->name('program.update');
+        Route::get('/{id}/delete','ProgramController@destroy')->name('hapusprogram.destroy');
     });
 
     
