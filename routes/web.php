@@ -60,6 +60,7 @@ Route::group(['prefix'=>'admin','middleware'=>'auth'], function(){
         Route::post('/tambah', 'AdminTestimoniController@store')->name('tambah_testimoni.store');
         Route::get('/{id}/edit', 'AdminTestimoniController@edit')->name('edit_testimoni.edit');
         Route::post('/{id}/update', 'AdminTestimoniController@update')->name('update_testimoni.update');
+        Route::get('/{id}/delete', 'AdminTestimoniController@destroy')->name('delete_testimoni.destroy');
     });
 
     

@@ -11,7 +11,7 @@ class UtamaController extends Controller
 {
     public function index()
     {
-        $testimoni = Testimoni::orderBy('id', 'DESC')->get();
+        $testimoni = Testimoni::orderBy('id', 'DESC')->take(3)->get();
         $articles = Article::orderBy('id', 'DESC')->take(3)->get();
         $programs = Program::orderBy('id', 'DESC')->get();
 
@@ -25,6 +25,7 @@ class UtamaController extends Controller
     }
 
     public function testimoni(){
-        return view('siswa.showtestimoni');
+        $testimoni = Testimoni::orderBy('id', 'DESC')->get();
+        return view('siswa.showtestimoni', compact('testimoni'));
     }
 }

@@ -140,6 +140,9 @@ class AdminTestimoniController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $testimoni = Testimoni::find($id);
+        $testimoni->delete();
+
+        return redirect()->route('admin_testimoni.index');
     }
 }

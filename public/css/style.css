@@ -8,6 +8,7 @@ body {
     margin-left: 5px;
     border: 1px solid #356F7D;
     border-radius: 20px;
+    min-width: 80px;
 }
 
 .grid-item {

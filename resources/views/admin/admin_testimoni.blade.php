@@ -23,13 +23,13 @@
                     <img src="{{ asset('storage/testimoni/'.$test->foto) }}" class="section5fotomuka rounded-circle mx-auto">
                     <p class="section5nama">{{ $test->name }}</p>
                     <p class="section5program">{{ $test->program->name }}</p>
-                        <div class="container">
+                        <div class="container section5wadahkesan">
                             <p class="section5kesan">{!! Str::limit($test->kesan, 250, '...') !!}</p>
                         </div>
                         <div class="optionprogram">
                             <div class="wadahoptionprogram mx-auto">
                                 <a href="{{ route('edit_testimoni.edit', $test) }}" style="margin-right:20px;"><i class="fas fa-edit"></i></a>
-                                <a href=""><i class="fas fa-trash-alt"></i></a>
+                                <a href="{{ route('delete_testimoni.destroy', $test) }}"><i class="fas fa-trash-alt"></i></a>
                             </div>
                         </div>
                 </div>
