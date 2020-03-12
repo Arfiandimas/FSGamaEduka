@@ -93,7 +93,7 @@ html {
 
 .divtulisan {
     margin-left: 280px;
-    width: 311px;
+    min-width: 311px;
     margin-top: -300px;
     position: absolute;
     z-index: 6;
@@ -486,7 +486,7 @@ footer .sosialmedia {
 }
 
 footer .copyright {
-    width: 162px;
+    width: 185px;
     margin-top: 30px;
     padding-bottom: 40px;
 }
@@ -507,7 +507,7 @@ footer .copyright {
 
     .divtulisan {
         margin-left: 650px;
-        width: 311px;
+        min-width: 311px;
         margin-top: -300px;
         position: absolute;
         z-index: 6;
@@ -572,7 +572,7 @@ footer .copyright {
     }
 
     footer .copyright {
-        width: 162px;
+        width: 185px;
         margin-top: 30px;
         padding-bottom: 40px;
     }
@@ -645,7 +645,7 @@ footer .copyright {
 
     .divtulisan {
         margin-left: 150px;
-        width: 230px;
+        min-width: 230px;
         margin-top: -200px;
         position: absolute;
         z-index: 6;
@@ -756,7 +756,7 @@ footer .copyright {
     }
 
     footer .copyright {
-        width: 162px;
+        width: 185px;
         margin-top: 20px;
         padding-bottom: 20px;
     }
@@ -820,7 +820,7 @@ footer .copyright {
 
     .divtulisan {
         margin-left: 150px;
-        width: 230px;
+        min-width: 230px;
         margin-top: -200px;
         position: absolute;
         z-index: 6;
@@ -848,6 +848,11 @@ footer .copyright {
         position: absolute;
         bottom: 0;
         margin-bottom: 10px;
+    }
+
+    .bungkussection1baten a {
+        color: #707070;
+        padding-top: 2px;
     }
 
     .section1batenkanan {
@@ -1086,7 +1091,7 @@ footer .copyright {
     }
 
     footer .copyright {
-        width: 162px;
+        width: 185px;
         margin-top: 20px;
         padding-bottom: 20px;
     }
@@ -1148,7 +1153,7 @@ footer .copyright {
 
     .divtulisan {
         margin-left: 150px;
-        width: 187px;
+        min-width: 187px;
         margin-top: -200px;
         position: absolute;
         z-index: 6;
@@ -1176,6 +1181,11 @@ footer .copyright {
         position: absolute;
         bottom: 0;
         margin-bottom: 10px;
+    }
+
+    .bungkussection1baten a {
+        color: #707070;
+        padding-top: 5px;
     }
 
     .section1baten {
@@ -1314,8 +1324,8 @@ footer .copyright {
     }
 
     .divtulisan {
-        margin-left: 60px;
-        width: 160px;
+        margin-left: 90px;
+        min-width: 160px;
         margin-top: -120px;
         position: absolute;
         z-index: 6;
@@ -1345,6 +1355,11 @@ footer .copyright {
         margin-bottom: 10px;
     }
 
+    .bungkussection1baten a {
+        color: #707070;
+        padding-top: 3px;
+    }
+
     .section1baten {
         background-color: transparent;
         width: 50px;
@@ -1354,7 +1369,7 @@ footer .copyright {
         border-radius: 16px;
         color: #707070;
         border: 1.5px solid #F8C470;
-        font-size: 7px;
+        font-size: 6px;
     }
 
     .section1batenkanan {
@@ -1468,7 +1483,7 @@ footer .copyright {
     }
 
     footer .copyright {
-        width: 170px;
+        width: 185px;
         margin-top: 30px;
         padding-bottom: 40px;
         margin-bottom: 40px;
@@ -1990,7 +2005,7 @@ footer .copyright {
     }
 
     .wadahtulisanmobile {
-        width: 280px;
+        min-width: 280px;
     }
 
     .section1h1mobile {
