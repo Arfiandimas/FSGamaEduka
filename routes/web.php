@@ -20,6 +20,8 @@
 Route::get('/','UtamaController@index')->name('utama.index');
 Route::get('/about','UtamaController@about')->name('utama.about');
 Route::get('/testimoni','UtamaController@testimoni')->name('utama.testimoni');
+Route::get('/daftar','PendaftaranSiswaController@index')->name('daftar.index');
+
 
 Route::group(['prefix'=>'artikel'] , function(){
     Route::get('/','ArtikelController@index')->name('artikel.index');

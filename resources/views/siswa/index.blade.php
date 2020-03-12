@@ -337,7 +337,7 @@
                 </div>
                 <div class="col-6">
                     <h1 class="section6h1">Let's Join Us</h1>
-                    <a href="" class="btn btn-primary section6button">Daftar !</a>
+                    <a href="{{ route('daftar.index') }}" class="btn btn-primary section6button">Daftar !</a>
                 </div>
             </div>
 
