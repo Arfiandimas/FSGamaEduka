@@ -20,7 +20,8 @@
 Route::get('/','UtamaController@index')->name('utama.index');
 Route::get('/about','UtamaController@about')->name('utama.about');
 Route::get('/testimoni','UtamaController@testimoni')->name('utama.testimoni');
-Route::get('/daftar','PendaftaranSiswaController@index')->name('daftar.index');
+Route::get('/daftar','PendaftaranSiswaController@create')->name('daftar.create');
+Route::post('/daftar','PendaftaranSiswaController@store')->name('daftar.store');
 
 
 Route::group(['prefix'=>'artikel'] , function(){
@@ -63,6 +64,11 @@ Route::group(['prefix'=>'admin','middleware'=>'auth'], function(){
         Route::get('/{id}/edit', 'AdminTestimoniController@edit')->name('edit_testimoni.edit');
         Route::post('/{id}/update', 'AdminTestimoniController@update')->name('update_testimoni.update');
         Route::get('/{id}/delete', 'AdminTestimoniController@destroy')->name('delete_testimoni.destroy');
+    });
+
+    Route::group(['prefix'=>'siswa'] , function(){
+        Route::get('/', 'PendaftaranSiswaController@index')->name('siswa.index');
+
     });
 
     

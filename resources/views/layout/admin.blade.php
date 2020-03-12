@@ -58,6 +58,15 @@
               </li>
 
               <li class="nav-item">
+                <a href="{{ route('siswa.index') }}" class="nav-link">
+                  <i class="fas fa-user-graduate"></i>
+                  <p>
+                    Siswa
+                  </p>
+                </a>
+              </li>
+
+              <li class="nav-item">
                 <a href="{{ route('program.index') }}" class="nav-link">
                   <i class="far fa-calendar"></i>
                   <p>

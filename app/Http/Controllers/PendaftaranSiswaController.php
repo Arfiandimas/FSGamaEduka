@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Program;
+use App\Siswa;
 
 class PendaftaranSiswaController extends Controller
 {
@@ -14,9 +15,9 @@ class PendaftaranSiswaController extends Controller
      */
     public function index()
     {
-        $programs = Program::all();
+        $siswa = Siswa::paginate(10);
 
-        return view('siswa.daftar', compact('programs'));
+        return view('admin.siswa', compact('siswa'));
     }
 
     /**
@@ -26,7 +27,9 @@ class PendaftaranSiswaController extends Controller
      */
     public function create()
     {
-        //
+        $programs = Program::all();
+
+        return view('siswa.daftar', compact('programs'));
     }
 
     /**
@@ -37,7 +40,17 @@ class PendaftaranSiswaController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        Siswa::create([
+            'name' => $request->name,
+            'pendidikan_terakhir' => $request->pendidikan_terakhir,
+            'umur' => $request->umur,
+            'alamat_lengkap' => $request->alamat_lengkap,
+            'no_telp' => $request->no_telp,
+            'email' => $request->email,
+            'program_id' => $request->program_id
+        ]);
+
+        return view('siswa.infopendaftaran');
     }
 
     /**

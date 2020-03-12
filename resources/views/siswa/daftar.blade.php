@@ -6,7 +6,8 @@
     <div class="container">
         <h4 style="text-align: center;">Form Pendaftaran Gama Eduka</h4>
         <h5 style="margin-top: 20px;">Silahkan Isi Data Diri Dengan Benar Dan Lengkap</h5>
-        <form action="" method="POST" style="margin-bottom:20px;">
+        <form action="{{ route('daftar.store') }}" method="POST" style="margin-bottom:20px;">
+            {{ csrf_field() }}
             <div class="form-group">
                 <label for="name">Nama Lengkap</label>
                 <input type="text" class="form-control" id="name" name="name" placeholder="Masukkan nama lengkap" required>
