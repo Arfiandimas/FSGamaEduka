@@ -41,23 +41,7 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    {{-- @foreach ($siswa as $sis)
-                                    <tr>
-                                    <td>{{ $sis->name }}</td>
-                                    <td>{{ $sis->pendidikan_terakhir }}</td>
-                                    <td>{{ $sis->umur }}</td>
-                                    <td><img style="width:80px;" src="{{ asset('storage/foto/'.$sis->foto) }}" alt=""></td>
-                                    <td><span class="tag tag-success">{{ $sis->program->name }}</span></td>
-                                    <td>{{ $sis->alamat_lengkap }}</td>
-                                    <td>{{ $sis->no_telp }}</td>
-                                    <td>{{ $sis->email }}</td>
-                                    <td>{{$sis->created_at->format('M d, Y')}}</td>
-                                    <td>
-                                        <a href="http://" class="btn btn-warning btn-sm">Edit</a>
-                                        <a href="http://" class="btn btn-danger btn-sm">Hapus</a>
-                                    </td>
-                                    </tr>
-                                    @endforeach --}}
+                                    
                                 </tbody>
                             </table>
                         </div>
@@ -65,7 +49,6 @@
                 <!-- /.card-body -->
                 </div>
                 <!-- /.card -->
-            {{-- {{$siswa->links()}} --}}
             </div>
         </div>
     </div>
@@ -80,14 +63,19 @@
                     {data:'name', name:'name'},
                     {data:'pendidikan_terakhir', name:'pendidikan_terakhir'},
                     {data:'umur', name:'umur'},
-                    {data:'foto', name:'foto'},
+                    {data:'foto', name:'foto',
+                        render: function( data, type, full, meta ) {
+                            return "<img src=\"/storage/foto/" + data + "\" width=\"100\"/>";
+                        }
+                    },
                     {data:'program_id', name:'program_id'},
                     {data:'alamat_lengkap', name:'alamat_lengkap'},
                     {data:'no_telp', name:'no_telp'},
                     {data:'email', name:'email'},
                     {data:'created_at', name:'created_at'},
                     {data:'aksi', name:'aksi'},
-                ]
+                ],
+                order: [[ 0, "desc" ]],
             });
         } );
     </script>

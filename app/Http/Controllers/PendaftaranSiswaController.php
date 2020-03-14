@@ -126,15 +126,13 @@ class PendaftaranSiswaController extends Controller
         ->editColumn('created_at', function ($user) {
             return $user->created_at->format('M d, Y');
         })
-        ->editColumn('foto', function ($foto) {
-            return '<img style="width:80px;" src="{{ asset("storage/foto/".$foto->foto) }}" alt="">';
-        })
         ->editColumn('program_id', function ($program) {
             return $program->program->name;
         })
         ->addColumn('aksi', function($s){
-            return '<a href="#" class="btn btn-warning btn-sm">Edit</a> <a href="#" class="btn btn-danger btn-sm">Hapus</a>';
+            return '<a href="{{ $s->id }}" class="btn btn-warning btn-sm">Edit</a> <a href="#" class="btn btn-danger btn-sm">Hapus</a>';
         })
+        ->orderColumn('name', 'id $1')
         ->rawColumns(['aksi'])
         ->make(true);
     }
