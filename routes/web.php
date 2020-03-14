@@ -68,7 +68,7 @@ Route::group(['prefix'=>'admin','middleware'=>'auth'], function(){
 
     Route::group(['prefix'=>'siswa'] , function(){
         Route::get('/', 'PendaftaranSiswaController@index')->name('siswa.index');
-
+        Route::get('/getdatasiswa', 'PendaftaranSiswaController@getdatasiswa')->name('getdatasiswa.getdatasiswa');
     });
 
     

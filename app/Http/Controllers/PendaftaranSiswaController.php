@@ -17,9 +17,9 @@ class PendaftaranSiswaController extends Controller
      */
     public function index()
     {
-        $siswa = Siswa::orderBy('id', 'DESC')->paginate(10);
+        // $siswa = Siswa::orderBy('id', 'DESC')->get();
 
-        return view('admin.siswa', compact('siswa'));
+        return view('admin.siswa');
     }
 
     /**
@@ -116,5 +116,26 @@ class PendaftaranSiswaController extends Controller
     public function destroy($id)
     {
         //
+    }
+
+    public function getdatasiswa()
+    {
+        $siswa = Siswa::select('siswas.*');
+
+        return \DataTables::of($siswa)
+        ->editColumn('created_at', function ($user) {
+            return $user->created_at->format('M d, Y');
+        })
+        ->editColumn('foto', function ($foto) {
+            return '<img style="width:80px;" src="{{ asset("storage/foto/".$foto->foto) }}" alt="">';
+        })
+        ->editColumn('program_id', function ($program) {
+            return $program->program->name;
+        })
+        ->addColumn('aksi', function($s){
+            return '<a href="#" class="btn btn-warning btn-sm">Edit</a> <a href="#" class="btn btn-danger btn-sm">Hapus</a>';
+        })
+        ->rawColumns(['aksi'])
+        ->make(true);
     }
 }

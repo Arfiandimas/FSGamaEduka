@@ -19,3 +19,7 @@
     cursor: pointer;
     z-index: 1;
 }
+
+.fa-trash-alt {
+    color: #FF5757;
+}
