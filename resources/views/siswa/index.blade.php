@@ -44,15 +44,14 @@
                                     <div class="wadahgambarsection1" class="mx-auto">
                                         <img class="gambarsection1" src="/img/gambar section 1.svg" alt="">
                                     </div>
+                                    <div class="divtulisan ">
+                                        <h1 class="section1h1">Gama Eduka</h1>
+                                        <p class="section1p1">Let's Join Us, Upgrade</p>
+                                        <p class="section1p2">Your Skill</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-
-                    <div class="divtulisan">
-                        <h1 class="section1h1">Gama Eduka</h1>
-                        <p class="section1p1">Let's Join Us, Upgrade</p>
-                        <p class="section1p2">Your Skill</p>
                     </div>
                 </div>
 
@@ -111,12 +110,12 @@
 
                             @foreach ($programs as $key => $program)
                             <div class="carousel-item {{$key == 0 ? 'active' : '' }}">    
-                                <div class="container-fluid">
+                                <div class="container-fluid pt-3 pb-3">
                                     <div class="row">
-                                        <div class="col-md-5 offset-1">
-                                            <img src="{{ asset('storage/program/'.$program->gambar) }}" alt="" class="img-fluid" style="width:100%; height:auto;">
+                                        <div class="col-md-5 offset-1 d-flex align-items-center justify-content-center">
+                                            <img src="{{ asset('storage/program/'.$program->gambar) }}" alt="" class="img-fluid section2gambarasset" style="width:100%; height:auto;">
                                         </div>
-                                        <div class="col-md-5">
+                                        <div class="col-md-5 text-justify">
                                             <h5 class="section2judulprogram">{{ $program->name }}</h5>
                                             <span class="section2clock">
                                                 <i class="far fa-clock"></i>
@@ -188,7 +187,7 @@
                         </div>
                         <div class="col-6">
                             <h4 class="section3h4">Service Terbaik Kami</h4>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti eaque iusto delectus rerum, maiores, nostrum iure iste minima aspernatur at illum, explicabo quos rem. Placeat obcaecati rem necessitatibus veniam odit cumque esse tenetur eum officia nesciunt consectetur praesentium voluptates, ut tempore.</p>
+                            <p class="text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti eaque iusto delectus rerum, maiores, nostrum iure iste minima aspernatur at illum, explicabo quos rem. Placeat obcaecati rem necessitatibus veniam odit cumque esse tenetur eum officia nesciunt consectetur praesentium voluptates, ut tempore.</p>
                         </div>
                     </div>
                     {{-- End Row Desktop --}}
@@ -223,7 +222,7 @@
 
                     <div class="section3rowmobile">
                         <h4 class="section3h4mobile">Service Terbaik Kami</h4>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti eaque iusto delectus rerum, maiores, nostrum iure iste minima aspernatur at illum, explicabo quos rem. Placeat obcaecati rem necessitatibus veniam odit cumque esse tenetur eum officia nesciunt consectetur praesentium voluptates, ut tempore. lorem20</p>
+                        <p class="text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti eaque iusto delectus rerum, maiores, nostrum iure iste minima aspernatur at illum, explicabo quos rem. Placeat obcaecati rem necessitatibus veniam odit cumque esse tenetur eum officia nesciunt consectetur praesentium voluptates, ut tempore. lorem20</p>
                     </div>
 
                 </div>

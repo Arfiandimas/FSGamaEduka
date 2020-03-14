@@ -17,7 +17,7 @@
 
             <h6>Gambar</h6>
             <div>
-                <input type="file" name="gambar" id="gambar" value="{{ $articles->gambar }}">
+                <input type="file" name="gambar" id="gambar">
             </div>
             {{-- <div class="input-group">
                 <span class="input-group-btn">
@@ -29,7 +29,9 @@
             </div>
             <img id='img-upload' src="{{ asset('storage/thumbnail/'.$articles->gambar) }}"/> --}}
             
-            <img id='img-upload' src="{{ asset('storage/thumbnail/'.$articles->gambar) }}"/>
+            <img id="img-upload" src="{{ asset('storage/thumbnail/'.$articles->gambar) }}"/>
+            <br>
+            <br>
 
             <h6>Kategori</h6>
             <div class="input-group mb-3">

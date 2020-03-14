@@ -15,8 +15,12 @@
 
         <h6>Foto</h6>
         <div style="margin-bottom:30px;">
-            <input type="file" id="gambar" name="foto" value="{{ $testimoni->gambar }}">
+            <input type="file" id="gambar" name="foto">
         </div>
+        <div>
+            <img id="img-upload" style="max-width:200px" src="{{ asset('storage/testimoni/'.$testimoni->foto) }}"/>
+        </div>
+        <br>
 
         <h6>Program</h6>
         <div class="input-group mb-3">

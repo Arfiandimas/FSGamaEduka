@@ -100,30 +100,30 @@ class ProgramController extends Controller
     public function update(Request $request, $id)
     {
         $programs = Program::find($id);
-
+        
         $this->validate($request, [
-            'gambar' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:7048'
+            'gambar' => 'image|mimes:jpeg,png,jpg,gif,svg|max:7048'
         ]);
 
-        $image = $request->file('gambar');
+        if( $request->file('gambar')){
+            $image = $request->file('gambar');
 
-        $image_name = time() . '.' . $image->getClientOriginalExtension();
+            $image_name = time() . '.' . $image->getClientOriginalExtension();
 
-        $destinationPath = storage_path('app/public/program');
+            $destinationPath = storage_path('app/public/program');
 
-        $resize_image = Image::make($image->getRealPath());
+            $resize_image = Image::make($image->getRealPath());
 
-        $resize_image->resize(1152, 800, function($constraint){
-            $constraint->aspectRatio();
-        })->save($destinationPath . '/' . $image_name);
+            $resize_image->resize(1152, 800, function($constraint){
+                $constraint->aspectRatio();
+            })->save($destinationPath . '/' . $image_name);
+        }
 
-
-        $programs->update([
-            'name' => $request->name,
-            'pertemuan' => $request->pertemuan,
-            'deskripsi' => $request->deskripsi,
-            'gambar' => $image_name
-        ]);
+        $programs->name = $request->name?$request->name : $programs->name;
+        $programs->pertemuan = $request->pertemuan?$request->pertemuan : $programs->pertemuan;
+        $programs->deskripsi = $request->deskripsi?$request->deskripsi : $programs->deskripsi;
+        $programs->gambar = $request->file('gambar')?$image_name : $programs->gambar;
+        $programs->update();
 
         return redirect()->route('program.index');
     }

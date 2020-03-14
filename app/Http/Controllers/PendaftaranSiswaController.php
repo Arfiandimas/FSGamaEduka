@@ -15,7 +15,7 @@ class PendaftaranSiswaController extends Controller
      */
     public function index()
     {
-        $siswa = Siswa::paginate(10);
+        $siswa = Siswa::orderBy('id', 'DESC')->paginate(10);
 
         return view('admin.siswa', compact('siswa'));
     }

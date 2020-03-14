@@ -108,33 +108,34 @@ class AdminArtikelController extends Controller
      */
     public function update(Request $request, $id)
     {
+        $articles = Article::find($id);
+
         $this->validate($request, [
-            'gambar' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:7048'
+            'gambar' => 'image|mimes:jpeg,png,jpg,gif,svg|max:7048'
         ]);
         
-        $image = $request->file('gambar');
+        if( $request->file('gambar')){
+            $image = $request->file('gambar');
 
-        $image_name = time() . '.' . $image->getClientOriginalExtension();
+            $image_name = time() . '.' . $image->getClientOriginalExtension();
 
-        $destinationPath = storage_path('app/public/thumbnail');
+            $destinationPath = storage_path('app/public/thumbnail');
 
-        $resize_image = Image::make($image->getRealPath());
+            $resize_image = Image::make($image->getRealPath());
 
-        $resize_image->resize(1152, 800, function($constraint){
-            $constraint->aspectRatio();
-        })->save($destinationPath . '/' . $image_name);
+            $resize_image->resize(1152, 800, function($constraint){
+                $constraint->aspectRatio();
+            })->save($destinationPath . '/' . $image_name);
+        }
 
-        $articles = Article::find($id);
-        $articles->update([
-            'judul' => $request->judul,
-            'slug' => Str::slug($request->judul),
-            'deskripsi' => $request->deskripsi,
-            'konten' => $request->konten,
-            'category_id' => $request->category_id,
-            'user_id' => auth()->user()->id,
-            'gambar' => $image_name,
-        ]);
-
+        $articles->judul = $request->judul?$request->judul : $articles->judul;
+        $articles->slug = Str::slug($request->judul);
+        $articles->deskripsi = $request->deskripsi?$request->deskripsi : $articles->deskripsi;
+        $articles->konten = $request->konten?$request->konten : $articles->konten;
+        $articles->category_id = $request->category_id?$request->category_id : $articles->category_id;
+        $articles->user_id = auth()->user()->id;
+        $articles->gambar = $request->file('gambar')?$image_name : $articles->gambar;
+        $articles->update();
 
         return redirect()->route('adminartikel.index');
     }

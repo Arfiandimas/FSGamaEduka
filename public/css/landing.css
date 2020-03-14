@@ -92,9 +92,8 @@ html {
 }
 
 .divtulisan {
-    margin-left: 280px;
-    min-width: 311px;
-    margin-top: -300px;
+    margin-top: -240px;
+    margin-left: -215px;
     position: absolute;
     z-index: 6;
 }
@@ -138,9 +137,10 @@ html {
 /* ---------------------Section2----------------------- */
 .section2 {
     width: 100%;
-    background-color: #98E0F8;
+    background-color: #D8F4FD;
     min-height: 500px;
     padding-bottom: 1px;
+
 }
 
 .section2h5 {
@@ -166,6 +166,10 @@ html {
     margin-top: -5px;
 }
 
+.section2gambarasset {
+    max-width: 350px;
+}
+
 /* ---------------------End Section2----------------------- */
 
 
@@ -179,7 +183,7 @@ html {
 .section3kiri {
     position: relative;
     z-index: 9;
-    background: #5CC4E7;
+    background: #ADE7FA;
     width: 100%;
 }
 
@@ -271,7 +275,7 @@ html {
 }
 
 .section4card {
-    width: 18rem;
+    width: 90%;
     margin-top: 15px;
     box-shadow: 3px 5px 5px 0 rgba(0, 0, 0, 0.2);
 }
@@ -297,7 +301,7 @@ html {
 .section5kiri {
     position: relative;
     z-index: 9;
-    background: #5CC4E7;
+    background: #ADE7FA;
     width: 100%;
 }
 
@@ -506,9 +510,8 @@ footer .copyright {
     }
 
     .divtulisan {
-        margin-left: 650px;
-        min-width: 311px;
-        margin-top: -300px;
+        margin-top: -240px;
+        margin-left: -215px;
         position: absolute;
         z-index: 6;
     }
@@ -625,13 +628,11 @@ footer .copyright {
         margin-top: -50px;
     }
 
-    .divgambar {
-        width: 500px;
-        height: 300px;
-        margin-top: 100px;
-        border: 5px solid #F8C470;
-        position: relative;
-        z-index: 5;
+    .divtulisan {
+        margin-top: -120px;
+        margin-left: -155px;
+        position: absolute;
+        z-index: 6;
     }
 
     .divgambar .gambarsection1 {
@@ -641,14 +642,6 @@ footer .copyright {
 
     .divgambar .wadahgambarsection1 {
         width: 450px;
-    }
-
-    .divtulisan {
-        margin-left: 150px;
-        min-width: 230px;
-        margin-top: -200px;
-        position: absolute;
-        z-index: 6;
     }
 
     .section1h1 {
@@ -764,10 +757,6 @@ footer .copyright {
     /* ---------------------End Footer----------------------- */
 }
 
-/* 
-    ##Device = Tablets, Ipads (landscape)
-    ##Screen = B/w 768px to 1024px
-*/
 @media (min-width: 768px) and (max-width: 991px) and (orientation: landscape) {
 
     /* ---------------------Section1----------------------- */
@@ -819,9 +808,8 @@ footer .copyright {
     }
 
     .divtulisan {
-        margin-left: 150px;
-        min-width: 230px;
-        margin-top: -200px;
+        margin-top: -190px;
+        margin-left: -155px;
         position: absolute;
         z-index: 6;
     }
@@ -893,28 +881,9 @@ footer .copyright {
         padding-top: 50px;
     }
 
-    .section3kiri {
-        position: relative;
-        z-index: 9;
-        background: #5CC4E7;
-        width: 100%;
-    }
-
     .section3 h5 {
         padding-top: 50px;
     }
-
-    .section3kiri:before {
-        content: "";
-        position: absolute;
-        z-index: -1;
-        top: 0;
-        right: 37%;
-        bottom: 0;
-        left: 0;
-        background: #F4F8F7;
-    }
-
 
     .kotakkuning {
         width: 90%;
@@ -1152,9 +1121,8 @@ footer .copyright {
     }
 
     .divtulisan {
-        margin-left: 150px;
-        min-width: 187px;
-        margin-top: -200px;
+        margin-top: -170px;
+        margin-left: -115px;
         position: absolute;
         z-index: 6;
     }
@@ -1224,28 +1192,9 @@ footer .copyright {
         padding-top: 50px;
     }
 
-    .section3kiri {
-        position: relative;
-        z-index: 9;
-        background: #5CC4E7;
-        width: 100%;
-    }
-
     .section3 h5 {
         padding-top: 50px;
     }
-
-    .section3kiri:before {
-        content: "";
-        position: absolute;
-        z-index: -1;
-        top: 0;
-        right: 37%;
-        bottom: 0;
-        left: 0;
-        background: #F4F8F7;
-    }
-
 
     .kotakkuning {
         width: 95%;
@@ -1324,9 +1273,8 @@ footer .copyright {
     }
 
     .divtulisan {
-        margin-left: 90px;
-        min-width: 160px;
-        margin-top: -120px;
+        margin-top: -100px;
+        margin-left: -100px;
         position: absolute;
         z-index: 6;
     }
@@ -1394,28 +1342,9 @@ footer .copyright {
         padding-top: 50px;
     }
 
-    .section3kiri {
-        position: relative;
-        z-index: 9;
-        background: #5CC4E7;
-        width: 100%;
-    }
-
     .section3 h5 {
         padding-top: 50px;
     }
-
-    .section3kiri:before {
-        content: "";
-        position: absolute;
-        z-index: -1;
-        top: 0;
-        right: 37%;
-        bottom: 0;
-        left: 0;
-        background: #F4F8F7;
-    }
-
 
     .kotakkuning {
         width: 95%;
@@ -1696,28 +1625,9 @@ footer .copyright {
         padding-top: 50px;
     }
 
-    .section3kiri {
-        position: relative;
-        z-index: 9;
-        background: #5CC4E7;
-        width: 100%;
-    }
-
     .section3 h5 {
         padding-top: 30px;
     }
-
-    .section3kiri:before {
-        content: "";
-        position: absolute;
-        z-index: -1;
-        top: 0;
-        right: 37%;
-        bottom: 0;
-        left: 0;
-        background: #F4F8F7;
-    }
-
 
     .kotakkuning {
         width: 95%;
@@ -1736,7 +1646,6 @@ footer .copyright {
     .section3h4mobile {
         text-align: center;
         margin-top: 20px;
-        font-size: 10px;
     }
 
     .section3cardkiri {
@@ -1995,14 +1904,13 @@ footer .copyright {
         height: 150px;
     }
 
-    .divtulisanmobile {
+    /* .divtulisanmobile {
         overflow: hidden;
         width: 100%;
         min-height: 90px;
-        /* margin-top: -90px; */
         position: absolute;
         z-index: 6;
-    }
+    } */
 
     .wadahtulisanmobile {
         min-width: 280px;

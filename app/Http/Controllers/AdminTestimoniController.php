@@ -103,31 +103,33 @@ class AdminTestimoniController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $programs = Testimoni::find($id);
+        $testimoni = Testimoni::find($id);
 
         $this->validate($request, [
-            'foto' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:7048'
+            'foto' => 'image|mimes:jpeg,png,jpg,gif,svg|max:7048'
         ]);
 
-        $image = $request->file('foto');
+        if($request->file('foto')){
+            $image = $request->file('foto');
 
-        $image_name = time() . '.' . $image->getClientOriginalExtension();
+            $image_name = time() . '.' . $image->getClientOriginalExtension();
 
-        $destinationPath = storage_path('app/public/testimoni');
+            $destinationPath = storage_path('app/public/testimoni');
 
-        $resize_image = Image::make($image->getRealPath());
+            $resize_image = Image::make($image->getRealPath());
 
-        $resize_image->resize(1152, 800, function($constraint){
-            $constraint->aspectRatio();
-        })->save($destinationPath . '/' . $image_name);
+            $resize_image->resize(1152, 800, function($constraint){
+                $constraint->aspectRatio();
+            })->save($destinationPath . '/' . $image_name);
+        }
+        
+        $testimoni->name = $request->name?$request->name : $testimoni->name;
+        $testimoni->foto = $request->file('foto')?$image_name : $testimoni->foto;
+        $testimoni->program_id = $request->program_id?$request->program_id : $testimoni->program_id;
+        $testimoni->kesan = $request->kesan?$request->kesan : $testimoni->kesan;
+        $testimoni->update();
 
 
-        $programs->update([
-            'name' => $request->name,
-            'foto' => $image_name,
-            'program_id' => $request->program_id,
-            'kesan' => $request->kesan
-        ]);
 
         return redirect()->route('admin_testimoni.index');
     }

@@ -25,9 +25,12 @@
 
         <h6>Gambar</h6>
         <div style="margin-bottom:30px;">
-            <input type="file" id="gambar" name = "gambar" value="{{ $programs->gambar }}">
+            <input type="file" id="gambar" name = "gambar">
         </div>
-
+        <div>
+            <img id="img-upload"  style="max-width:400px" src="{{ asset('storage/program/'.$programs->gambar) }}"/>
+        </div>
+        <br>
         <button type="submit" class="btn btn-primary">Simpan</button>
     </form>
 </div>
