@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="/css/add_artikel.css">
     <link rel="stylesheet" href="/css/program.css">
     <link rel="stylesheet" href="/css/showtestimoni.css">
+    <link rel="stylesheet" href="/css/gambaradmin.css">
 
     <link rel="stylesheet" href="/css/all.min.css">
     <link rel="stylesheet" href="/css/adminlte.min.css">
@@ -146,7 +147,7 @@
     <script src="/js/jquery-3.4.1.slim.min.js"></script>
     <script src="/js/popper.min.js"></script>
     <script src="/js/bootstrap.min.js"></script>
-    {{-- <script src="/js/gambar.js"></script> --}}
+    <script src="/js/gambar.js"></script>
     <script src="/js/adminlte.min.js"></script>
     <script src="/js/bootstrap.bundle.min.js"></script>
 </body>

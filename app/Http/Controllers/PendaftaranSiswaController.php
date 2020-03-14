@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 use App\Program;
 use App\Siswa;
 
+use Image;
+
 class PendaftaranSiswaController extends Controller
 {
     /**
@@ -40,6 +42,23 @@ class PendaftaranSiswaController extends Controller
      */
     public function store(Request $request)
     {
+        $this->validate($request, [
+            'foto' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:7048'
+        ]);
+
+        $image = $request->file('foto');
+
+        $image_name = time() . '.' . $image->getClientOriginalExtension();
+
+        $destinationPath = storage_path('app/public/foto');
+
+        $resize_image = Image::make($image->getRealPath());
+
+        $resize_image->resize(1152, 800, function($constraint){
+            $constraint->aspectRatio();
+        })->save($destinationPath . '/' . $image_name);
+
+
         Siswa::create([
             'name' => $request->name,
             'pendidikan_terakhir' => $request->pendidikan_terakhir,
@@ -47,6 +66,7 @@ class PendaftaranSiswaController extends Controller
             'alamat_lengkap' => $request->alamat_lengkap,
             'no_telp' => $request->no_telp,
             'email' => $request->email,
+            'foto' => $image_name,
             'program_id' => $request->program_id
         ]);
 

@@ -16,20 +16,12 @@
             </div>
 
             <h6>Gambar</h6>
-            <div>
-                <input type="file" name="gambar" id="gambar">
+            <div class="logoContainer">
+                <img src="{{ asset('storage/thumbnail/'.$articles->gambar) }}">
             </div>
-            {{-- <div class="input-group">
-                <span class="input-group-btn">
-                    <span class="btn btn-default btn-file">
-                        Browse… <input type="file" id="imgInp">
-                    </span>
-                </span>
-                <input type="text" class="nama-gambar" name="gambar" value="{{ $articles->gambar }}">
+            <div class="fileContainer sprite">
+                <input type="file"  value="Choose File" id="gambar" name="gambar">
             </div>
-            <img id='img-upload' src="{{ asset('storage/thumbnail/'.$articles->gambar) }}"/> --}}
-            
-            <img id="img-upload" src="{{ asset('storage/thumbnail/'.$articles->gambar) }}"/>
             <br>
             <br>
 

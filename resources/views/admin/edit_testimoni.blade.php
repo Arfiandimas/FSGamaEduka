@@ -14,11 +14,11 @@
         </div>
 
         <h6>Foto</h6>
-        <div style="margin-bottom:30px;">
-            <input type="file" id="gambar" name="foto">
+        <div class="logoContainer">
+            <img src="{{ asset('storage/testimoni/'.$testimoni->foto) }}">
         </div>
-        <div>
-            <img id="img-upload" style="max-width:200px" src="{{ asset('storage/testimoni/'.$testimoni->foto) }}"/>
+        <div class="fileContainer sprite">
+            <input type="file"  value="Choose File" id="foto" name="foto">
         </div>
         <br>
 

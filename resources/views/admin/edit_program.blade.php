@@ -24,11 +24,11 @@
         </div>
 
         <h6>Gambar</h6>
-        <div style="margin-bottom:30px;">
-            <input type="file" id="gambar" name = "gambar">
+        <div class="logoContainer">
+            <img src="{{ asset('storage/program/'.$programs->gambar) }}">
         </div>
-        <div>
-            <img id="img-upload"  style="max-width:400px" src="{{ asset('storage/program/'.$programs->gambar) }}"/>
+        <div class="fileContainer sprite">
+            <input type="file"  value="Choose File" id="gambar" name="gambar">
         </div>
         <br>
         <button type="submit" class="btn btn-primary">Simpan</button>

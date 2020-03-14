@@ -21,6 +21,7 @@ class CreateSiswasTable extends Migration
             $table->text('alamat_lengkap');
             $table->bigInteger('no_telp');
             $table->string('email')->nullable();
+            $table->string('foto');
             $table->timestamps();
             $table->softDeletes();
 

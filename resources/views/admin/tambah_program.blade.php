@@ -10,23 +10,27 @@
             {{ csrf_field() }}
             <h6>Nama Program</h6>
             <div class="input-group mb-3">
-                <input type="text" class="form-control" aria-describedby="basic-addon1" name="name">
+                <input type="text" class="form-control" aria-describedby="basic-addon1" name="name" required>
             </div>
 
             <h6>Jumlah Pertemuan</h6>
             <div class="input-group mb-3">
-                <input type="number" class="form-control" aria-describedby="basic-addon1" name="pertemuan">
+                <input type="number" class="form-control" aria-describedby="basic-addon1" name="pertemuan" required>
             </div>
 
             <h6>Deskripsi Program</h6>
             <div class="input-group mb-3">
-                <textarea class="form-control" rows="3" id="deskripsi" name="deskripsi"></textarea>
+                <textarea class="form-control" rows="3" id="deskripsi" name="deskripsi" required></textarea>
             </div>
 
             <h6>Gambar</h6>
-            <div style="margin-bottom:30px;">
-                <input type="file" id="gambar" name = "gambar">
+            <div class="logoContainer">
+                <img src="/img/photo.png">
             </div>
+            <div class="fileContainer sprite">
+                <input type="file" value="Choose File" id="gambar" name="gambar" required>
+            </div>
+            <br>
 
             <button type="submit" class="btn btn-primary">Simpan</button>
         </form>

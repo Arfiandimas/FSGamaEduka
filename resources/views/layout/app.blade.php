@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="/css/bootstrap.min.css">
     <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="/css/showtestimoni.css">
+    <link rel="stylesheet" href="/css/gambarsiswa.css">
     <script src="https://kit.fontawesome.com/f45723ccd1.js" crossorigin="anonymous"></script>
     <title>@yield('title')</title>
 </head>
@@ -117,6 +118,7 @@
     <script src="/js/jquery-3.4.1.slim.min.js"></script>
     <script src="/js/popper.min.js"></script>
     <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/gambar.js"></script>
 </body>
 
 </html>

@@ -12,20 +12,16 @@
             {{ csrf_field() }}
             <h6>Judul</h6>
             <div class="input-group mb-3">
-                <input type="text" class="form-control" aria-label="Username" aria-describedby="basic-addon1" name="judul">
+                <input type="text" class="form-control" aria-label="Username" aria-describedby="basic-addon1" name="judul" required>
             </div>
 
             <h6>Gambar</h6>
-            <input type="file" id="gambar" name = "gambar">
-            {{-- <div class="input-group">
-                <span class="input-group-btn">
-                    <span class="btn btn-default btn-file">
-                        Browse… <input type="file" id="imgInp">
-                    </span>
-                </span>
-                <input type="text" class="nama-gambar" id="gambar" name="gambar">
+            <div class="logoContainer">
+                <img src="/img/photo.png">
             </div>
-            <img id='img-upload' /> --}}
+            <div class="fileContainer sprite">
+                <input type="file" value="Choose File" id="gambar" name="gambar" required>
+            </div>
 
             <h6>Kategori</h6>
             <div class="input-group mb-3">
@@ -38,12 +34,12 @@
 
             <h6>Deskripsi</h6>
             <div class="input-group mb-3">
-                <textarea class="form-control" rows="3" name="deskripsi"></textarea>
+                <textarea class="form-control" rows="3" name="deskripsi" required></textarea>
             </div>
 
             <h6>Konten</h6>
             <div class="input-group mb-3">
-                <textarea class="form-control" style="height: 600px;" rows="3" name="konten" id="konten"></textarea>
+                <textarea class="form-control" style="height: 600px;" rows="3" name="konten" id="konten" required></textarea>
             </div>
             
             <button type="submit" class="btn btn-primary">Simpan</button>
