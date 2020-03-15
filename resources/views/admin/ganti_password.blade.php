@@ -12,6 +12,7 @@
 
 @section('content')
     <div class="container">
+        <h5 style="text-align:center;">Hai <span style="font-weight:bold;">{{ auth()->user()->name }}</span>, ini adalah halaman ganti password</h5>
         <form action="{{ route('password.changePassword') }}" method="post" class="formpassword">
             {{ csrf_field() }}
 

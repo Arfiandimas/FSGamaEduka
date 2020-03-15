@@ -69,6 +69,9 @@ Route::group(['prefix'=>'admin','middleware'=>'auth'], function(){
     Route::group(['prefix'=>'siswa'] , function(){
         Route::get('/', 'PendaftaranSiswaController@index')->name('siswa.index');
         Route::get('/getdatasiswa', 'PendaftaranSiswaController@getdatasiswa')->name('getdatasiswa.getdatasiswa');
+        Route::get('/{id}/edit', 'PendaftaranSiswaController@edit')->name('edit_siswa.edit');
+        Route::post('/{id}/update', 'PendaftaranSiswaController@update')->name('update_siswa.update');
+        Route::get('/{id}/delete', 'PendaftaranSiswaController@destroy')->name('delete_siswa.destroy');
     });
 
     

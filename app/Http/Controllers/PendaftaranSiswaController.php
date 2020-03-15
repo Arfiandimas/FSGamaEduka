@@ -92,7 +92,10 @@ class PendaftaranSiswaController extends Controller
      */
     public function edit($id)
     {
-        //
+        $siswa = Siswa::find($id);
+        $programs = Program::all();
+
+        return view('admin.edit_siswa', compact('siswa', 'programs'));
     }
 
     /**
@@ -104,7 +107,37 @@ class PendaftaranSiswaController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $siswa = Siswa::find($id);
+
+        $this->validate($request, [
+            'foto' => 'image|mimes:jpeg,png,jpg,gif,svg|max:7048'
+        ]);
+
+        if($request->file('foto')){
+            $image = $request->file('foto');
+
+            $image_name = time() . '.' . $image->getClientOriginalExtension();
+
+            $destinationPath = storage_path('app/public/foto');
+
+            $resize_image = Image::make($image->getRealPath());
+
+            $resize_image->resize(1152, 800, function($constraint){
+                $constraint->aspectRatio();
+            })->save($destinationPath . '/' . $image_name);
+        }
+
+        $siswa->name = $request->name?$request->name : $siswa->name;
+        $siswa->pendidikan_terakhir = $request->pendidikan_terakhir?$request->pendidikan_terakhir : $siswa->pendidikan_terakhir;
+        $siswa->umur = $request->umur?$request->umur : $siswa->umur;
+        $siswa->alamat_lengkap = $request->alamat_lengkap?$request->alamat_lengkap : $siswa->alamat_lengkap;
+        $siswa->no_telp = $request->no_telp?$request->no_telp : $siswa->no_telp;
+        $siswa->email = $request->email?$request->email : $siswa->email;
+        $siswa->foto = $request->file('foto')?$image_name : $siswa->foto;
+        $siswa->program_id = $request->program_id?$request->program_id : $siswa->program_id;
+        $siswa->update();
+
+        return redirect()->route('siswa.index');
     }
 
     /**
@@ -115,7 +148,10 @@ class PendaftaranSiswaController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $siswa = Siswa::find($id);
+        $siswa->delete();
+
+        return redirect()->route('siswa.index');
     }
 
     public function getdatasiswa()
@@ -129,8 +165,10 @@ class PendaftaranSiswaController extends Controller
         ->editColumn('program_id', function ($program) {
             return $program->program->name;
         })
-        ->addColumn('aksi', function($s){
-            return '<a href="{{ $s->id }}" class="btn btn-warning btn-sm">Edit</a> <a href="#" class="btn btn-danger btn-sm">Hapus</a>';
+        ->addColumn('aksi', function($data){
+            $button = '<a href="/admin/siswa/'. $data->id .'/edit" class="edit btn btn-warning btn-sm">Edit</a>';
+            $button .= '&nbsp;&nbsp;&nbsp;<a href="/admin/siswa/'. $data->id .'/delete" class="hapus btn btn-danger btn-sm">Hapus</a>';
+            return $button;
         })
         ->orderColumn('name', 'id $1')
         ->rawColumns(['aksi'])

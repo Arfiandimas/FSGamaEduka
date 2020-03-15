@@ -73,7 +73,7 @@
                     {data:'no_telp', name:'no_telp'},
                     {data:'email', name:'email'},
                     {data:'created_at', name:'created_at'},
-                    {data:'aksi', name:'aksi'},
+                    {data:'aksi', name:'aksi', orderable:false, searchable:false},
                 ],
                 order: [[ 0, "desc" ]],
             });

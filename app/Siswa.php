@@ -3,6 +3,7 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Siswa extends Model
 {
@@ -14,4 +15,8 @@ class Siswa extends Model
     {
         return $this->belongsTo(Program::class);
     }
+
+    use SoftDeletes;
+
+    protected $dates = ['deleted_at'];
 }
