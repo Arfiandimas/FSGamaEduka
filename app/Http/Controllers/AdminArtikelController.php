@@ -72,7 +72,7 @@ class AdminArtikelController extends Controller
             'user_id' => auth()->user()->id,
         ]);
 
-        return redirect()->route('adminartikel.index');
+        return redirect()->route('adminartikel.index')->with('success', 'Artikel Berhasil Ditambahkan!');
     }
 
     /**
@@ -138,7 +138,7 @@ class AdminArtikelController extends Controller
         $articles->gambar = $request->file('gambar')?$image_name : $articles->gambar;
         $articles->update();
 
-        return redirect()->route('adminartikel.index');
+        return redirect()->route('adminartikel.index')->withInfo('Artikel Berhasil Diedit!');
     }
 
     /**
@@ -153,7 +153,7 @@ class AdminArtikelController extends Controller
 
         $articles->delete();
 
-        return redirect()->route('adminartikel.index');
+        return redirect()->route('adminartikel.index')->withDanger('Artikel Berhasil Dihapus!!!');
     }
 
     public function tambahcategory(Request $request)
@@ -163,7 +163,7 @@ class AdminArtikelController extends Controller
             'slug' => Str::slug($request->judul)
         ]);
 
-        return redirect()->route('adminartikel.index');
+        return redirect()->route('adminartikel.index')->with('success', 'Kategori Berhasil Ditambahkan!');
     }
 
     public function hapuscategory($id)
@@ -172,7 +172,7 @@ class AdminArtikelController extends Controller
 
         $categories->delete();
 
-        return redirect()->route('adminartikel.index');
+        return redirect()->route('adminartikel.index')->withDanger('Kategori Berhasil Dihapus!!!');
     }
 
 }

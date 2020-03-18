@@ -74,6 +74,7 @@ Route::group(['prefix'=>'admin','middleware'=>'auth'], function(){
         Route::get('/{id}/edit', 'PendaftaranSiswaController@edit')->name('edit_siswa.edit');
         Route::post('/{id}/update', 'PendaftaranSiswaController@update')->name('update_siswa.update');
         Route::get('/{id}/delete', 'PendaftaranSiswaController@destroy')->name('delete_siswa.destroy');
+        Route::get('/{foto}/download', 'PendaftaranSiswaController@downloadFoto')->name('download.downloadFoto');
     });
 
     

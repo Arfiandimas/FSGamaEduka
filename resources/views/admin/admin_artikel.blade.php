@@ -116,7 +116,7 @@
                         <div class="modal-body">
                             <div class="form-group">
                                 <label for="name" class="col-form-label">Nama Kategori</label>
-                                <input type="text" class="form-control" name="name" id="name">
+                                <input type="text" class="form-control" name="name" id="name" required>
                             </div>
                         </div>
                         <div class="modal-footer">

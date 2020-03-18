@@ -63,7 +63,7 @@ class ProgramController extends Controller
             'gambar' => $image_name
         ]);
 
-        return redirect()->route('program.index');
+        return redirect()->route('program.index')->with('success', 'Program Berhasil Ditambahkan!');
     }
 
     /**
@@ -125,7 +125,7 @@ class ProgramController extends Controller
         $programs->gambar = $request->file('gambar')?$image_name : $programs->gambar;
         $programs->update();
 
-        return redirect()->route('program.index');
+        return redirect()->route('program.index')->withInfo('Program Berhasil Diedit!');
     }
 
     /**
@@ -139,6 +139,6 @@ class ProgramController extends Controller
         $program = Program::find($id);
         $program->delete();
 
-        return redirect()->route('program.index');
+        return redirect()->route('program.index')->withDanger('Program Berhasil Dihapus!!!');
     }
 }

@@ -10,7 +10,7 @@
 
     <div class="tambah-program mx-auto">
         <a href="{{ route('tambah_testimoni.create') }}"><img src="/img/plus.png" class="logo-programtambah" alt="">
-        <h5 class="new-program">Tambah Program</h5></a>
+        <h5 class="new-program">Tambah Testimoni</h5></a>
     </div>
 
     <h5 class="section5h5judul">Testimoni Siswa Gama Eduka</h5>

@@ -66,7 +66,7 @@ class AdminTestimoniController extends Controller
             'kesan' => $request->kesan
         ]);
 
-        return redirect()->route('admin_testimoni.index');
+        return redirect()->route('admin_testimoni.index')->with('success', 'Testimoni Berhasil Ditambahkan!');
     }
 
     /**
@@ -131,7 +131,7 @@ class AdminTestimoniController extends Controller
 
 
 
-        return redirect()->route('admin_testimoni.index');
+        return redirect()->route('admin_testimoni.index')->withInfo('Testimoni Berhasil Diedit!');
     }
 
     /**
@@ -145,6 +145,6 @@ class AdminTestimoniController extends Controller
         $testimoni = Testimoni::find($id);
         $testimoni->delete();
 
-        return redirect()->route('admin_testimoni.index');
+        return redirect()->route('admin_testimoni.index')->withDanger('Testimoni Berhasil Dihapus!!!');
     }
 }

@@ -3,10 +3,12 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 use App\Program;
 use App\Siswa;
 
 use Image;
+use File;
 
 class PendaftaranSiswaController extends Controller
 {
@@ -137,7 +139,7 @@ class PendaftaranSiswaController extends Controller
         $siswa->program_id = $request->program_id?$request->program_id : $siswa->program_id;
         $siswa->update();
 
-        return redirect()->route('siswa.index');
+        return redirect()->route('siswa.index')->withInfo('Data Siswa Berhasil Diedit!');
     }
 
     /**
@@ -151,7 +153,7 @@ class PendaftaranSiswaController extends Controller
         $siswa = Siswa::find($id);
         $siswa->delete();
 
-        return redirect()->route('siswa.index');
+        return redirect()->route('siswa.index')->withDanger('Siswa Berhasil Dihapus!!!');
     }
 
     public function getdatasiswa()
@@ -168,11 +170,16 @@ class PendaftaranSiswaController extends Controller
         ->addColumn('aksi', function($data){
             $button = '<a href="/admin/siswa/'. $data->id .'/edit" class="edit btn btn-warning btn-sm">Edit</a>';
             $button .= '&nbsp;&nbsp;&nbsp;<a href="/admin/siswa/'. $data->id .'/delete" class="hapus btn btn-danger btn-sm">Hapus</a>';
-            $button .= '&nbsp;&nbsp;&nbsp;<a href="/admin/siswa/'. $data->id .'/delete" class="hapus btn btn-secondary btn-sm"><i class="fas fa-download"></i></a>';
+            $button .= '&nbsp;&nbsp;&nbsp;<a href="/admin/siswa/'. $data->foto .'/download" class="hapus btn btn-secondary btn-sm"><i class="fas fa-download"></i></a>';
             return $button;
         })
         ->orderColumn('name', 'id $1')
         ->rawColumns(['aksi'])
         ->make(true);
+    }
+
+    public function downloadFoto($foto)
+    {
+        return response()->download(storage_path("app/public/foto/{$foto}"));
     }
 }

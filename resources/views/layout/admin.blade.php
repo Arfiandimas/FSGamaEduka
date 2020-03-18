@@ -33,8 +33,10 @@
           <li class="nav-item">
             <a class="nav-link" data-widget="pushmenu" href="#"><i class="fas fa-bars"></i></a>
           </li>
+          <li>
+            @include('layout.partials._alert')
+          </li>
         </ul>
-  
       </nav>
       <!-- /.navbar -->
   
@@ -134,6 +136,7 @@
         <div class="content">
           <div class="container-fluid">
             <div class="row">
+
 
         @yield('content')
 
