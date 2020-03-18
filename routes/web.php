@@ -46,6 +46,8 @@ Route::group(['prefix'=>'admin','middleware'=>'auth'], function(){
         Route::get('/{id}/edit','AdminArtikelController@edit')->name('tambahartikel.edit');
         Route::post('/{id}/update','AdminArtikelController@update')->name('tambahartikel.update');
         Route::get('/{id}/delete','AdminArtikelController@destroy')->name('hapusartikel.destroy');
+        Route::post('/tambahcategory','AdminArtikelController@tambahcategory')->name('tambahcategory.tambahcategory');
+        Route::get('/{id}/hapuscategory','AdminArtikelController@hapuscategory')->name('hapuscategory.hapuscategory');
     });
 
     Route::group(['prefix'=>'program'] , function(){

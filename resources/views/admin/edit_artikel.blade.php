@@ -59,6 +59,11 @@
         CKEDITOR.replace( 'konten' , {
             width: 1120,
             height: 600,
+
+            filebrowserBrowseUrl: '/ckfinder/ckfinder.html',
+            filebrowserImageBrowseUrl: '/ckfinder/ckfinder.html?type=Images',
+            filebrowserUploadUrl: '/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Files',
+            filebrowserImageUploadUrl: '/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Images'
         });
     </script>
     <!-- End Content -->

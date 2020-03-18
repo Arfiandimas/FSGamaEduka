@@ -18,9 +18,10 @@ class AdminArtikelController extends Controller
      */
     public function index()
     {
-        $articles = Article::orderBy('id', 'DESC')->get();
+        $articles = Article::orderBy('id', 'DESC')->paginate(10);
+        $categories = Category::orderBy('id', 'DESC')->paginate(5);
 
-        return view('admin.admin_artikel', compact('articles'));
+        return view('admin.admin_artikel', compact('articles', 'categories'));
     }
 
     /**
@@ -151,6 +152,25 @@ class AdminArtikelController extends Controller
         $articles = Article::find($id);
 
         $articles->delete();
+
+        return redirect()->route('adminartikel.index');
+    }
+
+    public function tambahcategory(Request $request)
+    {
+        Category::create([
+            'name' => $request->name,
+            'slug' => Str::slug($request->judul)
+        ]);
+
+        return redirect()->route('adminartikel.index');
+    }
+
+    public function hapuscategory($id)
+    {
+        $categories = Category::find($id);
+
+        $categories->delete();
 
         return redirect()->route('adminartikel.index');
     }

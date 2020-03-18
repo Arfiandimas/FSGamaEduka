@@ -168,6 +168,7 @@ class PendaftaranSiswaController extends Controller
         ->addColumn('aksi', function($data){
             $button = '<a href="/admin/siswa/'. $data->id .'/edit" class="edit btn btn-warning btn-sm">Edit</a>';
             $button .= '&nbsp;&nbsp;&nbsp;<a href="/admin/siswa/'. $data->id .'/delete" class="hapus btn btn-danger btn-sm">Hapus</a>';
+            $button .= '&nbsp;&nbsp;&nbsp;<a href="/admin/siswa/'. $data->id .'/delete" class="hapus btn btn-secondary btn-sm"><i class="fas fa-download"></i></a>';
             return $button;
         })
         ->orderColumn('name', 'id $1')

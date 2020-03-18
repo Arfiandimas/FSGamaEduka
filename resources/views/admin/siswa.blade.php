@@ -58,6 +58,8 @@
             $('#datatable').DataTable({
                 processing:true,
                 serverSide:true,
+                dom: 'Bfrtip',
+                buttons: ['copy', 'csv', 'excel', 'pdf', 'print'],
                 ajax:"{{ route('getdatasiswa.getdatasiswa') }}",
                 columns:[
                     {data:'name', name:'name'},
