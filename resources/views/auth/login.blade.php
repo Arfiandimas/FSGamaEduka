@@ -1,7 +1,7 @@
 @extends('layout.app')
 
 @section('content')
-<div class="container">
+<div class="container mb-5">
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
@@ -56,12 +56,6 @@
                                 <button type="submit" class="btn btn-primary">
                                     {{ __('Login') }}
                                 </button>
-
-                                @if (Route::has('register'))
-                                    <a class="btn btn-link" href="{{ route('register') }}">
-                                        {{ __('Register') }}
-                                    </a>
-                                @endif
 
                                 @if (Route::has('password.request'))
                                     <a class="btn btn-link" href="{{ route('password.request') }}">

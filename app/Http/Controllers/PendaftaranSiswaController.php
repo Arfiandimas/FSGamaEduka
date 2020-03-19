@@ -45,6 +45,11 @@ class PendaftaranSiswaController extends Controller
     public function store(Request $request)
     {
         $this->validate($request, [
+            'name' => 'required|max:255',
+            'pendidikan_terakhir' => 'required|max:255',
+            'umur' => 'required',
+            'alamat_lengkap' => 'required',
+            'no_telp' => 'required|max:15',
             'foto' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:7048'
         ]);
 
@@ -151,6 +156,7 @@ class PendaftaranSiswaController extends Controller
     public function destroy($id)
     {
         $siswa = Siswa::find($id);
+        unlink(storage_path("app/public/foto/{$siswa->foto}"));
         $siswa->delete();
 
         return redirect()->route('siswa.index')->withDanger('Siswa Berhasil Dihapus!!!');

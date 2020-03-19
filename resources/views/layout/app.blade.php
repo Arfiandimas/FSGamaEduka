@@ -36,7 +36,7 @@
         </div>
     </nav>
     <!-- End Navbar -->
-
+    
 
     @yield('content')
 

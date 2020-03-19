@@ -3,7 +3,7 @@
 @section('title','Daftar Gama Eduka')
 
 @section('content')
-    <div class="container">
+    <div class="container mb-5">
         <h4 style="text-align: center;">Form Pendaftaran Gama Eduka</h4>
         <br>
         <!-- general form elements -->
@@ -13,28 +13,37 @@
             </div>
             <!-- /.card-header -->
             <!-- form start -->
+            @if ($errors->any())
+                <div class="alert alert-danger">
+                    <ul>
+                        @foreach ($errors->all() as $error)
+                            <li>{{ $error }}</li>
+                        @endforeach
+                    </ul>
+                </div>
+            @endif
             <form action="{{ route('daftar.store') }}" method="POST" enctype="multipart/form-data">
                 {{ csrf_field() }}
                 <div class="card-body">
                     <div class="form-group">
                         <label for="name">Nama Lengkap</label>
-                        <input type="text" class="form-control" id="name" name="name" placeholder="Masukkan nama lengkap" required>
+                        <input type="text" class="form-control" id="name" name="name" placeholder="Masukkan nama lengkap">
                     </div>
                     <div class="form-group">
                         <label for="pendidikanterakhir">Pendidikan Terakhir</label>
-                        <input type="text" class="form-control" id="pendidikanterakhir" name="pendidikan_terakhir" placeholder="Masukkan pendidikan terakhir" required>
+                        <input type="text" class="form-control" id="pendidikanterakhir" name="pendidikan_terakhir" placeholder="Masukkan pendidikan terakhir">
                     </div>
                     <div class="form-group">
                         <label for="umur">Umur</label>
-                        <input type="number" class="form-control" id="umur" name="umur" placeholder="Masukkan umur" required>
+                        <input type="number" class="form-control" id="umur" name="umur" placeholder="Masukkan umur">
                     </div>
                     <div class="form-group">
                         <label for="alamat">Alamat Lengkap</label>
-                        <textarea class="form-control" rows="3" id="alamat" name="alamat_lengkap" placeholder="Masukkan alamat lengkap" required></textarea>
+                        <textarea class="form-control" rows="3" id="alamat" name="alamat_lengkap" placeholder="Masukkan alamat lengkap"></textarea>
                     </div>
                     <div class="form-group">
                         <label for="no_telp">Nomor Telepon / WhatsApp</label>
-                        <input type="number" class="form-control" id="no_telp" name="no_telp" placeholder="Masukkan nomor telepon atau whatsapp" required>
+                        <input type="number" class="form-control" id="no_telp" name="no_telp" placeholder="Masukkan nomor telepon atau whatsapp">
                     </div>
                     <div class="form-group">
                         <label for="email">Email (opsional)</label>
@@ -47,7 +56,7 @@
                             <img src="/img/photo.png">
                         </div>
                         <div class="fileContainer sprite">
-                            <input type="file" value="Choose File" id="foto" name="foto" required>
+                            <input type="file" value="Choose File" id="foto" name="foto">
                         </div>
                     </div>
         
@@ -66,6 +75,7 @@
                 <button type="submit" class="btn btn-primary">Submit</button>
             </div>
             </form>
+            <p></p>
         </div>
         <!-- /.card -->
     </div>
