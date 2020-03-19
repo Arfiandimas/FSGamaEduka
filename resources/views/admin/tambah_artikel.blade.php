@@ -8,11 +8,20 @@
 
     <!-- Content -->
     <div class="container">
+        @if ($errors->any())
+            <div class="alert alert-danger">
+                <ul>
+                    @foreach ($errors->all() as $error)
+                        <li>{{ $error }}</li>
+                    @endforeach
+                </ul>
+            </div>
+        @endif
         <form action="{{ route('tambahartikel.store') }}" method="POST" enctype="multipart/form-data">
             {{ csrf_field() }}
             <h6>Judul</h6>
             <div class="input-group mb-3">
-                <input type="text" class="form-control" aria-label="Username" aria-describedby="basic-addon1" name="judul" required>
+                <input type="text" class="form-control" aria-label="Username" aria-describedby="basic-addon1" name="judul">
             </div>
 
             <h6>Gambar</h6>
@@ -20,7 +29,7 @@
                 <img src="/img/photo.png">
             </div>
             <div class="fileContainer sprite">
-                <input type="file" value="Choose File" id="gambar" name="gambar" required>
+                <input type="file" value="Choose File" id="gambar" name="gambar">
             </div>
 
             <h6>Kategori</h6>
@@ -34,12 +43,12 @@
 
             <h6>Deskripsi</h6>
             <div class="input-group mb-3">
-                <textarea class="form-control" rows="3" name="deskripsi" required></textarea>
+                <textarea class="form-control" rows="3" name="deskripsi"></textarea>
             </div>
 
             <h6>Konten</h6>
             <div class="input-group mb-3">
-                <textarea class="form-control" style="height: 600px;" rows="3" name="konten" id="konten" required></textarea>
+                <textarea class="form-control" style="height: 600px;" rows="3" name="konten" id="konten"></textarea>
             </div>
             
             <button type="submit" class="btn btn-primary">Simpan</button>

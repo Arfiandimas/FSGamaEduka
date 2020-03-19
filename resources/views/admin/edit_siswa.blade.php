@@ -6,6 +6,15 @@
 
 @section('content')
 <div class="container">
+    @if ($errors->any())
+        <div class="alert alert-danger">
+            <ul>
+                @foreach ($errors->all() as $error)
+                    <li>{{ $error }}</li>
+                @endforeach
+            </ul>
+        </div>
+    @endif
     <h4 style="text-align: center;">Form Pendaftaran Gama Eduka</h4>
     <br>
     <!-- general form elements -->

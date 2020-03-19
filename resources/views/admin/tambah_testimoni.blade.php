@@ -6,11 +6,20 @@
 
 @section('content')
 <div class="container">
+    @if ($errors->any())
+        <div class="alert alert-danger">
+            <ul>
+                @foreach ($errors->all() as $error)
+                    <li>{{ $error }}</li>
+                @endforeach
+            </ul>
+        </div>
+    @endif
     <form action="{{ route('tambah_testimoni.store') }}" method="POST" enctype="multipart/form-data">
         {{ csrf_field() }}
         <h6>Nama Siswa</h6>
         <div class="input-group mb-3">
-            <input type="text" class="form-control" aria-describedby="basic-addon1" name="name" required>
+            <input type="text" class="form-control" aria-describedby="basic-addon1" name="name">
         </div>
 
         <h6>Foto</h6>
@@ -18,7 +27,7 @@
             <img src="/img/photo.png">
         </div>
         <div class="fileContainer sprite">
-            <input type="file" value="Choose File" id="foto" name="foto" required>
+            <input type="file" value="Choose File" id="foto" name="foto">
         </div>
         <br>
 
@@ -33,7 +42,7 @@
 
         <h6>Kesan</h6>
         <div class="input-group mb-3">
-            <textarea class="form-control" rows="3" id="kesan" name="kesan" required></textarea>
+            <textarea class="form-control" rows="3" id="kesan" name="kesan"></textarea>
         </div>
 
         <button type="submit" class="btn btn-primary">Simpan</button>

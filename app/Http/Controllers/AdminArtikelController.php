@@ -46,6 +46,9 @@ class AdminArtikelController extends Controller
     {
 
         $this->validate($request, [
+            'judul' => 'required|max:255',
+            'deskripsi' => 'required',
+            'konten' => 'required',
             'gambar' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:7048'
         ]);
 
@@ -112,6 +115,9 @@ class AdminArtikelController extends Controller
         $articles = Article::find($id);
 
         $this->validate($request, [
+            'judul' => 'required|max:255',
+            'deskripsi' => 'required',
+            'konten' => 'required',
             'gambar' => 'image|mimes:jpeg,png,jpg,gif,svg|max:7048'
         ]);
         
@@ -150,6 +156,7 @@ class AdminArtikelController extends Controller
     public function destroy($id)
     {
         $articles = Article::find($id);
+        unlink(storage_path("app/public/thumbnail/{$articles->gambar}"));
 
         $articles->delete();
 

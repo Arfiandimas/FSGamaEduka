@@ -31,6 +31,6 @@ class GantiPasswordController extends Controller
         $user = Auth::user();
         $user->password = bcrypt($request->get('new_password'));
         $user->save();
-        return back()->with('message', 'Password berhasil diganti');
+        return back()->with('success', 'Password berhasil diganti');
     }
 }

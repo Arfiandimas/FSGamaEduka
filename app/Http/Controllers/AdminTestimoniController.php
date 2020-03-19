@@ -43,6 +43,8 @@ class AdminTestimoniController extends Controller
     public function store(Request $request)
     {
         $this->validate($request, [
+            'name' => 'required|max:255',
+            'kesan' => 'required',
             'foto' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:7048'
         ]);
 
@@ -106,6 +108,8 @@ class AdminTestimoniController extends Controller
         $testimoni = Testimoni::find($id);
 
         $this->validate($request, [
+            'name' => 'required|max:255',
+            'kesan' => 'required',
             'foto' => 'image|mimes:jpeg,png,jpg,gif,svg|max:7048'
         ]);
 
@@ -143,6 +147,7 @@ class AdminTestimoniController extends Controller
     public function destroy($id)
     {
         $testimoni = Testimoni::find($id);
+        unlink(storage_path("app/public/testimoni/{$testimoni->foto}"));
         $testimoni->delete();
 
         return redirect()->route('admin_testimoni.index')->withDanger('Testimoni Berhasil Dihapus!!!');

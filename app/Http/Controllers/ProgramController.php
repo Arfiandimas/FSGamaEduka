@@ -40,6 +40,9 @@ class ProgramController extends Controller
     public function store(Request $request)
     {
         $this->validate($request, [
+            'name' => 'required|max:255',
+            'pertemuan' => 'required|max:11',
+            'deskripsi' => 'required',
             'gambar' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:7048'
         ]);
 
@@ -102,6 +105,9 @@ class ProgramController extends Controller
         $programs = Program::find($id);
         
         $this->validate($request, [
+            'name' => 'required|max:255',
+            'pertemuan' => 'required|max:11',
+            'deskripsi' => 'required',
             'gambar' => 'image|mimes:jpeg,png,jpg,gif,svg|max:7048'
         ]);
 
@@ -137,6 +143,7 @@ class ProgramController extends Controller
     public function destroy($id)
     {
         $program = Program::find($id);
+        unlink(storage_path("app/public/program/{$program->gambar}"));
         $program->delete();
 
         return redirect()->route('program.index')->withDanger('Program Berhasil Dihapus!!!');

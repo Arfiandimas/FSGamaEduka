@@ -117,6 +117,11 @@ class PendaftaranSiswaController extends Controller
         $siswa = Siswa::find($id);
 
         $this->validate($request, [
+            'name' => 'required|max:255',
+            'pendidikan_terakhir' => 'required|max:255',
+            'umur' => 'required',
+            'alamat_lengkap' => 'required',
+            'no_telp' => 'required|max:15',
             'foto' => 'image|mimes:jpeg,png,jpg,gif,svg|max:7048'
         ]);
 

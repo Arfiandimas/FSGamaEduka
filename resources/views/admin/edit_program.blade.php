@@ -6,6 +6,15 @@
 
 @section('content')
 <div class="container">
+    @if ($errors->any())
+        <div class="alert alert-danger">
+            <ul>
+                @foreach ($errors->all() as $error)
+                    <li>{{ $error }}</li>
+                @endforeach
+            </ul>
+        </div>
+    @endif
     <form action="{{ route('program.update', $programs) }}" method="POST" enctype="multipart/form-data">
         {{ csrf_field() }}
         <h6>Nama Program</h6>
