@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Article;
 use App\Category;
+use App\Program;
 
 class ArtikelController extends Controller
 {
@@ -15,18 +16,20 @@ class ArtikelController extends Controller
      */
     public function index()
     {
-        $articles = Article::orderBy('id', 'DESC')->get();
+        $articles = Article::orderBy('id', 'DESC')->paginate(12);
         $categories = Category::all();
+        $programs = Program::orderBy('id', 'DESC')->get();
 
-        return view('siswa.artikel', compact('articles', 'categories'));
+        return view('siswa.artikel', compact('articles', 'categories', 'programs'));
     }
 
     public function index_by_kategory($id)
     {
-        $articles = Article::where('category_id',$id)->get();
+        $articles = Article::where('category_id',$id)->paginate(12);
         $categories = Category::all();
+        $programs = Program::orderBy('id', 'DESC')->get();
 
-        return view('siswa.artikel', compact('articles', 'categories'));
+        return view('siswa.artikel', compact('articles', 'categories', 'programs'));
     }
 
     
@@ -61,8 +64,9 @@ class ArtikelController extends Controller
     public function show($slug)
     {
         $artikel = Article::where('slug', $slug)->firstOrFail();
+        $programs = Program::orderBy('id', 'DESC')->get();
 
-        return view('siswa.showartikel', compact('artikel'));
+        return view('siswa.showartikel', compact('artikel', 'programs'));
     }
 
     /**

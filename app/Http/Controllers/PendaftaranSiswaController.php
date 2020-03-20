@@ -44,6 +44,8 @@ class PendaftaranSiswaController extends Controller
      */
     public function store(Request $request)
     {
+        $programs = Program::orderBy('id', 'DESC')->get();
+        
         $this->validate($request, [
             'name' => 'required|max:255',
             'pendidikan_terakhir' => 'required|max:255',
@@ -77,7 +79,7 @@ class PendaftaranSiswaController extends Controller
             'program_id' => $request->program_id
         ]);
 
-        return view('siswa.infopendaftaran');
+        return view('siswa.infopendaftaran', compact('programs'));
     }
 
     /**
@@ -124,6 +126,14 @@ class PendaftaranSiswaController extends Controller
             'no_telp' => 'required|max:15',
             'foto' => 'image|mimes:jpeg,png,jpg,gif,svg|max:7048'
         ]);
+
+        if($request->hasFile('foto'))
+        {
+            $usersImage = storage_path("app/public/foto/{$siswa->foto}"); // get previous image from folder
+            if (File::exists($usersImage)) { // unlink or remove previous image from folder
+                unlink($usersImage);
+            }
+        }
 
         if($request->file('foto')){
             $image = $request->file('foto');
@@ -179,9 +189,9 @@ class PendaftaranSiswaController extends Controller
             return $program->program->name;
         })
         ->addColumn('aksi', function($data){
-            $button = '<a href="/admin/siswa/'. $data->id .'/edit" class="edit btn btn-warning btn-sm">Edit</a>';
-            $button .= '&nbsp;&nbsp;&nbsp;<a href="/admin/siswa/'. $data->id .'/delete" class="hapus btn btn-danger btn-sm">Hapus</a>';
-            $button .= '&nbsp;&nbsp;&nbsp;<a href="/admin/siswa/'. $data->foto .'/download" class="hapus btn btn-secondary btn-sm"><i class="fas fa-download"></i></a>';
+            $button = '<a href="/admingamaeduka/siswa/'. $data->id .'/edit" class="edit btn btn-warning btn-sm">Edit</a>';
+            $button .= '&nbsp;&nbsp;&nbsp;<a href="/admingamaeduka/siswa/'. $data->id .'/delete" class="hapus btn btn-danger btn-sm">Hapus</a>';
+            $button .= '&nbsp;&nbsp;&nbsp;<a href="/admingamaeduka/siswa/'. $data->foto .'/download" class="hapus btn btn-secondary btn-sm"><i class="fas fa-download"></i></a>';
             return $button;
         })
         ->orderColumn('name', 'id $1')

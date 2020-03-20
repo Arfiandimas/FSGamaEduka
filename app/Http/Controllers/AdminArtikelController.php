@@ -8,6 +8,7 @@ use App\Article;
 use App\Category;
 
 use Image;
+use File;
 
 class AdminArtikelController extends Controller
 {
@@ -18,7 +19,7 @@ class AdminArtikelController extends Controller
      */
     public function index()
     {
-        $articles = Article::orderBy('id', 'DESC')->paginate(10);
+        $articles = Article::orderBy('id', 'DESC')->paginate(12);
         $categories = Category::orderBy('id', 'DESC')->paginate(5);
 
         return view('admin.admin_artikel', compact('articles', 'categories'));
@@ -120,6 +121,14 @@ class AdminArtikelController extends Controller
             'konten' => 'required',
             'gambar' => 'image|mimes:jpeg,png,jpg,gif,svg|max:7048'
         ]);
+
+        if($request->hasFile('gambar'))
+        {
+            $usersImage = storage_path("app/public/thumbnail/{$articles->gambar}"); // get previous image from folder
+            if (File::exists($usersImage)) { // unlink or remove previous image from folder
+                unlink($usersImage);
+            }
+        }
         
         if( $request->file('gambar')){
             $image = $request->file('gambar');
@@ -167,7 +176,7 @@ class AdminArtikelController extends Controller
     {
         Category::create([
             'name' => $request->name,
-            'slug' => Str::slug($request->judul)
+            'slug' => Str::slug($request->name)
         ]);
 
         return redirect()->route('adminartikel.index')->with('success', 'Kategori Berhasil Ditambahkan!');

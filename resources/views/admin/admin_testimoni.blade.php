@@ -35,7 +35,7 @@
                 </div>
             </div>
             @endforeach
-
+            
         </div>
     </div>
 
@@ -65,5 +65,6 @@
 
         </div>
     </div>
+    {{ $testimoni->links() }}
 </div>
 @endsection

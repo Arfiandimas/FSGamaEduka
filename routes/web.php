@@ -27,7 +27,7 @@ Route::post('/daftar','PendaftaranSiswaController@store')->name('daftar.store');
 Route::group(['prefix'=>'artikel'] , function(){
     Route::get('/','ArtikelController@index')->name('artikel.index');
     Route::get('/show/kategori={id}','ArtikelController@index_by_kategory')->name('artikel.bycategory');
-    Route::get('/show/artikel/{article}','ArtikelController@show')->name('artikel.show');
+    Route::get('/show/{article}','ArtikelController@show')->name('artikel.show');
 });
 
 
@@ -35,7 +35,7 @@ Route::group(['prefix'=>'artikel'] , function(){
 
 
 // -------------------------- Admin ------------------------------
-Route::group(['prefix'=>'admin','middleware'=>'auth'], function(){
+Route::group(['prefix'=>'admingamaeduka','middleware'=>'auth'], function(){
     Route::get('/','AdminArtikelController@index')->name('adminartikel.index');
     Route::get('/password','GantiPasswordController@index')->name('password.index');
     Route::post('/password','GantiPasswordController@changePassword')->name('password.changePassword');
@@ -81,5 +81,7 @@ Route::group(['prefix'=>'admin','middleware'=>'auth'], function(){
     
 });
 
+Route::group(['prefix'=>'admingamaeduka'] , function(){
 Auth::routes();
 Auth::routes(['register' => false]);
+});

@@ -93,11 +93,9 @@
                 <div class="col-md-4">
                     <h4>Program Kami</h4>
                     <br>
-                    <button type="button" class="baten-footer2">Android Developer</button>
-                    <button type="button" class="baten-footer2">Komputer Dasar</button>
-                    <button type="button" class="baten-footer2">Microsoft Office</button>
-                    <button type="button" class="baten-footer2">Komputer Jaringan</button>
-                    <button type="button" class="baten-footer2">Bahasa Inggris</button>
+                    @foreach ($programs as $program)
+                        <button type="button" class="baten-footer2">{{ $program->name }}</button>
+                    @endforeach
                 </div>
             </div>
             <br>

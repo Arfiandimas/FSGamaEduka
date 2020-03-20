@@ -45,5 +45,6 @@
 
             </div>
         </div>
+        {{ $testimoni->links() }}
     </div>
 @endsection

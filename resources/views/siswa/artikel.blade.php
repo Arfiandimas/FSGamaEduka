@@ -15,7 +15,7 @@
         <div class="row justify-content-md-center">
             <span class="col-md-10">
 
-                <a href="" type="button" class="btn baten">All</a>
+                <a href="{{ route('artikel.index') }}" type="button" class="btn baten">All</a>
                 @foreach ($categories as $category)
                     <a href="{{ route('artikel.bycategory', $category->id) }}" type="button" class="btn baten">{{ $category->name }}</a>
                 @endforeach
@@ -44,6 +44,7 @@
             @endforeach
 
         </div>
+        {{ $articles->links() }}
     </div>
     <!-- End Content -->
     @endsection

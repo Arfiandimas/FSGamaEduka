@@ -7,6 +7,7 @@ use App\Program;
 use App\Testimoni;
 
 use Image;
+use File;
 
 class AdminTestimoniController extends Controller
 {
@@ -17,7 +18,7 @@ class AdminTestimoniController extends Controller
      */
     public function index()
     {
-        $testimoni = Testimoni::orderBy('id', 'DESC')->get();
+        $testimoni = Testimoni::orderBy('id', 'DESC')->paginate(12);
 
         return view('admin.admin_testimoni', compact('testimoni'));
     }
@@ -112,6 +113,14 @@ class AdminTestimoniController extends Controller
             'kesan' => 'required',
             'foto' => 'image|mimes:jpeg,png,jpg,gif,svg|max:7048'
         ]);
+
+        if($request->hasFile('foto'))
+        {
+            $usersImage = storage_path("app/public/testimoni/{$testimoni->foto}"); // get previous image from folder
+            if (File::exists($usersImage)) { // unlink or remove previous image from folder
+                unlink($usersImage);
+            }
+        }
 
         if($request->file('foto')){
             $image = $request->file('foto');

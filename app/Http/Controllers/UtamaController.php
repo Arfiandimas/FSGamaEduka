@@ -21,11 +21,15 @@ class UtamaController extends Controller
 
     public function about()
     {
-        return view('siswa.about');
+        $programs = Program::orderBy('id', 'DESC')->get();
+
+        return view('siswa.about', compact('programs'));
     }
 
     public function testimoni(){
-        $testimoni = Testimoni::orderBy('id', 'DESC')->get();
-        return view('siswa.showtestimoni', compact('testimoni'));
+        $testimoni = Testimoni::orderBy('id', 'DESC')->paginate(12);
+        $programs = Program::orderBy('id', 'DESC')->get();
+
+        return view('siswa.showtestimoni', compact('testimoni', 'programs'));
     }
 }

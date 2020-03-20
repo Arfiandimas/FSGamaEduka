@@ -11,6 +11,11 @@
 </head>
 
 <body>
+    <div class="container-fluid mb-5 position-fixed" style="width:100%; bottom: 0; z-index:100;">
+        <a href="" class="float-right">
+            <img src="/img/whatsappfixed.png" class="float-right mr-3 mb-3" style="width:10%;" alt="whatsapp">
+        </a>
+    </div>
     {{-- Logo Mobile --}}
     <img src="/img/logo.png" class="img-fluid logo-mobile" alt="logo gama eduka">
     {{-- End Logo Mobile --}}
@@ -399,11 +404,9 @@
                 <div class="col-md-4">
                     <h4>Program Kami</h4>
                     <br>
-                    <button type="button" class="baten-footer2">Android Developer</button>
-                    <button type="button" class="baten-footer2">Komputer Dasar</button>
-                    <button type="button" class="baten-footer2">Microsoft Office</button>
-                    <button type="button" class="baten-footer2">Komputer Jaringan</button>
-                    <button type="button" class="baten-footer2">Bahasa Inggris</button>
+                    @foreach ($programs as $program)
+                    <button type="button" class="baten-footer2">{{ $program->name }}</button>
+                    @endforeach
                 </div>
             </div>
             <br>

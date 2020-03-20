@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Program;
 
 use Image;
+use File;
 
 class ProgramController extends Controller
 {
@@ -16,7 +17,7 @@ class ProgramController extends Controller
      */
     public function index()
     {
-        $programs = Program::orderBy('id', 'DESC')->get();
+        $programs = Program::orderBy('id', 'DESC')->paginate(10);
 
         return view('admin.program', compact('programs'));
     }
@@ -110,6 +111,14 @@ class ProgramController extends Controller
             'deskripsi' => 'required',
             'gambar' => 'image|mimes:jpeg,png,jpg,gif,svg|max:7048'
         ]);
+
+        if($request->hasFile('gambar'))
+        {
+            $usersImage = storage_path("app/public/program/{$programs->gambar}"); // get previous image from folder
+            if (File::exists($usersImage)) { // unlink or remove previous image from folder
+                unlink($usersImage);
+            }
+        }
 
         if( $request->file('gambar')){
             $image = $request->file('gambar');
