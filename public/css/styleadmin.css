@@ -1,0 +1,680 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #707070;
+}
+
+.baten {
+    margin-top: 15px;
+    margin-left: 5px;
+    border: 1px solid #356F7D;
+    border-radius: 20px;
+    min-width: 80px;
+}
+
+.grid-item {
+    margin: 20px -65px 0px 0px;
+}
+
+.cardartikelsiswa {
+    margin-bottom: 30px;
+}
+
+.image-article {
+    height: 200px;
+}
+
+.tgl {
+    margin-top: 10px;
+    margin-left: 20px;
+}
+
+.arrow {
+    position: relative;
+    width: 30px;
+    margin-left: 252px;
+    margin-top: -38px;
+}
+
+.grid-item .card {
+    box-shadow: 3px 3px 3px 0 rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+    width: 18rem;
+}
+
+.grid-item .card:hover {
+    box-shadow: 9px 9px 9px 0 rgba(0, 0, 0, 0.2);
+}
+
+.baten:hover {
+    background-color: lightblue;
+}
+
+.imgshowartikel {
+    width: 600px;
+    margin-top: 20px;
+}
+
+.showkontenartikel {
+    margin-top: 20px;
+}
+
+
+/* -------------------------------Halaman About------------------------------- */
+.h3about {
+    text-align: center;
+}
+
+.hrabout {
+    width: 120px;
+    margin-top: -6px;
+    position: relative;
+    border: none;
+    height: 2px;
+    background: #707070;
+    margin-bottom: 50px;
+}
+
+.paragrafabout {
+    text-align: center;
+    margin-top: -40px;
+}
+
+.dot {
+    height: 12px;
+    width: 12px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.dotvisi {
+    height: 12px;
+    width: 12px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+.visiabout {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.logovisi {
+    height: 150px;
+    width: 150px;
+    background-color: #FF5757;
+    border-radius: 50%;
+    display: block;
+    margin-bottom: 8px;
+    text-align: center;
+    margin-top: 40px;
+}
+
+.logovisi img {
+    width: 150px;
+}
+
+.logomisi {
+    height: 150px;
+    width: 150px;
+    background-color: #FF5757;
+    border-radius: 50%;
+    display: block;
+    margin-bottom: 8px;
+    text-align: center;
+    margin-top: 40px;
+}
+
+.logomisi img {
+    width: 110px;
+    margin-top: 20px;
+}
+
+/* -------------------------------End Halaman About------------------------------- */
+
+/* ---------------------Footer----------------------- */
+footer {
+    width: 100%;
+    background-color: #5CC4E7;
+}
+
+footer h4 {
+    margin-top: 50px;
+    color: white;
+}
+
+footer h5 {
+    margin-top: 30px;
+    color: white;
+}
+
+.footerwadahkontak {
+    display: flex;
+}
+
+.baten-footer {
+    background-color: transparent;
+    width: 100px;
+    height: 35px;
+    text-align: center;
+    margin: 4px 2px;
+    border-radius: 16px;
+    color: white;
+    border: 1.5px solid white;
+}
+
+.footerparagraf {
+    margin-top: auto;
+    margin-bottom: 11px;
+    margin-left: 15px;
+}
+
+.baten-footer2 {
+    background-color: transparent;
+    width: auto;
+    height: 45px;
+    text-align: center;
+    margin: 4px 2px;
+    border-radius: 20px;
+    color: white;
+    border: 1.5px solid white;
+    padding: 5px 12px 5px 12px;
+}
+
+.image-footer {
+    /* Center and scale the image nicely */
+    position: absolute;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 450px;
+    opacity: 0.5;
+}
+
+footer hr {
+    display: block;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    margin-left: auto;
+    margin-right: auto;
+    border-style: inset;
+    border-width: 2px;
+}
+
+footer .sosialmedia {
+    width: 215px;
+    margin-top: 15px;
+}
+
+.footerlogososlialmedia {
+    width: 35px;
+}
+
+.footerlogososlialmediatengah {
+    width: 35px;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+footer .copyright {
+    width: 162px;
+    margin-top: 30px;
+    padding-bottom: 40px;
+}
+
+/* ---------------------End Footer----------------------- */
+
+/* 
+    ##Device = Desktops
+    ##Screen = 1281px to higher resolution desktops
+*/
+@media (min-width: 1921px) {
+    tiga {
+        margin-left: 150px;
+    }
+
+    .search {
+        width: 520px;
+    }
+
+    .logo-search {
+        position: absolute;
+        width: 30px;
+        margin-left: 480px;
+        margin-top: -35px;
+    }
+}
+
+@media (min-width: 1025px) and (max-width: 1920px) {
+
+    .search {
+        width: 420px;
+    }
+
+    .logo-search {
+        position: absolute;
+        width: 30px;
+        margin-left: 380px;
+        margin-top: -35px;
+    }
+
+    .grid-item {
+        margin: 20px -65px 0px 0px;
+    }
+
+    /* ---------------------Footer----------------------- */
+    .baten-footer {
+        background-color: transparent;
+        width: 100px;
+        height: 35px;
+        text-align: center;
+        margin: 4px 2px;
+        border-radius: 16px;
+        color: white;
+        border: 1.5px solid white;
+    }
+
+    .baten-footer2 {
+        background-color: transparent;
+        width: auto;
+        height: 45px;
+        text-align: center;
+        margin: 4px 2px;
+        border-radius: 20px;
+        color: white;
+        border: 1.5px solid white;
+        padding: 5px 12px 5px 12px;
+        font-size: 15px;
+    }
+
+    .image-footer {
+        /* Center and scale the image nicely */
+        position: absolute;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 320px;
+        opacity: 0.5;
+    }
+
+    footer .sosialmedia {
+        width: 215px;
+        margin-top: 15px;
+    }
+
+    footer .copyright {
+        width: 162px;
+        margin-top: 30px;
+        padding-bottom: 40px;
+    }
+
+    /* ---------------------End Footer----------------------- */
+}
+
+/* 
+    ##Device = Tablets, Ipads (landscape)
+    ##Screen = B/w 768px to 1024px
+*/
+@media (min-width: 768px) and (max-width: 991px) and (orientation: landscape) {
+
+    .search {
+        width: 350px;
+    }
+
+    .logo-search {
+        position: absolute;
+        width: 30px;
+        margin-left: 310px;
+        margin-top: -35px;
+    }
+
+    /* ---------------------Footer----------------------- */
+    .footerwadahkontak {
+        display: contents;
+    }
+
+    .baten-footer {
+        background-color: transparent;
+        width: 100px;
+        height: 35px;
+        text-align: center;
+        margin-left: 20px;
+        border-radius: 16px;
+        color: white;
+        border: 1.5px solid white;
+    }
+
+    .footerparagraf {
+        margin-top: auto;
+        margin-bottom: 11px;
+        margin-left: 15px;
+    }
+
+    .baten-footer2 {
+        background-color: transparent;
+        width: auto;
+        height: 45px;
+        text-align: center;
+        border-radius: 20px;
+        color: white;
+        border: 1.5px solid white;
+        padding: 0px 10px 0px 10px;
+        font-size: 13px;
+    }
+
+    .image-footer {
+        /* Center and scale the image nicely */
+        position: absolute;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 250px;
+        opacity: 0.5;
+    }
+
+    footer .sosialmedia {
+        width: 185px;
+        margin-top: 15px;
+    }
+
+    .footerlogososlialmedia {
+        width: 25px;
+    }
+
+    .footerlogososlialmediatengah {
+        width: 25px;
+        margin-left: 50px;
+        margin-right: 50px;
+    }
+
+    footer .copyright {
+        width: 162px;
+        margin-top: 20px;
+        padding-bottom: 20px;
+    }
+
+    /* ---------------------End Footer----------------------- */
+}
+
+/* 
+    ##Device = Low Resolution Tablets, Mobiles (Landscape)
+    ##Screen = B/w 481px to 767px
+*/
+
+@media (min-width: 481px) and (max-width: 767px) {
+
+    .search {
+        width: 350px;
+    }
+
+    .logo-search {
+        position: absolute;
+        width: 30px;
+        margin-left: 310px;
+        margin-top: -35px;
+    }
+
+    .card {
+        margin: auto;
+    }
+
+    .cardartikelsiswa {
+        margin-bottom: 30px;
+    }
+
+    .image-footer {
+        /* Center and scale the image nicely */
+        position: absolute;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 300px;
+        opacity: 0.5;
+    }
+}
+
+/* 
+    ##Device = Most of the Smartphones Mobiles (Portrait)
+    ##Screen = B/w 320px to 479px
+*/
+
+@media (min-width: 320px) and (max-width: 480px) {
+
+    .search {
+        width: 150px;
+    }
+
+    .logo-search {
+        position: absolute;
+        width: 30px;
+        margin-left: 118px;
+        margin-top: -35px;
+    }
+
+    .card {
+        margin: auto;
+    }
+
+    .cardartikelsiswa {
+        margin-bottom: 30px;
+    }
+
+    /* ---------------------Footer----------------------- */
+    .image-footer {
+        /* Center and scale the image nicely */
+        position: absolute;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 200px;
+        opacity: 0.5;
+    }
+
+    footer .sosialmedia {
+        width: 230px;
+        margin-top: 15px;
+    }
+
+    .footerlogososlialmedia {
+        width: 35px;
+    }
+
+    .footerlogososlialmediatengah {
+        width: 35px;
+        margin-left: 50px;
+        margin-right: 50px;
+    }
+
+    footer .copyright {
+        width: 185px;
+        margin-top: 30px;
+        padding-bottom: 40px;
+        margin-bottom: 40px;
+    }
+
+    /* ---------------------End Footer----------------------- */
+}
+
+
+
+/* Diluar Media Query Yang Semestinya */
+
+@media (min-width: 991px) and (max-width: 1200px) and (orientation: landscape) {
+    .grid-item .card {
+        width: 15rem;
+    }
+
+    .image-article {
+        height: 150px;
+    }
+
+    .arrow {
+        position: relative;
+        width: 30px;
+        margin-left: 180px;
+        margin-top: -43px;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1024px) {
+
+    .search {
+        width: 350px;
+        margin-top: -50px;
+    }
+
+    .logo-search {
+        position: absolute;
+        width: 30px;
+        margin-left: 310px;
+        margin-top: -35px;
+    }
+
+    /* ---------------------Footer----------------------- */
+    .baten-footer {
+        background-color: transparent;
+        width: 100px;
+        height: 35px;
+        text-align: center;
+        margin: 4px 2px;
+        border-radius: 16px;
+        color: white;
+        border: 1.5px solid white;
+    }
+
+    .footerparagraf {
+        margin-top: auto;
+        margin-bottom: 11px;
+        margin-left: 15px;
+    }
+
+    .baten-footer2 {
+        background-color: transparent;
+        width: auto;
+        height: 45px;
+        text-align: center;
+        border-radius: 20px;
+        color: white;
+        border: 1.5px solid white;
+        padding: 0px 10px 0px 10px;
+        font-size: 13px;
+    }
+
+    .image-footer {
+        /* Center and scale the image nicely */
+        position: absolute;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 250px;
+        opacity: 0.5;
+    }
+
+    footer .sosialmedia {
+        width: 185px;
+        margin-top: 15px;
+    }
+
+    .footerlogososlialmedia {
+        width: 25px;
+    }
+
+    .footerlogososlialmediatengah {
+        width: 25px;
+        margin-left: 50px;
+        margin-right: 50px;
+    }
+
+    footer .copyright {
+        width: 162px;
+        margin-top: 20px;
+        padding-bottom: 20px;
+    }
+
+    /* ---------------------End Footer----------------------- */
+}
+
+
+@media (min-width: 751px) {
+
+    .logo-mobile {
+        display: none;
+    }
+}
+
+@media (max-width: 750px) {
+
+    .logo-mobile {
+        width: 40px;
+        margin-top: 20px;
+        margin-left: 30px;
+        z-index: 10;
+    }
+
+    /* ---------------------Footer----------------------- */
+    footer .sosialmedia {
+        width: 230px;
+        margin-top: 15px;
+    }
+
+    .footerlogososlialmedia {
+        width: 35px;
+    }
+
+    .footerlogososlialmediatengah {
+        width: 35px;
+        margin-left: 50px;
+        margin-right: 50px;
+    }
+
+    footer .copyright {
+        width: 185px;
+        margin-top: 30px;
+        padding-bottom: 40px;
+        margin-bottom: 20px;
+    }
+
+    /* ---------------------End Footer----------------------- */
+}
+
+
+@media (min-width: 992px) {
+    .abouttab {
+        display: none;
+    }
+}
+
+@media (max-width: 991px) {
+    .aboutdesk {
+        display: none;
+    }
+
+    .hrvisimisi {
+        width: 10%;
+        position: relative;
+        border: none;
+        height: 1px;
+        background: #707070;
+    }
+}
+
+
+@media (min-width: 768px) {
+    .aboutmobile {
+        display: none;
+    }
+}
+
+@media (max-width: 767px) {
+    .aboutdesk {
+        display: none;
+    }
+
+    .abouttab {
+        display: none;
+    }
+
+}

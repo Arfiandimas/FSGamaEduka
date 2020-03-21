@@ -17,10 +17,10 @@
         <div class="section2wadah mx-auto">
             <div class="container-fluid">
                 <div class="row">
-                    <div class="col-md-5 offset-1 d-flex align-items-center justify-content-center">
-                        <img src="{{ asset('storage/program/'.$program->gambar) }}" alt="" class="img-fluid" style="max-width: 350px;">
+                    <div class="col-md-6 d-flex align-items-center justify-content-center">
+                        <img src="{{ asset('storage/program/'.$program->gambar) }}" alt="" class="img-fluid">
                     </div>
-                    <div class="col-md-5">
+                    <div class="col-md-6">
                         <h5 class="section2judulprogram">{{ $program->name }}</h5>
                         <span class="section2clock">
                             <i class="far fa-clock"></i>

@@ -19,9 +19,8 @@ class PendaftaranSiswaController extends Controller
      */
     public function index()
     {
-        // $siswa = Siswa::orderBy('id', 'DESC')->get();
-
-        return view('admin.siswa');
+        $programs = Program::orderBy('id', 'DESC')->get();
+        return view('admin.siswa', compact('programs'));
     }
 
     /**
@@ -51,7 +50,7 @@ class PendaftaranSiswaController extends Controller
             'pendidikan_terakhir' => 'required|max:255',
             'umur' => 'required',
             'alamat_lengkap' => 'required',
-            'no_telp' => 'required|max:15',
+            'no_telp' => 'required|max:14',
             'foto' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:7048'
         ]);
 
@@ -123,7 +122,7 @@ class PendaftaranSiswaController extends Controller
             'pendidikan_terakhir' => 'required|max:255',
             'umur' => 'required',
             'alamat_lengkap' => 'required',
-            'no_telp' => 'required|max:15',
+            'no_telp' => 'required|max:14',
             'foto' => 'image|mimes:jpeg,png,jpg,gif,svg|max:7048'
         ]);
 

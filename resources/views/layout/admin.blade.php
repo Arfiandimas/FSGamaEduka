@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/bootstrap.min.css">
-    <link rel="stylesheet" href="/css/style.css">
-    <link rel="stylesheet" href="/css/artikel.css">
+    <link rel="stylesheet" href="/css/styleadmin.css">
+    <link rel="stylesheet" href="/css/artikeladmin.css">
     <link rel="stylesheet" href="/css/add_artikel.css">
     <link rel="stylesheet" href="/css/program.css">
     <link rel="stylesheet" href="/css/showtestimoni.css">

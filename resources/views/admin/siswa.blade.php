@@ -21,7 +21,14 @@
                                     <th>Pendidikan</th>
                                     <th>Umur</th>
                                     <th>Foto</th>
-                                    <th>Program Dipilih</th>
+                                    <th>
+                                        <select name="program_filter" id="program_filter" class="form-control">
+                                            <option value="">Semua Program</option>
+                                            @foreach ($programs as $program)
+                                                <option value="{{ $program->id }}">{{ $program->name }}</option>
+                                            @endforeach
+                                        </select>
+                                    </th>
                                     <th>Alamat</th>
                                     <th>No Telp</th>
                                     <th>Email</th>
@@ -53,18 +60,18 @@
                 ajax:"{{ route('getdatasiswa.getdatasiswa') }}",
                 columns:[
                     {data:'name', name:'name'},
-                    {data:'pendidikan_terakhir', name:'pendidikan_terakhir'},
-                    {data:'umur', name:'umur'},
+                    {data:'pendidikan_terakhir', name:'pendidikan_terakhir', orderable:false},
+                    {data:'umur', name:'umur', orderable:false},
                     {data:'foto', name:'foto',
                         render: function( data, type, full, meta ) {
                             return "<img src=\"/storage/foto/" + data + "\" width=\"100\"/>";
-                        }
+                        }, orderable:false
                     },
-                    {data:'program_id', name:'program_id'},
-                    {data:'alamat_lengkap', name:'alamat_lengkap'},
-                    {data:'no_telp', name:'no_telp'},
-                    {data:'email', name:'email'},
-                    {data:'created_at', name:'created_at'},
+                    {data:'program_id', name:'program_id', orderable:false},
+                    {data:'alamat_lengkap', name:'alamat_lengkap', orderable:false},
+                    {data:'no_telp', name:'no_telp', orderable:false},
+                    {data:'email', name:'email', orderable:false},
+                    {data:'created_at', name:'created_at', orderable:false},
                     {data:'aksi', name:'aksi', orderable:false, searchable:false},
                 ],
                 order: [[ 0, "desc" ]],

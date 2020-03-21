@@ -39,7 +39,7 @@
                     <!-- /.card-body -->
                     <div class="card-footer clearfix">
                     <ul class="float-right" style="height:20px">
-                        {{ $categories->links() }}
+                        {{$categories->appends(['category' => $articles->currentPage()])->links()}}  
                     </ul>
                     </div>
                 </div>
@@ -76,7 +76,6 @@
                     </div>
                     <div class="col-sm-7 card-kanan">
                         <h6>{{ $article->judul }}</h6>
-                        {{-- <p>{{ $article->deskripsi }}</p> --}}
                         <p class="paragraf-konten">{{ Str::limit($article->deskripsi, 250, '...') }}</p>
                         <div class="row kategori-waktu">
                             <div class="col-md-6">
@@ -96,7 +95,7 @@
                 </div>
             </div>
             @endforeach
-            {{ $articles->links() }}
+            {{$articles->appends(['category' => $categories->currentPage()])->links()}}  
 
         </div>
 

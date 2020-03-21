@@ -11,7 +11,7 @@
     <!-- End Search -->
 
     <!-- Kategori -->
-    <div class="container">
+    <div class="container mb-2">
         <div class="row justify-content-md-center">
             <span class="col-md-10">
 

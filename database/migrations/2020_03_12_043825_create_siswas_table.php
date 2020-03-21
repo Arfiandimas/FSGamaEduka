@@ -19,7 +19,7 @@ class CreateSiswasTable extends Migration
             $table->string('pendidikan_terakhir');
             $table->integer('umur');
             $table->text('alamat_lengkap');
-            $table->bigInteger('no_telp');
+            $table->string('no_telp');
             $table->string('email')->nullable();
             $table->string('foto');
             $table->timestamps();

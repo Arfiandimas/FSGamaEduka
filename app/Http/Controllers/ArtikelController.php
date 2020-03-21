@@ -17,7 +17,7 @@ class ArtikelController extends Controller
     public function index()
     {
         $articles = Article::orderBy('id', 'DESC')->paginate(12);
-        $categories = Category::all();
+        $categories = Category::orderBy('id', 'DESC')->get();
         $programs = Program::orderBy('id', 'DESC')->get();
 
         return view('siswa.artikel', compact('articles', 'categories', 'programs'));
@@ -26,7 +26,7 @@ class ArtikelController extends Controller
     public function index_by_kategory($id)
     {
         $articles = Article::where('category_id',$id)->paginate(12);
-        $categories = Category::all();
+        $categories = Category::orderBy('id', 'DESC')->get();
         $programs = Program::orderBy('id', 'DESC')->get();
 
         return view('siswa.artikel', compact('articles', 'categories', 'programs'));

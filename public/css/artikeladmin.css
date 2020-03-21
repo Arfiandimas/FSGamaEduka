@@ -1,0 +1,245 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* .search {
+    width: 520px;
+}
+
+.logo-search {
+    position: absolute;
+    width: 30px;
+    margin-left: 480px;
+    margin-top: -35px;
+} */
+
+.search-admin {
+    width: 300px;
+    margin: auto;
+}
+
+.logo-search-admin {
+    position: absolute;
+    width: 30px;
+    margin-left: 265px;
+    margin-top: -35px;
+}
+
+.logo-plus {
+    position: absolute;
+    width: 25px;
+}
+
+.tambah-artikel {
+    width: 300px;
+    margin: auto;
+    margin-top: 5px;
+}
+
+.new-artikel {
+    margin-left: 35px;
+    color: #707070;
+}
+
+.card-admin {
+    margin-top: 10px;
+}
+
+.gambar-card {
+    width: 360px;
+    height: 220px;
+}
+
+.baris-card {
+    margin: 5px;
+    width: 855px;
+    margin-top: -5px;
+}
+
+.card-kanan span {
+    float: right;
+}
+
+.kategori-waktu {
+    position: relative;
+    margin-bottom: -20px;
+}
+
+
+.hr {
+    display: block;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    margin-left: auto;
+    margin-right: auto;
+    border-style: inset;
+    border-color: #707070;
+}
+
+.kategori-color {
+    margin: 0px;
+    padding: 0px;
+}
+
+.card-img-kanan {
+    width: 97px;
+}
+
+.card-kanan span {
+    margin-right: 5px;
+}
+
+.card-kanan h6 {
+    margin-top: 10px;
+}
+
+.baris-card .card {
+    box-shadow: 3px 3px 3px 0 rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+}
+
+.formpassword {
+    width: 500px;
+    float: left;
+}
+
+/* 
+    ##Device = Desktops
+    ##Screen = 1921px to higher resolution desktops
+*/
+@media (min-width: 1921px) {
+
+    .paragraf-konten {
+        height: 96px;
+    }
+}
+
+@media (min-width: 1025px) and (max-width: 1920px) {
+    .paragraf-konten {
+        height: 96px;
+    }
+}
+
+/* 
+    ##Device = Tablets, Ipads (landscape)
+    ##Screen = B/w 768px to 1024px
+*/
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+
+    .search-admin {
+        width: 350px;
+    }
+
+    .logo-search-admin {
+        position: absolute;
+        width: 30px;
+        margin-left: 310px;
+        margin-top: -35px;
+    }
+
+    .paragraf-konten {
+        height: 96px;
+    }
+}
+
+/* 
+    ##Device = Low Resolution Tablets, Mobiles (Landscape)
+    ##Screen = B/w 481px to 767px
+*/
+
+@media (min-width: 481px) and (max-width: 767px) {
+
+    .search-admin {
+        width: 300px;
+    }
+
+    .logo-search-admin {
+        position: absolute;
+        width: 30px;
+        margin-left: 165px;
+        margin-top: -35px;
+    }
+
+    .new-artikel {
+        display: none;
+    }
+
+    .logo-plus {
+        z-index: 2;
+    }
+
+    .paragraf-konten {
+        height: 96px;
+    }
+}
+
+/* 
+    ##Device = Most of the Smartphones Mobiles (Portrait)
+    ##Screen = B/w 320px to 479px
+*/
+
+@media (min-width: 320px) and (max-width: 480px) {
+
+    .search-admin {
+        width: 150px;
+        margin-right: 15px;
+    }
+
+    .logo-search-admin {
+        position: absolute;
+        width: 30px;
+        margin-left: 118px;
+        margin-top: -35px;
+    }
+
+    .new-artikel {
+        display: none;
+    }
+
+    .gambar-card {
+        display: none;
+    }
+
+
+
+    .baris-card {
+        margin: auto;
+        width: 300px;
+    }
+
+    .hr {
+        display: block;
+        margin-top: 0.5em;
+        margin-bottom: 0.5em;
+        margin-left: auto;
+        margin-right: auto;
+        border-style: inset;
+        border-color: #707070;
+    }
+
+    .kategori-color {
+        margin: 0px;
+        padding: 0px;
+    }
+
+    .card-img-kanan {
+        width: 97px;
+    }
+
+    .card-kanan h6 {
+        text-align: center;
+    }
+
+    .card-kanan {
+        margin: 0px 2px 0px 2px;
+    }
+
+    .kategori-waktu {
+        position: relative;
+        margin-bottom: -20px;
+    }
+
+    .kategori-waktu span {
+        margin-top: -38px;
+    }
+}
