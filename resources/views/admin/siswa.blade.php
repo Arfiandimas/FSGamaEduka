@@ -21,14 +21,7 @@
                                     <th>Pendidikan</th>
                                     <th>Umur</th>
                                     <th>Foto</th>
-                                    <th>
-                                        <select name="program_filter" id="program_filter" class="form-control">
-                                            <option value="">Semua Program</option>
-                                            @foreach ($programs as $program)
-                                                <option value="{{ $program->id }}">{{ $program->name }}</option>
-                                            @endforeach
-                                        </select>
-                                    </th>
+                                    <th>Program</th>
                                     <th>Alamat</th>
                                     <th>No Telp</th>
                                     <th>Email</th>

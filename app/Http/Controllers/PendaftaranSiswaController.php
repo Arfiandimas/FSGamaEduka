@@ -19,8 +19,7 @@ class PendaftaranSiswaController extends Controller
      */
     public function index()
     {
-        $programs = Program::orderBy('id', 'DESC')->get();
-        return view('admin.siswa', compact('programs'));
+        return view('admin.siswa');
     }
 
     /**

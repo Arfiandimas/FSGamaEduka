@@ -346,7 +346,9 @@
             </div>
 
             <h5 class="section6temukan">Temukan Kami</h5>
-            <img class="section6maps" src="/img/maps.png" alt="">
+
+            <iframe class="section6maps" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15810.361392119143!2d110.2517644!3d-7.8331065!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x507ed87f3d4179a9!2sgama%20eduka!5e0!3m2!1sid!2sid!4v1585153382996!5m2!1sid!2sid" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+            
         </div>
     </div>
     {{-- End Section 6 --}}
