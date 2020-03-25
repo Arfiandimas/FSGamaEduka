@@ -9,10 +9,19 @@
     <link rel="stylesheet" href="/css/showtestimoni.css">
     <link rel="stylesheet" href="/css/gambarsiswa.css">
     <script src="https://kit.fontawesome.com/f45723ccd1.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
     <title>@yield('title')</title>
 </head>
 
 <body>
+    {{-- Message --}}
+    <div class="container-fluid mb-5 position-fixed" style="width:100%; bottom: 0; z-index:100;">
+        <a href="" class="float-right">
+            <img src="/img/whatsappfixed.png" class="float-right mr-3 mb-3" style="width:10%;" alt="whatsapp">
+        </a>
+    </div>
+    {{-- End Message --}}
+
     <!-- Navbar -->
     <img src="/img/logo.png" class="logo-navbar img-fluid logo-mobile" alt="logo gama eduka">
     <nav class="navbar navbar-expand-lg navbar-light nav-desktop">
@@ -113,7 +122,7 @@
     </footer>
     <!-- End Footer -->
 
-    <script src="/js/jquery-3.4.1.slim.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
     <script src="/js/popper.min.js"></script>
     <script src="/js/bootstrap.min.js"></script>
     <script src="/js/gambar.js"></script>

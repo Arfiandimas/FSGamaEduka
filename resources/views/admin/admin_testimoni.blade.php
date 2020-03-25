@@ -55,7 +55,7 @@
                             <span class="section5kesan">{!! Str::limit($test->kesan, 250, '...') !!}</span>
                             {{-- <p class="section5kesan">{!! Str::limit($test->kesan, 250, '...') !!}</p> --}}
                         </div>
-                        <div class="optionprogram">
+                        <div class="optionprogramtestimonimobile">
                             <div class="wadahoptionprogram mx-auto">
                                 <a href="{{ route('edit_testimoni.edit', $test) }}" style="margin-right:20px;"><i class="fas fa-edit"></i></a>
                                 <a href=""><i class="fas fa-trash-alt"></i></a>

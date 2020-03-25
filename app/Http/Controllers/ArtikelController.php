@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Article;
 use App\Category;
 use App\Program;
+use DB;
 
 class ArtikelController extends Controller
 {
@@ -31,8 +32,6 @@ class ArtikelController extends Controller
 
         return view('siswa.artikel', compact('articles', 'categories', 'programs'));
     }
-
-    
 
     /**
      * Show the form for creating a new resource.
@@ -101,5 +100,18 @@ class ArtikelController extends Controller
     public function destroy($id)
     {
         //
+    }
+
+    public function search(Request $request)
+    {
+        $cari = $request->search;
+
+        $articles = Article::search($cari)->orderBy('id', 'DESC')->paginate(12);
+        $categories = Category::orderBy('id', 'DESC')->get();
+        $programs = Program::orderBy('id', 'DESC')->get();
+
+        $articles->appends($request->only('search'));
+
+        return view('siswa.artikel', compact('articles', 'categories', 'programs'));
     }
 }

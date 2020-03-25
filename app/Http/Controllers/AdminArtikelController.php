@@ -19,10 +19,9 @@ class AdminArtikelController extends Controller
      */
     public function index()
     {
-        $articles = Article::orderBy('id', 'DESC')->paginate(12, ['*'], 'article');
-        $categories = Category::orderBy('id', 'DESC')->paginate(5, ['*'], 'category');
+        $articles = Article::orderBy('id', 'DESC')->paginate(3);
 
-        return view('admin.admin_artikel', compact('articles', 'categories'));
+        return view('admin.admin_artikel', compact('articles'));
     }
 
     /**
@@ -32,7 +31,7 @@ class AdminArtikelController extends Controller
      */
     public function create()
     {
-        $categories = Category::all();
+        $categories = Category::orderBy('id', 'DESC')->get();
 
         return view('admin.tambah_artikel', compact('categories'));
     }
@@ -99,7 +98,7 @@ class AdminArtikelController extends Controller
     public function edit($id)
     {
         $articles = Article::find($id);
-        $categories = Category::all();
+        $categories = Category::orderBy('id', 'DESC')->get();
 
         return view('admin.edit_artikel', compact('articles', 'categories'));
     }
@@ -172,6 +171,13 @@ class AdminArtikelController extends Controller
         return redirect()->route('adminartikel.index')->withDanger('Artikel Berhasil Dihapus!!!');
     }
 
+    public function category()
+    {
+        $categories = Category::orderBy('id', 'DESC')->paginate(5);
+
+        return view('admin.category', compact('categories'));
+    }
+
     public function tambahcategory(Request $request)
     {
         Category::create([
@@ -179,7 +185,7 @@ class AdminArtikelController extends Controller
             'slug' => Str::slug($request->name)
         ]);
 
-        return redirect()->route('adminartikel.index')->with('success', 'Kategori Berhasil Ditambahkan!');
+        return redirect()->route('categories.category')->with('success', 'Kategori Berhasil Ditambahkan!');
     }
 
     public function hapuscategory($id)
@@ -188,7 +194,17 @@ class AdminArtikelController extends Controller
 
         $categories->delete();
 
-        return redirect()->route('adminartikel.index')->withDanger('Kategori Berhasil Dihapus!!!');
+        return redirect()->route('categories.category')->withDanger('Kategori Berhasil Dihapus!!!');
+    }
+
+    public function search(Request $request)
+    {
+        $cari = $request->search;
+
+        $articles = Article::search($cari)->orderBy('id', 'DESC')->paginate(12);
+        $articles->appends($request->only('search'));
+
+        return view('admin.admin_artikel', compact('articles'));
     }
 
 }

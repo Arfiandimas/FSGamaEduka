@@ -5,8 +5,10 @@
 @section('content')
     <!-- Search -->
     <div class="search  mx-auto">
-        <input class="form-control" type="search" placeholder="Search" aria-label="Search">
-        <img src="img/search.png" class="logo-search" alt="">
+        <form action="{{ route('article.search') }}" method="GET">
+            <input class="form-control" type="text" placeholder="Search" aria-label="Search" name="search" id="search">
+            <img src="/img/search.png" class="logo-search" alt="">
+        </form>
     </div>
     <!-- End Search -->
 
@@ -31,7 +33,7 @@
 
             @foreach ($articles as $article)
             <div class="col-lg-4 col-md-6 col-sm-12 grid-item">
-                <div class="card cardartikelsiswa">
+                <div class="card cardartikelsiswa" id="article">
                     <img src="{{ asset('storage/thumbnail/'.$article->gambar) }}" class="card-img-top img-fluid image-article" alt="...">
                     <div class="card-body">
                         <h6 class="card-title">{{ $article->judul }}</h6>

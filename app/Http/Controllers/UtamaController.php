@@ -11,7 +11,7 @@ class UtamaController extends Controller
 {
     public function index()
     {
-        $testimoni = Testimoni::orderBy('id', 'DESC')->take(3)->get();
+        $testimoni = Testimoni::inRandomOrder()->take(3)->get();
         $articles = Article::orderBy('id', 'DESC')->take(3)->get();
         $programs = Program::orderBy('id', 'DESC')->get();
 

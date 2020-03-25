@@ -32,7 +32,7 @@
                 <input type="file" value="Choose File" id="gambar" name="gambar">
             </div>
 
-            <h6>Kategori</h6>
+            <h6 class="mt-3">Kategori</h6>
             <div class="input-group mb-3">
                 <select class="form-control" id="exampleFormControlSelect1" name="category_id">
                     @foreach ($categories as $category)

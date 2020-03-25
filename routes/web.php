@@ -28,10 +28,8 @@ Route::group(['prefix'=>'artikel'] , function(){
     Route::get('/','ArtikelController@index')->name('artikel.index');
     Route::get('/show/kategori={id}','ArtikelController@index_by_kategory')->name('artikel.bycategory');
     Route::get('/show/{article}','ArtikelController@show')->name('artikel.show');
+    Route::get('/search','ArtikelController@search')->name('article.search');
 });
-
-
-
 
 
 // -------------------------- Admin ------------------------------
@@ -39,6 +37,7 @@ Route::group(['prefix'=>'admingamaeduka','middleware'=>'auth'], function(){
     Route::get('/','AdminArtikelController@index')->name('adminartikel.index');
     Route::get('/password','GantiPasswordController@index')->name('password.index');
     Route::post('/password','GantiPasswordController@changePassword')->name('password.changePassword');
+    Route::get('/search','AdminArtikelController@search')->name('adminarticle.search');
 
     Route::group(['prefix'=>'artikel'] , function(){
         Route::get('/tambah','AdminArtikelController@create')->name('tambahartikel.create');
@@ -46,8 +45,9 @@ Route::group(['prefix'=>'admingamaeduka','middleware'=>'auth'], function(){
         Route::get('/{id}/edit','AdminArtikelController@edit')->name('tambahartikel.edit');
         Route::post('/{id}/update','AdminArtikelController@update')->name('tambahartikel.update');
         Route::get('/{id}/delete','AdminArtikelController@destroy')->name('hapusartikel.destroy');
-        Route::post('/tambahcategory','AdminArtikelController@tambahcategory')->name('tambahcategory.tambahcategory');
-        Route::get('/{id}/hapuscategory','AdminArtikelController@hapuscategory')->name('hapuscategory.hapuscategory');
+        Route::get('/categories','AdminArtikelController@category')->name('categories.category');
+        Route::post('/categories/tambahcategory','AdminArtikelController@tambahcategory')->name('tambahcategory.tambahcategory');
+        Route::get('/categories/{id}/hapuscategory','AdminArtikelController@hapuscategory')->name('hapuscategory.hapuscategory');
     });
 
     Route::group(['prefix'=>'program'] , function(){

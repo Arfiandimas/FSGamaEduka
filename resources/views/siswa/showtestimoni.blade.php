@@ -17,7 +17,6 @@
                     <p class="section5program">{{ $test->program->name }}</p>
                         <div class="container">
                             <span class="section5kesan">{!! Str::limit($test->kesan, 250, '...') !!}</span>
-                            {{-- <p class="section5kesan">{!! Str::limit($test->kesan, 250, '...') !!}</p> --}}
                         </div>
                     </div>
                 </div>
@@ -39,7 +38,6 @@
                     <p class="section5program">{{ $test->program->name }}</p>
                         <div class="container">
                             <span class="section5kesan">{!! Str::limit($test->kesan, 250, '...') !!}</span>
-                            {{-- <p class="section5kesan">{!! Str::limit($test->kesan, 250, '...') !!}</p> --}}
                         </div>
                     </div>
                 </div>
