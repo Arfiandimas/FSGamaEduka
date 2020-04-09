@@ -38,7 +38,39 @@
             </div>
         </div>
         @endforeach
-        {{ $programs->links() }}
+        {{$programs->appends(['programsdelete' => $programsdelete->currentPage()])->links()}} 
     </div>
+
+    <div class="container">
+
+        <h3 style="color:red;">Program Yang Telah Dihapus</h3>
+
+        @foreach ($programsdelete as $progdel)
+        <div class="section2wadah mx-auto" style="border-color:red;">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-6 d-flex align-items-center justify-content-center">
+                        <img src="{{ asset('storage/program/'.$progdel->gambar) }}" alt="" class="img-fluid">
+                    </div>
+                    <div class="col-md-6">
+                        <h5 class="section2judulprogram">{{ $progdel->name }}</h5>
+                        <span class="section2clock">
+                            <i class="far fa-clock"></i>
+                            <p class="section2pertemuan">{{ $progdel->pertemuan }} Pertemuan</p>
+                        </span>
+                        <p>{!! Str::limit($progdel->deskripsi, 600, '...') !!}</p>
+                    </div>
+                </div>
+            </div>
+            <div class="optionprogram" style="border-color:red;">
+                <div class="wadahoptionprogram mx-auto" style="width: 25px;">
+                    <a href="{{ route('restoreprogram.restore', $progdel) }}"><i class="fas fa-trash-restore"></i></a>
+                </div>
+            </div>
+        </div>
+        @endforeach
+        {{$programsdelete->appends(['programs' => $programs->currentPage()])->links()}} 
+    </div>
+
 
 @endsection

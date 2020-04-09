@@ -17,9 +17,10 @@ class ProgramController extends Controller
      */
     public function index()
     {
-        $programs = Program::orderBy('id', 'DESC')->paginate(10);
+        $programs = Program::orderBy('id', 'DESC')->paginate(3, ['*'], 'programs');
+        $programsdelete = Program::onlyTrashed()->orderBy('id', 'DESC')->paginate(3, ['*'], 'programsdelete');
 
-        return view('admin.program', compact('programs'));
+        return view('admin.program', compact('programs', 'programsdelete'));
     }
 
     /**
@@ -152,9 +153,15 @@ class ProgramController extends Controller
     public function destroy($id)
     {
         $program = Program::find($id);
-        unlink(storage_path("app/public/program/{$program->gambar}"));
         $program->delete();
 
         return redirect()->route('program.index')->withDanger('Program Berhasil Dihapus!!!');
+    }
+
+    public function restore($id)
+    {
+        $program = Program::onlyTrashed()->where('id',$id);
+        $program->restore();
+        return redirect()->route('program.index')->with('success', 'Program Berhasil Direstore!');
     }
 }

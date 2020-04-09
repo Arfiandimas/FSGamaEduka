@@ -57,6 +57,7 @@ Route::group(['prefix'=>'admingamaeduka','middleware'=>'auth'], function(){
         Route::get('/{id}/edit','ProgramController@edit')->name('editprogram.edit');
         Route::post('/{id}/update','ProgramController@update')->name('program.update');
         Route::get('/{id}/delete','ProgramController@destroy')->name('hapusprogram.destroy');
+        Route::get('/{id}/restore','ProgramController@restore')->name('restoreprogram.restore');
     });
 
     Route::group(['prefix'=>'testimoni'] , function(){
