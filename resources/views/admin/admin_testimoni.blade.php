@@ -6,7 +6,7 @@
 
 @section('content')
 
-<div class="container">
+<div class="container mb-4">
 
     <div class="tambah-program mx-auto">
         <a href="{{ route('tambah_testimoni.create') }}"><img src="/img/plus.png" class="logo-programtambah" alt="">

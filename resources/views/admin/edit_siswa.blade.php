@@ -5,7 +5,7 @@
 @section('halaman','Edit Siswa')
 
 @section('content')
-<div class="container">
+<div class="container mb-5">
     @if ($errors->any())
         <div class="alert alert-danger">
             <ul>
@@ -77,7 +77,7 @@
             </div>
         <!-- /.card-body -->
 
-        <div class="card-footer">
+        <div class="card-footer" style="height: 70px;">
             <button type="submit" class="btn btn-primary">Submit</button>
         </div>
         </form>

@@ -5,7 +5,7 @@
 @section('halaman','Edit Testimoni')
 
 @section('content')
-<div class="container">
+<div class="container mb-4">
     @if ($errors->any())
         <div class="alert alert-danger">
             <ul>

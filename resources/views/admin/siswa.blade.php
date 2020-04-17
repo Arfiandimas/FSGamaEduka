@@ -5,7 +5,7 @@
 @section('halaman','Siswa')
 
 @section('content')
-    <div class="container-fluid">
+    <div class="container-fluid mb-5">
         <div class="row">
             <div class="col-12">
                 <div class="card">

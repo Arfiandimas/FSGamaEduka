@@ -28,7 +28,7 @@
     <!-- End Search -->
 
     <!-- Content -->
-    <div class="container">
+    <div class="container mb-5">
         <div class="baris-card mx-auto">
 
             @foreach ($articles as $article)

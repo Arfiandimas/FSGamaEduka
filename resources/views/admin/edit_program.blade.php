@@ -5,7 +5,7 @@
 @section('halaman','Edit Program')
 
 @section('content')
-<div class="container">
+<div class="container mb-4">
     @if ($errors->any())
         <div class="alert alert-danger">
             <ul>
@@ -33,7 +33,7 @@
         </div>
 
         <h6>Gambar</h6>
-        <div class="logoContainer">
+        <div class="logoContainer" style="width:60%;">
             <img src="{{ asset('storage/program/'.$programs->gambar) }}">
         </div>
         <div class="fileContainer sprite">

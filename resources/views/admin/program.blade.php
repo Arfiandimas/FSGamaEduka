@@ -6,7 +6,7 @@
 
 @section('content')
 
-    <div class="container">
+    <div class="container mb-5">
 
         <div class="tambah-program mx-auto">
             <a href="{{ route('program.create') }}"><img src="/img/plus.png" class="logo-programtambah" alt="">
@@ -41,7 +41,7 @@
         {{$programs->appends(['programsdelete' => $programsdelete->currentPage()])->links()}} 
     </div>
 
-    <div class="container">
+    <div class="container mb-5">
 
         <h3 style="color:red;">Program Yang Telah Dihapus</h3>
 
