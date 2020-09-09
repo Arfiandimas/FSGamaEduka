@@ -178,7 +178,7 @@
                             <div class="row">
                                 <div class="col-6">
                                     <div class="card section3cardkiri">
-                                        <img src="/img/library.png" class="section3wadahcardimg mx-auto rounded-circle">>
+                                        <img src="/img/library.png" class="section3wadahcardimg mx-auto rounded-circle">
                                         <b>Fasilitas Lengkap</b>
                                     </div>
                                 </div>
@@ -301,7 +301,7 @@
                     <p class="section5nama">{{ $test->name }}</p>
                     <p class="section5program">{{ $test->program->name }}</p>
                         <div class="container">
-                            <span class="section5kesan">{!! Str::limit($test->kesan, 250, '...') !!}</span>
+                            <span class="section5kesan">{!! $test->kesan !!}</span>
                         </div>
                     </div>
                 </div>
@@ -318,7 +318,7 @@
                         <p class="section5nama">{{ $test->name }}</p>
                         <p class="section5program">{{ $test->program->name }}</p>
                             <div class="container">
-                                <span class="section5kesan">{!! Str::limit($test->kesan, 250, '...') !!}</span>
+                                <span class="section5kesan">{!! $test->kesan !!}</span>
                             </div>
                         </div>
                     </div>

@@ -59,12 +59,15 @@ class PendaftaranSiswaController extends Controller
 
         $destinationPath = storage_path('app/public/foto');
 
-        $resize_image = Image::make($image->getRealPath());
+        if ($image->getClientOriginalExtension() != 'svg') {
+            $resize_image = Image::make($image->getRealPath());
 
-        $resize_image->resize(1152, 800, function($constraint){
-            $constraint->aspectRatio();
-        })->save($destinationPath . '/' . $image_name);
-
+            $resize_image->resize(1152, 800, function($constraint){
+                $constraint->aspectRatio();
+            })->save($destinationPath . '/' . $image_name);
+        } else {
+            $image->move($destinationPath, $image_name);
+        }
 
         Siswa::create([
             'name' => $request->name,
@@ -140,11 +143,15 @@ class PendaftaranSiswaController extends Controller
 
             $destinationPath = storage_path('app/public/foto');
 
-            $resize_image = Image::make($image->getRealPath());
+            if ($image->getClientOriginalExtension() != 'svg') {
+                $resize_image = Image::make($image->getRealPath());
 
-            $resize_image->resize(1152, 800, function($constraint){
-                $constraint->aspectRatio();
-            })->save($destinationPath . '/' . $image_name);
+                $resize_image->resize(1152, 800, function($constraint){
+                    $constraint->aspectRatio();
+                })->save($destinationPath . '/' . $image_name);
+            } else {
+                $image->move($destinationPath, $image_name);
+            }
         }
 
         $siswa->name = $request->name?$request->name : $siswa->name;

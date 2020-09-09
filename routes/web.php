@@ -84,5 +84,5 @@ Route::group(['prefix'=>'admingamaeduka','middleware'=>'auth'], function(){
 
 Route::group(['prefix'=>'admingamaeduka'] , function(){
 Auth::routes();
-Auth::routes(['register' => false]);
+// Auth::routes(['register' => false]);
 });

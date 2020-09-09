@@ -65,7 +65,7 @@
 
               <li class="nav-item">
                 <a href="{{ route('categories.category') }}" class="nav-link">
-                  <i class="far fa-newspaper"></i>
+                  <i class="fas fa-align-center"></i>
                   <p>
                     Category Artikel
                   </p>

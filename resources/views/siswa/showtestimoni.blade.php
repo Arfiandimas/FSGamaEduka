@@ -16,7 +16,7 @@
                     <p class="section5nama">{{ $test->name }}</p>
                     <p class="section5program">{{ $test->program->name }}</p>
                         <div class="container">
-                            <span class="section5kesan">{!! Str::limit($test->kesan, 250, '...') !!}</span>
+                            <span class="section5kesan">{!! $test->kesan !!}</span>
                         </div>
                     </div>
                 </div>
@@ -37,7 +37,7 @@
                     <p class="section5nama">{{ $test->name }}</p>
                     <p class="section5program">{{ $test->program->name }}</p>
                         <div class="container">
-                            <span class="section5kesan">{!! Str::limit($test->kesan, 250, '...') !!}</span>
+                            <span class="section5kesan">{!! $test->kesan !!}</span>
                         </div>
                     </div>
                 </div>

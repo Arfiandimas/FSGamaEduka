@@ -57,12 +57,16 @@ class AdminArtikelController extends Controller
         $image_name = time() . '.' . $image->getClientOriginalExtension();
 
         $destinationPath = storage_path('app/public/thumbnail');
+        
+        if ($image->getClientOriginalExtension() != 'svg') {
+            $resize_image = Image::make($image->getRealPath());
 
-        $resize_image = Image::make($image->getRealPath());
-
-        $resize_image->resize(1152, 800, function($constraint){
-            $constraint->aspectRatio();
-        })->save($destinationPath . '/' . $image_name);
+            $resize_image->resize(1152, 800, function($constraint){
+                $constraint->aspectRatio();
+            })->save($destinationPath . '/' . $image_name);
+        } else {
+            $image->move($destinationPath, $image_name);
+        }
 
 
         Article::create([
@@ -136,11 +140,16 @@ class AdminArtikelController extends Controller
 
             $destinationPath = storage_path('app/public/thumbnail');
 
-            $resize_image = Image::make($image->getRealPath());
+            if ($image->getClientOriginalExtension() != 'svg') {
+                $resize_image = Image::make($image->getRealPath());
 
-            $resize_image->resize(1152, 800, function($constraint){
-                $constraint->aspectRatio();
-            })->save($destinationPath . '/' . $image_name);
+                $resize_image->resize(1152, 800, function($constraint){
+                    $constraint->aspectRatio();
+                })->save($destinationPath . '/' . $image_name);
+            } else {
+                $image->move($destinationPath, $image_name);
+            }
+            
         }
 
         $articles->judul = $request->judul?$request->judul : $articles->judul;
@@ -200,7 +209,7 @@ class AdminArtikelController extends Controller
     public function search(Request $request)
     {
         $cari = $request->search;
-
+        
         $articles = Article::search($cari)->orderBy('id', 'DESC')->paginate(12);
         $articles->appends($request->only('search'));
 

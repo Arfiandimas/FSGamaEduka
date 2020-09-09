@@ -55,12 +55,15 @@ class AdminTestimoniController extends Controller
 
         $destinationPath = storage_path('app/public/testimoni');
 
-        $resize_image = Image::make($image->getRealPath());
+        if ($image->getClientOriginalExtension() != 'svg') {
+            $resize_image = Image::make($image->getRealPath());
 
-        $resize_image->resize(1152, 800, function($constraint){
-            $constraint->aspectRatio();
-        })->save($destinationPath . '/' . $image_name);
-
+            $resize_image->resize(1152, 800, function($constraint){
+                $constraint->aspectRatio();
+            })->save($destinationPath . '/' . $image_name);
+        } else {
+            $image->move($destinationPath, $image_name);
+        }
 
         Testimoni::create([
             'name' => $request->name,
@@ -129,11 +132,15 @@ class AdminTestimoniController extends Controller
 
             $destinationPath = storage_path('app/public/testimoni');
 
-            $resize_image = Image::make($image->getRealPath());
+            if ($image->getClientOriginalExtension() != 'svg') {
+                $resize_image = Image::make($image->getRealPath());
 
-            $resize_image->resize(1152, 800, function($constraint){
-                $constraint->aspectRatio();
-            })->save($destinationPath . '/' . $image_name);
+                $resize_image->resize(1152, 800, function($constraint){
+                    $constraint->aspectRatio();
+                })->save($destinationPath . '/' . $image_name);
+            } else {
+                $image->move($destinationPath, $image_name);
+            }
         }
         
         $testimoni->name = $request->name?$request->name : $testimoni->name;
