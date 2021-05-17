@@ -19,6 +19,11 @@ class Article extends Model
         return $this->belongsTo(Category::class);
     }
 
+    public function searchableAs()
+    {
+        return 'articles';
+    }
+
     public function toSearchableArray()
     {
         return [

@@ -12,5 +12,10 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         // $this->call(UsersTableSeeder::class);
+        $admin = \App\User::create([
+            'name' => "Arfian Dimas Andi Permana",
+            'email' => "arfiandimas@gmail.com",
+            'password' => bcrypt('password')
+        ]);
     }
 }
