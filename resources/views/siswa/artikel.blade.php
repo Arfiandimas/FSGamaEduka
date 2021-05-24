@@ -33,15 +33,17 @@
 
             @foreach ($articles as $article)
             <div class="col-lg-4 col-md-6 col-sm-12 grid-item">
-                <div class="card cardartikelsiswa" id="article">
-                    <img src="{{ asset('storage/thumbnail/'.$article->gambar) }}" class="card-img-top img-fluid image-article" alt="...">
-                    <div class="card-body">
-                        <h6 class="card-title">{{ $article->judul }}</h6>
-                        <p class="card-text">{{ Str::limit($article->deskripsi, 150, '...') }}</p>
+                <a href="{{ route('artikel.show', $article->slug) }}" style="text-decoration:none; color: #707070;">
+                    <div class="card cardartikelsiswa" id="article">
+                        <img src="{{ asset('storage/thumbnail/'.$article->gambar) }}" class="card-img-top img-fluid image-article" alt="...">
+                        <div class="card-body">
+                            <h6 class="card-title">{{ $article->judul }}</h6>
+                            <p class="card-text">{{ Str::limit($article->deskripsi, 150, '...') }}</p>
+                        </div>
+                        <p class="tgl mb-3">{{$article->created_at->format('M d, Y')}}</p>
+                        <p class="arrow mb-3"><i class="fas fa-arrow-right text-primary"></i></p>
                     </div>
-                    <p class="tgl">{{$article->created_at->format('M d, Y')}}</p>
-                    <a href="{{ route('artikel.show', $article->slug) }}" class="arrow"><i class="fas fa-arrow-right"></i></a>
-                </div>
+                </a>
             </div>
             @endforeach
 
